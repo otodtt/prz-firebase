@@ -25,172 +25,167 @@ import { ResizeService } from '../../common/services/ResizeService';
 import { Product } from '../shared/models/product.model';
 
 export class TableFromDatabase {
-    constructor(public db: AngularFireDatabase) { }
+  constructor(public db: AngularFireDatabase) { }
 
-    getRepoIssues(): Observable<any[]> {
-      return this.db.list(`products/pheromones`).valueChanges();
-    }
-    disconnect(): void { }
+  getRepoIssues(): Observable<any[]> {
+    return this.db.list(`products/pheromones`).valueChanges();
+  }
+  disconnect(): void { }
 }
 
 @Component({
-    templateUrl: './pheromones.component.html',
-    styleUrls: [ '../shared/pages.scss', './pheromones.component.scss']
+  templateUrl: './pheromones.component.html',
+  styleUrls: [ '../shared/pages.scss', './pheromones.component.scss']
 })
 export class PheromonesComponent implements OnInit, AfterViewInit, OnDestroy {
 
-    private title = 'ПРЗ | Феромони';
-    private description = 'Феромони. Продуки за растителна защита за борба срещу ябълков плодов червей, източен плодов червей ' +
-                          'сливов плодов червей и листозавивачки и други.';
-    private keywords = 'феромони, продуки, растителна, защита, култури, растителнозащитни, пракатики';
+  private title = 'ПРЗ | Феромони';
+  private description = 'Феромони. Продуки за растителна защита за борба срещу ябълков плодов червей, източен плодов червей ' +
+                        'сливов плодов червей и листозавивачки и други.';
+  private keywords = 'феромони, продуки, растителна, защита, култури, растителнозащитни, пракатики';
 
-    breadcrumbName = 'Феромони';
+  breadcrumbName = 'Феромони';
 
-    mode = '';
+  mode = '';
 
-    private link = 'products/pheromones';
-    bigQuery: MediaQueryList;
-    mediumQuery: MediaQueryList;
-    smallQuery: MediaQueryList;
+  private link = 'products/pheromones';
+  bigQuery: MediaQueryList;
+  mediumQuery: MediaQueryList;
+  smallQuery: MediaQueryList;
 
-    private resizeSubscription: Subscription;
-    private mobileQueryListener: () => void;
+  private resizeSubscription: Subscription;
+  private mobileQueryListener: () => void;
 
-    displayedColumns = ['name', 'dose', 'category'];
-    exampleDatabase: TableFromDatabase | null;
-    dataSource = new MatTableDataSource();
+  displayedColumns = ['name', 'dose', 'category'];
+  exampleDatabase: TableFromDatabase | null;
+  dataSource = new MatTableDataSource();
 
-    resultsLength = 0;
-    isLoadingResults = true;
-    isRateLimitReached = false;
+  resultsLength = 0;
+  isLoadingResults = true;
+  isRateLimitReached = false;
 
-    @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
-    @ViewChild(MatSort, { static: true }) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
 
-    constructor(
-        private changeBreadcrumb: ChangeBreadcrumbService,
-        private seoService: SeoService,
-        private db: AngularFireDatabase,
-        public dialog: MatDialog,
-        private resizeService: ResizeService,
-        changeDetectorRef: ChangeDetectorRef,
-        media: MediaMatcher
+  constructor(
+    private changeBreadcrumb: ChangeBreadcrumbService,
+    private seoService: SeoService,
+    private db: AngularFireDatabase,
+    public dialog: MatDialog,
+    private resizeService: ResizeService,
+    changeDetectorRef: ChangeDetectorRef,
+    media: MediaMatcher
+  ) {
+    this.seoService.addTitle(this.title);
+    this.seoService.setMeta(this.description, this.keywords);
+
+    this.mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.bigQuery = media.matchMedia('(max-width: 850px)');
+    this.bigQuery.addEventListener('change', this.mobileQueryListener);
+
+    this.mediumQuery = media.matchMedia('(max-width: 768px)');
+    this.mediumQuery.addEventListener('change', this.mobileQueryListener);
+
+    this.smallQuery = media.matchMedia('(max-width: 481px)');
+    this.smallQuery.addEventListener('change', this.mobileQueryListener);
+
+    if (
+        this.bigQuery.matches === false &&
+        this.mediumQuery.matches === false &&
+        this.smallQuery.matches === false
     ) {
-        this.seoService.addTitle(this.title);
-        this.seoService.setMeta(this.description, this.keywords);
+        this.mode = '60%';
+    }
+    if (
+        this.bigQuery.matches === true &&
+        this.mediumQuery.matches === false &&
+        this.smallQuery.matches === false
+    ) {
+        this.mode = '60%';
+    }
+    if (
+        this.bigQuery.matches === true &&
+        this.mediumQuery.matches === true &&
+        this.smallQuery.matches === false
+    ) {
+        this.mode = '80%';
+    }
+    if (
+        this.bigQuery.matches === true &&
+        this.mediumQuery.matches === true &&
+        this.smallQuery.matches === true
+    ) {
+        this.mode = '';
+    }
+  }
 
-        this.mobileQueryListener = () => changeDetectorRef.detectChanges();
-        this.bigQuery = media.matchMedia('(max-width: 850px)');
-        // tslint:disable-next-line: deprecation
-        this.bigQuery.addListener(this.mobileQueryListener);
+  ngOnInit(): void {
+    this.changeBreadcrumb.emitName(this.breadcrumbName);
 
-        this.mediumQuery = media.matchMedia('(max-width: 768px)');
-        // tslint:disable-next-line: deprecation
-        this.mediumQuery.addListener(this.mobileQueryListener);
+    this.exampleDatabase = new TableFromDatabase(this.db);
 
-        this.smallQuery = media.matchMedia('(max-width: 481px)');
-        // tslint:disable-next-line: deprecation
-        this.smallQuery.addListener(this.mobileQueryListener);
+    this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
 
-        if (
-            this.bigQuery.matches === false &&
-            this.mediumQuery.matches === false &&
-            this.smallQuery.matches === false
-        ) {
-            this.mode = '60%';
-        }
-        if (
-            this.bigQuery.matches === true &&
-            this.mediumQuery.matches === false &&
-            this.smallQuery.matches === false
-        ) {
-            this.mode = '60%';
-        }
-        if (
-            this.bigQuery.matches === true &&
-            this.mediumQuery.matches === true &&
-            this.smallQuery.matches === false
-        ) {
-            this.mode = '80%';
-        }
-        if (
-            this.bigQuery.matches === true &&
-            this.mediumQuery.matches === true &&
-            this.smallQuery.matches === true
-        ) {
-            this.mode = '';
-        }
+    merge()
+      .pipe(
+          startWith({}),
+          switchMap(() => {
+              this.isLoadingResults = true;
+              return this.exampleDatabase.getRepoIssues();
+          }),
+          map(data => {
+              this.isLoadingResults = false;
+              this.isRateLimitReached = false;
+              this.resultsLength = data.length;
+
+              return data;
+          }),
+          catchError(() => {
+              this.isLoadingResults = false;
+              this.isRateLimitReached = true;
+              return observableOf([]);
+          })
+    ).subscribe(data => this.dataSource.data = data);
+  }
+
+  ngAfterViewInit(): void {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+
+    this.resizeSubscription = this.resizeService.onResize$
+        .subscribe(size => {
+            if (size.innerWidth > 768) {
+                this.mode = '60%';
+            }
+            if (size.innerWidth < 768) {
+                this.mode = '80%';
+            }
+            if (size.innerWidth < 481) {
+                this.mode = '';
+            }
+      });
     }
 
-    ngOnInit(): void {
-      this.changeBreadcrumb.emitName(this.breadcrumbName);
+  applyFilter(filterValue: string): void {
+    filterValue = filterValue.trim();
+    filterValue = filterValue.toLowerCase();
+    this.dataSource.filter = filterValue;
+  }
 
-      this.exampleDatabase = new TableFromDatabase(this.db);
+  openDialog(name: any, info: any): void {
+    const dialogRef = this.dialog.open(MoreInfoDialogComponent, {
+        data: { product: name, data: info, link: this.link },
+        width: this.mode
+    });
+  }
 
-      this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
+  ngOnDestroy(): void {
+    this.bigQuery.removeEventListener('change', this.mobileQueryListener);
+    this.mediumQuery.removeEventListener('change', this.mobileQueryListener);
+    this.smallQuery.removeEventListener('change', this.mobileQueryListener);
 
-      merge()
-          .pipe(
-              startWith({}),
-              switchMap(() => {
-                  this.isLoadingResults = true;
-                  return this.exampleDatabase.getRepoIssues();
-              }),
-              map(data => {
-                  this.isLoadingResults = false;
-                  this.isRateLimitReached = false;
-                  this.resultsLength = data.length;
-
-                  return data;
-              }),
-              catchError(() => {
-                  this.isLoadingResults = false;
-                  this.isRateLimitReached = true;
-                  return observableOf([]);
-              })
-          ).subscribe(data => this.dataSource.data = data);
+    if (this.resizeSubscription) {
+        this.resizeSubscription.unsubscribe();
     }
-
-    ngAfterViewInit(): void {
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
-
-        this.resizeSubscription = this.resizeService.onResize$
-            .subscribe(size => {
-                if (size.innerWidth > 768) {
-                    this.mode = '60%';
-                }
-                if (size.innerWidth < 768) {
-                    this.mode = '80%';
-                }
-                if (size.innerWidth < 481) {
-                    this.mode = '';
-                }
-            });
-    }
-
-    applyFilter(filterValue: string): void {
-        filterValue = filterValue.trim();
-        filterValue = filterValue.toLowerCase();
-        this.dataSource.filter = filterValue;
-    }
-
-    openDialog(name: any, info: any): void {
-        const dialogRef = this.dialog.open(MoreInfoDialogComponent, {
-            data: { product: name, data: info, link: this.link },
-            width: this.mode
-        });
-    }
-
-    ngOnDestroy(): void {
-        // tslint:disable-next-line: deprecation
-        this.bigQuery.removeListener(this.mobileQueryListener);
-        // tslint:disable-next-line: deprecation
-        this.mediumQuery.removeListener(this.mobileQueryListener);
-        // tslint:disable-next-line: deprecation
-        this.smallQuery.removeListener(this.mobileQueryListener);
-        if (this.resizeSubscription) {
-            this.resizeSubscription.unsubscribe();
-        }
-    }
+  }
 }

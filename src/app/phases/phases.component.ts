@@ -30,16 +30,14 @@ export class PhasesComponent implements OnInit, OnDestroy, AfterViewInit {
   ) {
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.openedQuery = media.matchMedia('(max-width: 850px)');
-    // tslint:disable-next-line: deprecation
-    this.openedQuery.addListener(this.mobileQueryListener);
+    this.openedQuery.addEventListener('change', this.mobileQueryListener);
 
     this.mediumQuery = media.matchMedia('(max-width: 768px)');
-    // tslint:disable-next-line: deprecation
-    this.mediumQuery.addListener(this.mobileQueryListener);
+    this.mediumQuery.addEventListener('change', this.mobileQueryListener);
 
     this.smallQuery = media.matchMedia('(max-width: 481px)');
-    // tslint:disable-next-line: deprecation
-    this.smallQuery.addListener(this.mobileQueryListener);
+    this.smallQuery.addEventListener('change', this.mobileQueryListener);
+
 
     if (this.mediumQuery.matches === true && this.smallQuery.matches === false) {
       this.mode = 'push';
@@ -70,12 +68,10 @@ export class PhasesComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngOnDestroy(): void {
-    // tslint:disable-next-line: deprecation
-    this.openedQuery.removeListener(this.mobileQueryListener);
-    // tslint:disable-next-line: deprecation
-    this.mediumQuery.removeListener(this.mobileQueryListener);
-    // tslint:disable-next-line: deprecation
-    this.smallQuery.removeListener(this.mobileQueryListener);
+    this.openedQuery.removeEventListener('change', this.mobileQueryListener);
+    this.mediumQuery.removeEventListener('change', this.mobileQueryListener);
+    this.smallQuery.removeEventListener('change', this.mobileQueryListener);
+
     if (this.resizeSubscription) {
       this.resizeSubscription.unsubscribe();
     }

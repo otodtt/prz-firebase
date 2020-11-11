@@ -73,16 +73,13 @@ export class ParallelComponent implements OnInit, AfterViewInit, OnDestroy {
 
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.bigQuery = media.matchMedia('(max-width: 850px)');
-    // tslint:disable-next-line: deprecation
-    this.bigQuery.addListener(this.mobileQueryListener);
+    this.bigQuery.addEventListener('change', this.mobileQueryListener);
 
     this.mediumQuery = media.matchMedia('(max-width: 768px)');
-    // tslint:disable-next-line: deprecation
-    this.mediumQuery.addListener(this.mobileQueryListener);
+    this.mediumQuery.addEventListener('change', this.mobileQueryListener);
 
     this.smallQuery = media.matchMedia('(max-width: 481px)');
-    // tslint:disable-next-line: deprecation
-    this.smallQuery.addListener(this.mobileQueryListener);
+    this.smallQuery.addEventListener('change', this.mobileQueryListener);
 
     if (
       this.bigQuery.matches === false &&
@@ -175,12 +172,10 @@ export class ParallelComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    // tslint:disable-next-line: deprecation
-    this.bigQuery.removeListener(this.mobileQueryListener);
-    // tslint:disable-next-line: deprecation
-    this.mediumQuery.removeListener(this.mobileQueryListener);
-    // tslint:disable-next-line: deprecation
-    this.smallQuery.removeListener(this.mobileQueryListener);
+    this.bigQuery.removeEventListener('change', this.mobileQueryListener);
+    this.mediumQuery.removeEventListener('change', this.mobileQueryListener);
+    this.smallQuery.removeEventListener('change', this.mobileQueryListener);
+
     if (this.resizeSubscription) {
       this.resizeSubscription.unsubscribe();
     }
