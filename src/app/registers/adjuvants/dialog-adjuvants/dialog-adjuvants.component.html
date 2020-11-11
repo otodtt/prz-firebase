@@ -1,0 +1,49 @@
+<mat-dialog-content>
+  <div class="dialog-header">
+    <h2 [innerHTML]="data.data.name| safeHtml"></h2>
+  </div>
+  <mat-card class="example-card card-top">
+    <mat-card-content>
+      <p>Лицето, което пуска на пазара:</p>
+      <p class="bold" [innerHTML]="data.data.owner| safeHtml"></p>
+      <hr *ngIf="data.data.orderAdjuvant !== undefined">
+      <p class="bold" *ngIf="data.data.orderAdjuvant !== undefined">{{ data.data.orderAdjuvant }}</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="example-card card-top">
+    <mat-card-content>
+      <div class="my-header">
+        <p class="bold">ДАННИ ЗА ПРОДУКТА</p>
+      </div>
+      <hr>
+      <p class="bold">Тип формулация:</p>
+      <p>{{ data.data.type }}</p>
+      <hr>
+      <p class="bold">Начин на действие:</p>
+      <p [innerHTML]="data.data.action | safeHtml"></p>
+
+      <hr *ngIf="data.data.crops !== undefined">
+      <p class="bold" *ngIf="data.data.crops !== undefined">Култури:</p>
+      <p *ngIf="data.data.crops !== undefined" [innerHTML]="data.data.crops | safeHtml"></p>
+
+      <hr>
+      <p class="bold">Доза на приложение:</p>
+      <p [innerHTML]="data.data.dose | safeHtml"></p>
+
+      <hr *ngIf="data.data.application !== undefined">
+      <p class="bold" *ngIf="data.data.application !== undefined">Употреба с други ПРЗ:</p>
+      <p [innerHTML]="data.data.application | safeHtml" *ngIf="data.data.application !== undefined"></p>
+
+      <p class="bold" *ngIf="data.data.noteApplication !== undefined">Забележка:</p>
+      <p class="noteApplication" [innerHTML]="data.data.noteApplication | safeHtml"
+        *ngIf="data.data.noteApplication !== undefined"></p>
+    </mat-card-content>
+  </mat-card>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button (click)="onNoClick()" matTooltip="Затвори">
+    <mat-icon aria-label="Назад">power_settings_new</mat-icon>
+    <span> Затвори</span>
+  </button>
+</mat-dialog-actions>

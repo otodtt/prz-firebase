@@ -1,0 +1,92 @@
+<section id="contact-form">
+  <div class="row-header">
+    <h1>КОНТАКТИ</h1>
+  </div>
+  <div id="contact-form-wrapper">
+    <div id="left-card" class="card-wrapper">
+      <mat-card class="example-card" >
+        <mat-card-header>
+          <div class="header-wrap">
+            <h2>За връзка с автора на <span class="span-form-color">ПРЗБГ</span></h2>
+          </div>
+        </mat-card-header>
+        <mat-card-content>
+          <ul>
+            <li>
+              <p>Ако желаете да се свържете с автора на сайта, моля попълнете контактната форма или изпратете съобщение на адрес!</p>
+            </li>
+            <li><p><mat-icon matSuffix >email</mat-icon> &nbsp;&nbsp;<span class="email-span-wrap">przbg@abv.bg</span></p></li>
+            <li>За още информация, натиснете бутона!</li>
+          </ul>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button (click)="openDialog()" class="more-info-button" matTooltip="Още информация">ТУК</button>
+          <!-- <button mat-button>ТУК</button> -->
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div id="right-card" class="card-wrapper">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div class="header-wrap">
+            <h2>Контактна <span class="span-form-color">Форма</span></h2>
+          </div>
+        </mat-card-header>
+
+        <form class="create-form" [formGroup]="contactForm" novalidate (ngSubmit)="onSubmit(contactForm.value)">
+          <mat-card-content>
+            <div class="example-container">
+              <mat-form-field class="input-style" appearance="outline">
+                <mat-label>Вашето име</mat-label>
+                <input matInput placeholder="Име" class="form-control" formControlName="name" required minlength="2">
+                <mat-icon matSuffix >person</mat-icon>
+                <mat-error *ngFor="let validation of validationMessages.name">
+                  <mat-error id="error-name" *ngIf="contactForm.get('name').hasError(validation.type) && (contactForm.get('name').dirty || contactForm.get('name').touched)">{{validation.message}}</mat-error>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="example-container">
+              <mat-form-field class="input-style" appearance="outline">
+                <mat-label>Относно</mat-label>
+                <input matInput placeholder="Тема" class="form-control" formControlName="subject" required minlength="3">
+                <mat-icon matSuffix >feedback</mat-icon>
+                <mat-error *ngFor="let validation of validationMessages.subject">
+                  <mat-error id="error-subject" *ngIf="contactForm.get('subject').hasError(validation.type) && (contactForm.get('subject').dirty || contactForm.get('subject').touched)">{{validation.message}}</mat-error>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="example-container">
+              <mat-form-field appearance="outline">
+                <mat-label>Въведете Вашият Email</mat-label>
+                <input matInput placeholder="pat@example.com" formControlName="email" required email>
+                <mat-icon matSuffix >email</mat-icon>
+                <mat-error *ngFor="let validation of validationMessages.email">
+                  <mat-error id="error-email" *ngIf="contactForm.get('email').hasError(validation.type) && (contactForm.get('email').dirty || contactForm.get('email').touched)">{{validation.message}}</mat-error>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="example-container">
+              <mat-form-field appearance="outline">
+                <mat-label>Текст</mat-label>
+                <textarea matInput rows="4" cols="50" formControlName="text" required  maxlength="5000"></textarea>
+                <mat-icon matSuffix >message</mat-icon>
+                <mat-error *ngFor="let validation of validationMessages.text">
+                  <mat-error id="error-text" *ngIf="contactForm.get('text').hasError(validation.type) && (contactForm.get('text').dirty || contactForm.get('text').touched)">{{validation.message}}</mat-error>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <re-captcha formControlName="captcha" required
+              (resolved)="resolved($event)"
+              siteKey="6LcOuyYTAAAAAHTjFuqhA52fmfJ_j5iFk5PsfXaU"
+            ></re-captcha>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button class="submit-button" color="primary" type="submit" [disabled]="!contactForm.valid">ИЗПРАТИ</button>
+          </mat-card-actions>
+        </form>
+
+
+      </mat-card>
+    </div>
+  </div>
+</section>

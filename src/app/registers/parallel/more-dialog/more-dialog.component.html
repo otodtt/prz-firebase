@@ -1,0 +1,49 @@
+<mat-dialog-content>
+  <div class="dialog-header" >
+      <h2>{{ data.data.product }}</h2>
+  </div>
+  <mat-card class="example-card card-top">
+      <mat-card-content>
+              <p>Заявител/Притежател на Разрешението:</p>
+              <p class="bold">{{ data.data.owner }}</p>
+      </mat-card-content>
+  </mat-card>
+
+  <mat-card class="example-card card-top">
+    <mat-card-content>
+          <div class="my-header"><p class="bold">ДАННИ ЗА ПРОДУКТА</p></div>
+          <p class="bold">{{ data.data.product }}</p>
+          <hr>
+          <p>Активно вещество:</p>
+          <p class="bold">{{ data.data.substances }}</p>
+          <hr>
+          <p>№ на удостоверението за паралелна търговия:</p>
+          <p class="bold">{{ data.data.parallelTrade }}</p>
+          <hr>
+          <p>Валидност на удостоверението:</p>
+          <p *ngIf="data.data.validParallelTrade !== '*'" class="bold">{{ data.data.validParallelTrade }}</p>
+          <p *ngIf="data.data.validParallelTrade === '*'" class="bold">* - Продукт за растителна защита в процес на подновяване на разрешението</p>
+          <hr>
+          <p>Допълнителни бележки:</p>
+          <p class="bold">{{ data.data.note }}</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="example-card">
+      <mat-card-content>
+          <div class="my-header"><p class="bold">ДАННИ ЗА РЕФЕРЕНТНИЯ ПРОДУКТ</p></div>
+          <p>Продукт: <span class="bold">{{ data.data.referenceProduct }}</span></p>
+          <hr>
+          <p>№ на удостоверението и валидност на референтния продукт:</p>
+          <p class="bold">{{ data.data.validReferenceProduct }}</p>
+      </mat-card-content>
+  </mat-card>
+
+  <p style="font-size: 10px;">* - Продукт за растителна защита в процес на подновяване на разрешението</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button (click)="onNoClick()" matTooltip="Затвори">
+    <mat-icon aria-label="Назад">power_settings_new</mat-icon>
+    <span> Затвори</span>
+  </button>
+</mat-dialog-actions>

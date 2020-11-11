@@ -1,0 +1,315 @@
+<div class="row text-center" id="prz-loader" *ngIf="!practices">
+    <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
+</div>
+
+<div *ngIf="practices" id="wrap_lmenu_txt">
+    <div class="text-center name-header">
+        <h2 class="customfont">ЗЕЛЕНЧУЦИ НА ОТКРИТО</h2>
+    </div>
+    <div class="row-top">
+        <div class="text-center" id="content-logo">
+            <h4 id="forest">МИНИСТЕРСТВО НА ЗЕМЕДЕЛИЕТО И ГОРИТЕ</h4>
+            <h4 id="plant-protect">НАЦИОНАЛНА СЛУЖБА ЗА РАСТИТЕЛНА ЗАЩИТА</h4>
+        </div>
+    </div>
+    <div class="row text-right">
+        <img id="stamp" src="../../../../../assets/img/my_images/stamp_director.png" alt="печат и подпис на директор" />
+    </div>
+    <div class="row text-center">
+        <h1 >ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА ПРИ ЛУКОВИ КУЛТУРИ</h1>
+    </div>
+    <div class="row text-right">
+        <p class="number-eppo">№ на НСРЗ ДРЗП 2/045(1)</p>
+        <p class="number-eppo">№ на БРРО РР 2/4(2)</p>
+    </div>
+    <div class="row">
+        <div id="authors-wrap">
+            <p ><span class="bold authors">Авторски колектив :</span><br/>
+                ст.н.с.II ст. д-р Никола Николов<br/>
+                ст.н.с. I ст. д.с.н. Невена Богацевска<br/>
+                ст.н.с.II ст. д-р Димитринка Христова<br/>
+                ст.н.с.II ст. д-р Оля Караджова<br/>
+                ст.н.с.II ст. д-р Василка Николова<br/>
+                н.с.I ст. д-р Ваньо Иванов<br/>
+                д-р Петър Николов - НСРЗ<br/>
+                Екатерина Томева - НСРЗ<br/>
+            </p>
+        </div>
+    </div>
+    <div class="row text-center">
+        <span class="year bold">СОФИЯ 2006 г.</span>
+    </div>
+    <div class="row text-center">
+        <h2 >ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА ПРИ ЛУКОВИ КУЛТУРИ*</h2>
+    </div>
+
+    <!--Специфична сфера на действие-->
+    <div class="row">
+        <div class="text-indent">
+            <h3 >Специфична сфера на действие</h3>
+            <p>Този стандарт очертава принципите на Добрата растителнозащитна практика при лукови култури (чесън, лук, праз)</p>
+            <h3 >Специфично одобрение и поправка</h3>
+            <p >Първоначално одобрена през септември 2005 г. от НСРЗ</p>
+            <br/>
+
+            <p >
+                Ръководството за добрата растителнозащитна практика при луковите култури представлява част
+                от ЕСОРЗ програмата за всички основни култури в ЕСОРЗ-региона. То е съобразено с
+                ЕСОРЗ-стандартите РР 2/1(2) - общи Принципи за добра растителнозащитна практика.
+                Ръководството съдържа методи за борба с вредителите при тези култури. Ръководството не
+                обхваща лукови култури, предназначени за семепроизводство или за посадъчен материал.
+            </p>
+            <p >
+                Луковите култури се отглеждат чрез семена (лук, праз), с разсад (праз) и вегетативно чрез
+                арпаджик и скилидки (лук и чесън). Според сроковете и начина на прибиране луковите култури
+                могат да бъдат разделени допълнително на лук за зелено и на лук за глави. У нас основно
+                се отглежда лук и чесън за глави, а в по-малки количества праз, лук и чесън за зелено.
+                Основа за ДРЗП е спазване на подходящо сеитбообращение и добра хигиена, в т.ч.
+                унищожаване на растителните остатъци. Третирането на луковите култури се извършва в
+                зависимост от начина на засаждане: обеззаразяване на семената или луковиците,
+                третиране на разсада преди засаждане на постоянно място или третиране на растенията.
+                Третирането на посадъчния материал е за предпочитане. Насажденията се обследват през
+                вегетацията за нападение от вредители по листата и луковиците. Третира се, когато степента
+                на нападение е над допустимите прагове на икономическа вредност. Има разработени прагове
+                за вредност за някои вредители по луковите култури и ДРЗП изисква те да бъдат прилагани.
+                Познати са и сортове с известна степен на устойчивост спрямо някои вредители. Понастоящем
+                няма подходящи средства за биологична борба срещу вредители по луковите култури.
+            </p>
+        </div>
+    </div>
+    <!--КРАЙ Специфична сфера на действие-->
+
+    <!-- Изтегляне на Приложения -->
+    <div class="row">
+        <div class="my_addendum text-indent">
+            <span class="span_addendum">
+                <a  class="href_addendum"
+                    rel="noopener noreferrer" target="_blank"
+                    href="../../../../../assets/practices/5-zelenchuci_otkrito-prilojenie.pdf"
+                >
+                    * Виж приложение 4
+                </a>
+            </span>
+        </div>
+    </div>
+    <!-- КРАЙ Изтегляне на Приложения -->
+
+    <!-- Избор на Вредител -->
+    <div class="aa-title" id="pest_menu"></div>
+    <div class="row">
+        <div id="pest_menu_links">
+            <h3 >Основни вредители при луковите култури са: </h3>
+            <ul id="menu_a">
+                <li>
+                    <a class="back_link" przAnchorTo target="#peronospora-destructor" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Мана по лука - <span class="latin_name">Peronospora destructor</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#sclerotium-cepivorum" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Бяло гниене по чесън, лук и праз - <span class="latin_name">Sclerotium cepivorum</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#botrytis-allii" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Шийно гниене по лука - <span class="latin_name">Botrytis allii, Botrytis byssoidea, Botrytis squamosa</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#botrytis-porri" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Сиво гниене по чесъна - <span class="latin_name">Botrytis porri</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#puccinia-alli" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Ръжди по лук и праз - <span class="latin_name">Puccinia alli, Puccinia porri</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#burkholderia-gladiol" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Сипкаво меко гниене - <span class="latin_name">Burkholderia gladioli pv. Allicolas</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#viruses" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Жълто вджуджаване по лука - <span class="latin_name">Onion yellow dwarf potyvirus-OYDV</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#viruses" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Доматена бронзовост по лука - <span class="latin_name">Tomato spotted wilt tospovirus - TSWV</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#delia-antiqua" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Лукова муха - <span class="latin_name">Delia antiqua</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#suilia-lurida" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Чеснова муха - <span class="latin_name">Suilia lurida</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#napomyza-gymnostoma" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Минираща муха по луковите култури - <span class="latin_name">Napomyza gymnostoma</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#thrips-tabaci" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Тютюнев трипс - <span class="latin_name">Thrips tabaci</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#cutworms" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Нощенки - <span class="latin_name">Cutworms, Helycoverpa armigera, Mamestra brassicae, M.oleracea), Autographa gamma</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#ditylenchus-allii" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Стъблена (лукова) нематода - <span class="latin_name">Ditylenchus allii (dipsaci)</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#galeruca-tanaceti" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Голям луков листояд - <span class="latin_name">Galeruca tanaceti</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#acrolepia-assectella" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Луков молец - <span class="latin_name">Acrolepia assectella</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#ceuthorrynchus" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Луков скритохоботник - <span class="latin_name">Ceuthorrynchus jakovlev</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#molluska" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Голи охлюви - <span class="latin_name">Molluska</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#grylotalpa-grylotalpa" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Попово прасе - <span class="latin_name">Grylotalpa grylotalpa</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#weed" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Плевели
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- КРАЙ Избор на Вредител -->
+
+    <div *ngFor="let practice of practices | async">
+        <div class="aa-title" id="{{practice?.linkId}}"></div>
+        <div class="row" >
+            <div class="pest-description-container text-indent" [innerHTML]="practice?.text  | safeHtml"></div>
+            <div class="pest-image-container" *ngIf="practice.images?.length > 0">
+                <ul class="products">
+                    <li *ngFor="let image of practice.images">
+                        <a data-lightbox="image" href="{{image.imgPath}}"
+                            data-title="{{image.imgTitle}}">
+                            <img threshold="200" loading="lazy" src="{{image.thumbPath}}"
+                                alt="{{image.thumbAlt}}" title="{{image.thumbTitle}}"/>
+                                <span class="title_thumb">{{image.bgName}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row-back">
+            <div class="col-md-6" *ngIf="practice?.tablePiv !== undefined">
+                <div class="panel-success text-center" >
+                    <div class="panel-heading">
+                        <button mat-button class="piv-button" (click)="openDialog(practice?.tablePiv)">
+                            <span class="full-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                            <span class="small-piv">ВИЖ ПИВ</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel-warning text-center">
+                    <div class="panel-heading ">
+                        <a mat-button class="back_link_bottom" przAnchorTo target="#pest_menu" title="към всички неприятели"> виж друг неприятел</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Автори на снимки -->
+    <br><br>
+    <div class="row">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-body my_panel-body">
+                    <p>
+                        <span class="bold">Снимка 1:</span><br>
+                        <span>By Howard F. Schwartz, Colorado State University, Bugwood.org - http://www.ipmimages.org/browse/detail.cfm?imgnum=5364057, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=10520404</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 2:</span><br>
+                        <span>Av Rasbak - Eget arbete, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=358054</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 3:</span><br>
+                        <span>By Rasbak at Dutch Wikipedia, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=3219061</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 4:</span><br>
+                        <span>By Udo Schmidt - Flickr: Galeruca tanaceti (Linné, 1758), CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=20014224</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 5:</span><br>
+                        <span>By No machine-readable author provided. Bogdan assumed (based on copyright claims). - No machine-readable source provided. Own work assumed (based on copyright claims)., CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=209764</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 6:</span><br>
+                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=998959</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 7:</span><br>
+                        <span>By Bidgee - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=9792633</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 8:</span><br>
+                        <span >By 4028mdk09 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11746444</span>
+                    </p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- КРАЙ Автори на снимки -->
+</div>
+

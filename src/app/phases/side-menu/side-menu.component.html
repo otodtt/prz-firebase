@@ -1,0 +1,57 @@
+<aside>
+    
+    <mat-nav-list>
+        <nav>
+            <mat-toolbar class="header-menu">
+                <span color="primary" >BBCH</span>
+                <span class="example-spacer"></span>
+                <button mat-mini-fab
+                    (click)="onCloseSideMenu()"
+                    color="warn" 
+                    id="close-btn-side-menu">
+                        <mat-icon  >close</mat-icon>
+                </button>
+            </mat-toolbar>
+            <ul class="nav" id="side-menu">
+                <li *ngFor="let page of pages; let i = index" 
+                [ngClass]="isActiveClass && checkPage === i ? 'active-group': '' ">
+                    <a mat-button
+                        *ngIf="page.subPage === null"
+                        [routerLink]="page.link"
+                        (click)="onCloseSideMenu()"
+                        (click)="addRemoveClass(i)"
+                        (click)="openClosePanel(page.id)"
+                        class="list-group-item">
+                            {{ page.name | uppercase }}
+                    </a>
+                    <a mat-button
+                        *ngIf="page.subPage !== null"
+                        (click)="openClosePanel(page.id)"
+                        class="list-group-item">
+                            <span class="example-spacer"></span>
+                            <mat-icon *ngIf="(!isOpenPanel || panelCheck !== page.id) && page.subPage !== null" class="example-icon">add</mat-icon>
+                            <mat-icon *ngIf="isOpenPanel && panelCheck === page.id && page.subPage !== null" class="example-icon open-panel">expand_less</mat-icon>
+                            {{ page.name | uppercase }}
+                    </a>
+                    <ul 
+                        id="panel{{page.id}}"
+                        class="nav-second-level"
+                        *ngIf="isOpenPanel && panelCheck === page.id"
+                    >
+                        <li *ngFor="let sp of  page.subPage; let is = index" 
+                        [ngClass]="checkSPIndex === is && checkPage === i ? 'active': '' ">
+                            <a mat-button 
+                                [routerLink]="sp.link" 
+                                class="list-group-item"
+                                (click)="onCloseSideMenu()"
+                                (click)="addClass(i, is)">
+                                <mat-icon class="example-icon-sub">navigate_next</mat-icon>
+                                {{ sp.subName }}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </mat-nav-list>
+</aside>

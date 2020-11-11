@@ -1,0 +1,88 @@
+:host ::ng-deep {
+    mat-dialog-content {
+        padding-bottom: 10px;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .latin_name {
+        font-style: italic;
+    }
+
+    .piv_table {
+        border: 1px solid #8f9e82;
+        th {
+            border: 1px solid #8f9e82;
+        }
+    }
+    .piv_table td {
+        border: 1px solid #8f9e82;
+    }
+    .piv_table thead {
+        background-color: #dff0d8;
+    }
+    .piv_table th {
+        text-align: center;
+        font-weight: 600 !important;
+        .small-name-piv {
+            display: none
+        }
+    }
+    .piv_table td {
+        text-align: left;
+        padding-left: 5px;
+        padding-right: 5px;
+        vertical-align: middle;
+    }
+    .piv_table>tbody>tr>td {
+        vertical-align: middle !important;
+    }
+    .piv_table .tr_name td {
+        text-align: center;
+        background-color: #f7f4d1;
+        font-weight: 300 !important;
+        color: #028102;
+    }
+    .piv_table .tr_name_pest td {
+        text-align: center;
+        background-color: #f7f4d1;
+        color: #3366FF;
+        font-weight: 300 !important;
+    }
+    .tr_hordeum {
+        font-weight: bolder;
+        background-color: #f0ffff;
+    }
+
+    @media (max-width: 480px){
+        .piv_table th {
+            .small-name-piv {
+                display: initial
+            }
+            .full-name-piv {
+                display: none
+            }
+        }
+    }
+    @media (max-width: 460px){
+        .piv_table {
+            font-size: 0.9em
+        }
+    }
+    @media (max-width: 400px){
+        .piv_table thead {
+            font-size: 0.8em
+        }
+        mat-dialog-content {
+            padding: 0 10px !important
+        }
+    }
+    @media (max-width: 360px){
+        .piv_table tbody {
+            font-size: 0.7em
+        }
+        mat-dialog-content {
+            padding: 0 5px !important
+        }
+    }
+}

@@ -1,0 +1,107 @@
+<section>
+    <div class="container">
+        <div class="row-header">
+            <h1>РЕПЕЛЕНТИ</h1>
+        </div>
+        <div class="example-container mat-elevation-z8">
+  
+          <div class="example-header">
+              <mat-form-field>
+                  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Филтър">
+              </mat-form-field>
+          </div>
+  
+          <mat-table #table [dataSource]="dataSource" class="example-table"
+                      matSort matSortActive="name" matSortDisableClear matSortDirection="asc">
+              <ng-container matColumnDef="name">
+                  <mat-header-cell *matHeaderCellDef
+                                  mat-sort-header
+                                  disableClear="true"
+                                  class="header-name">
+                      <span class="product-span">Продукт,<br/>Производител</span>
+                  </mat-header-cell>
+                  <mat-cell *matCellDef="let row">
+                          <p class="firm-name">{{ row.name }}</p>
+                  </mat-cell>
+              </ng-container>
+  
+              <ng-container matColumnDef="substances">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header>Активно<br/>вещество</mat-header-cell>
+                  <mat-cell *matCellDef="let row">
+                      <p class="cell_in">{{ row.substance | lowercase }}</p>
+                    </mat-cell>
+              </ng-container>
+  
+              <ng-container matColumnDef="dose">
+                <mat-header-cell *matHeaderCellDef
+                                mat-sort-header
+                                disableClear="true"
+                                class="header-dose">
+                    <span class="product-span">Доза/дка<br/>(концентрация)</span>
+                </mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    {{ row.dose }} {{ row.measure }}
+                </mat-cell>
+              </ng-container>
+  
+              <ng-container matColumnDef="disease">
+                <mat-header-cell *matHeaderCellDef
+                                mat-sort-header
+                                disableClear="true"
+                                class="header-disease">
+                    <span class="product-span">Култура, вредител<br/> приложение на продукта</span>
+                </mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <p >{{ row.disease }}</p>
+                </mat-cell>
+              </ng-container>
+  
+              <ng-container matColumnDef="period">
+                  <mat-header-cell *matHeaderCellDef
+                                  mat-sort-header
+                                  disableClear="true"
+                                  class="header-period">
+                      <span class="product-span">Карантинен<br/>срок в дни</span>
+                  </mat-header-cell>
+                  <mat-cell *matCellDef="let row">
+                      <p >{{ row.period }}</p>
+                  </mat-cell>
+              </ng-container>
+  
+              <ng-container matColumnDef="category">
+                  <mat-header-cell *matHeaderCellDef
+                                  mat-sort-header
+                                  disableClear="true"
+                                  class="header-category">
+                      <span class="product-span">Категория<br/>на употреба</span>
+                  </mat-header-cell>
+                  <mat-cell *matCellDef="let row">
+                      <p >{{ row.category }}</p>
+                  </mat-cell>
+              </ng-container>
+              
+              <ng-container matColumnDef="moreDetails">
+                  <mat-header-cell *matHeaderCellDef
+                                  disableClear="true"
+                                  class="header-moreDetails moreDetails">
+                  </mat-header-cell>
+                  <mat-cell *matCellDef="let row" class="moreDetails">
+                    <a mat-mini-fab (click)="openDialog(row)" class="more-info-button" matTooltip="Още информация">
+                      <i class="material-icons">subject</i>
+                    </a>
+                  </mat-cell>
+                </ng-container>
+  
+              <mat-header-row *matHeaderRowDef="displayedColumns" class="my-header-row"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+  
+          <mat-paginator #paginator
+                          [pageSize]="20"
+                          [pageSizeOptions]="[20, 50, 100]"
+                          [showFirstLastButtons]="true">
+          </mat-paginator>
+      </div>
+    </div>
+  </section>
+  

@@ -1,0 +1,303 @@
+<div class="row text-center" id="prz-loader" *ngIf="!practices">
+    <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
+</div>
+
+<div *ngIf="practices" id="wrap_lmenu_txt">
+    <div class="text-center name-header">
+        <h2 class="customfont">ЯГОДОПЛОДНИ КУЛТУРИ</h2>
+    </div>
+    <div class="row-top">
+        <div class="text-center" id="content-logo">
+            <h4 id="forest">МИНИСТЕРСТВО НА ЗЕМЕДЕЛИЕТО И ГОРИТЕ</h4>
+            <h4 id="plant-protect">НАЦИОНАЛНА СЛУЖБА ЗА РАСТИТЕЛНА ЗАЩИТА</h4>
+        </div>
+    </div>
+    <div class="row text-right">
+        <img id="stamp" src="../../../../../assets/img/my_images/stamp_director.png" alt="печат и подпис на директор" />
+    </div>
+    <div class="row text-center">
+        <h1 >ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА ПРИ КАСИС</h1>
+    </div>
+    <div class="row text-right">
+        <p class="number-eppo">№ на НСРЗ ДРЗП 2/093(1)</p>
+        <p class="number-eppo">№ на ЕРРО РР 2/26(1)</p>
+    </div>
+    <div class="row">
+        <div id="authors-wrap">
+            <p ><span class="bold authors">Авторски колектив :</span><br/>
+                ст.н.с.II ст. д-р Ньонка Велчева<br/>
+                ст.н.с.I ст. д.с.н. Никола Атанасов<br/>
+                ст.н.с.II ст. д-р Нонка Бакърджиева<br/>
+                ст.н.с.II ст. д-р Ганка Баева<br/>
+                н.с. д-р Елена Цолова<br/>
+                д-р Петър Николов - НСРЗ<br/>
+                Маргарита Ценова - НСРЗ
+            </p>
+        </div>
+    </div>
+    <div class="row text-center">
+        <span class="year bold">СОФИЯ 2006 г.</span>
+    </div>
+    <div class="row text-center">
+        <h2 >ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА ПРИ КАСИС*</h2>
+    </div>
+
+    <!--Специфична сфера на действие-->
+    <div class="row">
+        <div class="text-indent">
+            <h3 >Специфична сфера на действие</h3>
+            <p>Този стандарт очертава принципите на Добрата растителнозащитна практика при касис.</p>
+            <h3 >Специфично одобрение и поправка</h3>
+            <p >Първоначално одобрена през септември 2005 г. от НСРЗ</p>
+            <br/>
+            <p>
+                Основната цел на тази технология е да представи една добра растителнозащитна практика (ДРЗП)
+                за опазване на касисовите насаждения от болести, неприятели и плевели.
+            </p>
+            <p>
+                ДРЗП включва всички възможни методи за борба с вредителите по касисовата култура. Целта им е
+                намаляване или унищожаване на популациите неприятели, болести и плевели и получаване на
+                високи добиви с добро качество.
+            </p>
+            <p>
+                Добрата растителнозащитна практика за касиса се основава на следните по-важни принципи:
+            </p>
+            <p>
+                - използване на сертифициран и свободен от вирусни и микоплазмени болести здрав посадъчен материал;
+            </p>
+            <p>
+                - засаждане на сортове, устойчиви към основните болести и неприятели;
+            </p>
+            <p>
+                - правилен избор на подходящи площи за нови насаждения;
+            </p>
+            <p>
+                - спазване на всички основни агротехнически мероприятия за отглеждане на културата (мястото
+                за засаждане да е изцяло изложено на слънчева светлина и да осигурява добра въздушна
+                циркулация, да е добре защитено от отрицателните температури през зимните месеци, почвата да
+                е с добър въздушен дренаж);
+            </p>
+            <p>
+                От френските грозда у нас се отглеждат основно черен касис, следван от червен и бял касис.
+            </p>
+        </div>
+    </div>
+    <!--КРАЙ Специфична сфера на действие-->
+
+    <!-- Изтегляне на Приложения -->
+    <div class="row">
+        <div class="my_addendum text-indent">
+            <span class="span_addendum">
+                <a  class="href_addendum"
+                    rel="noopener noreferrer" target="_blank"
+                    href="../../../../../assets/practices/8-jagodoplodni-prilojenie.pdf"
+                >
+                    * Виж приложение 7
+                </a>
+            </span>
+        </div>
+    </div>
+    <!-- КРАЙ Изтегляне на Приложения -->
+
+    <!-- Избор на Вредител -->
+    <div class="aa-title" id="pest_menu"></div>
+    <div class="row">
+        <div id="pest_menu_links">
+            <h3 >Основни вредители по касиса са:</h3>
+            <ul id="menu_a">
+                <li>
+                    <a class="back_link" przAnchorTo target="#sphaerotheca" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Американска брашнеста мана - <span class="latin_name">Sphaerotheca morsuvae</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#drepanopeziza" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Антракноза - <span class="latin_name">Drepanopeziza ribis</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#mycosphaerella" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Септориоза - <span class="latin_name">Mycosphaerella ribis</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#cronartium" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Ръжди - <span class="latin_name">Cronartium ribicola, Puccinia ribes</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#verticillum" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Вертицилийно увяхване - <span class="latin_name">Verticillum wilt</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#botryotinia" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Сиво гниене - <span class="latin_name">Botryotinia fuckeliana</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#synanthedon" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Касисова стъкленка - <span class="latin_name">Synanthedon tipuliformis</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#agrilus" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Касисов агрилус - <span class="latin_name">Agrilus ribesi</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#cecidophyopsis" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Касисов пъпков акар - <span class="latin_name">Cecidophyopsis ribis</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#dasyneura" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Касисова листна галица - <span class="latin_name">Dasyneura tetensi</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#abraxas" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Бодлива педомерка - <span class="latin_name">Abraxas grossulariata</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#operophtera" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Малка зимна педомерка - <span class="latin_name">Operophtera brumata</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#tetranychus" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Паяжинообразуващи акари
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#aphididae" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Листни въшки - <span class="latin_name">Aphididae</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#nematus" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Листни оси
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#weed" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Плевели
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- КРАЙ Избор на Вредител -->
+
+    <div *ngFor="let practice of practices | async">
+        <div class="aa-title" id="{{practice?.linkId}}"></div>
+        <div class="row" >
+            <div class="pest-description-container text-indent" [innerHTML]="practice?.text  | safeHtml"></div>
+            <div class="pest-image-container" *ngIf="practice.images?.length > 0">
+                <ul class="products">
+                    <li *ngFor="let image of practice.images">
+                        <a data-lightbox="image" href="{{image.imgPath}}"
+                            data-title="{{image.imgTitle}}">
+                            <img threshold="200" loading="lazy" src="{{image.thumbPath}}"
+                                alt="{{image.thumbAlt}}" title="{{image.thumbTitle}}"/>
+                                <span class="title_thumb">{{image.bgName}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row-back">
+            <div class="col-md-6" *ngIf="practice?.tablePiv !== undefined">
+                <div class="panel-success text-center" >
+                    <div class="panel-heading">
+                        <button mat-button class="piv-button" (click)="openDialog(practice?.tablePiv)">
+                            <span class="full-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                            <span class="small-piv">ВИЖ ПИВ</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel-warning text-center">
+                    <div class="panel-heading ">
+                        <a mat-button class="back_link_bottom" przAnchorTo target="#pest_menu" title="към всички неприятели"> виж друг неприятел</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Автори на снимки -->
+    <br><br>
+    <div class="row">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-body my_panel-body">
+                    <p>
+                        <span class="bold">Снимка 1:</span><br>
+                        <span>By Jerzy Opioła - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=50748663</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 2:</span><br>
+                        <span>By Whitney Cranshaw, Colorado State University, Bugwood.org - This image is Image Number 5007013 at Insect Images, a source for entomological images operated by The Bugwood Network at the University of Georgia and the USDA Forest Service.(cropped), CC BY 3.0 us, https://commons.wikimedia.org/w/index.php?curid=6748279</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 3:</span><br>
+                        <span>By Gyorgy Csoka, Hungary Forest Research Institute, Bugwood.org - This image is Image Number 1231259 at Insect Images, a source for entomological images operated by The Bugwood Network at the University of Georgia and the USDA Forest Service.(cropped, rotated), CC BY 3.0 us, https://commons.wikimedia.org/w/index.php?curid=6748378</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 4:</span><br>
+                        <span>By AfroBrazilian - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=26873108</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 5:</span><br>
+                        <span>Av Notafly - Eget arbete, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=15032039</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 6:</span><br>
+                        <span>By Acélan - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=7113562</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 7:</span><br>
+                        <span>By Gilles San Martin - originally posted to Flickr as Tetranychus urticae with silk threads, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=11208762</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 8:</span><br>
+                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=998959</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 9:</span><br>
+                        <span >By Stefan.lefnaer (Own work) [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 10:</span><br>
+                        <span >By 4028mdk09 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11746444</span>
+                    </p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- КРАЙ Автори на снимки -->
+</div>

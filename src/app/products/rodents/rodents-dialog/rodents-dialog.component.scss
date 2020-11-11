@@ -1,0 +1,57 @@
+.bold {
+    font-weight: bolder;
+}
+.note {
+    text-decoration: underline;
+}
+.afterNote {
+    font-size: 0.9em;
+}
+p {
+    -webkit-margin-before: .3em;
+    -webkit-margin-after: .8em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+.against {
+    text-decoration: underline;
+    font-size: 0.9em;
+}
+hr {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.dialog-header {
+    background: #638b34;
+    color: rgb(255, 255, 255);
+    padding: 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+    text-align: center; 
+    h2 {
+        margin: 0;
+        width: 100%;
+        font-size: 1em;
+    }
+    .firm-name {
+        margin: 0;
+        font-size: 0.8em;
+        color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+    }
+}
+.my-header {
+    text-align: center; 
+}
+
+.example-card {
+    margin-bottom: 10px;
+    background: rgba(133, 133, 133, 0.1);
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+.mat-raised-button {
+    margin-bottom: 10px;
+}

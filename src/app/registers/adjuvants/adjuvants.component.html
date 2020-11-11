@@ -1,0 +1,84 @@
+<section>
+    <div class="container">
+        <div class="row-header">
+            <h1>РЕГИСТЪР НА ИЗПОЛЗВАНИТЕ АДЮВАНТИ В РЕПУБЛИКА БЪЛГАРИЯ</h1>
+        </div>
+        <div class="example-container mat-elevation-z8">
+            <div class="example-loading-shade"
+                *ngIf="isLoadingResults || isRateLimitReached">
+                <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+                <div class="example-rate-limit-reached" *ngIf="isRateLimitReached">
+                    Моля, презаредете страницата отново!
+                </div>
+            </div>
+
+            <div class="example-header">
+                <mat-form-field>
+                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Филтър">
+                </mat-form-field>
+            </div>
+
+            <mat-table #table [dataSource]="dataSource" class="example-table"
+                        matSort matSortActive="name" matSortDisableClear matSortDirection="asc">
+
+                <ng-container matColumnDef="name">
+                    <mat-header-cell *matHeaderCellDef
+                                    mat-sort-header
+                                    disableClear="true"
+                                    class="header-name my-header-row">
+                        <span>Търговско<br/>наименование</span>
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let row" class="header-name">
+                        <p  [innerHTML]="row.name | safeHtml" ></p>
+                    </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="owner">
+                    <mat-header-cell *matHeaderCellDef class="header-owner my-header-row" >
+                        <span >Лицето, което<br/>пуска на пазара</span>
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let row" class="header-owner">
+                        <p class="firm-name">{{ row.owner }}</p>
+                    </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="action">
+                    <mat-header-cell *matHeaderCellDef class="header-action my-header-row">
+                        <span>Начин на действие</span>
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let row" class="header-action">
+                        <p [innerHTML]="row.action | safeHtml"></p>
+                    </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="crops">
+                    <mat-header-cell *matHeaderCellDef class="header-crops my-header-row">
+                        <span>Култури</span>
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let row" class="header-crops">
+                        <p *ngIf="row.crops !== undefined" class="product-crops" [innerHTML]="row.crops | safeHtml" ></p>
+                    </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="moreDetails">
+                    <mat-header-cell *matHeaderCellDef class="header-moreDetails moreDetails"></mat-header-cell>
+                    <mat-cell *matCellDef="let row" class="moreDetails">
+                        <a mat-mini-fab (click)="openDialog(row)" class="more-info-button" matTooltip="Още информация">
+                            <i class="material-icons">subject</i>
+                        </a>
+                    </mat-cell>
+                </ng-container>
+
+                <mat-header-row *matHeaderRowDef="displayedColumns" class="my-header-row"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+
+            <mat-paginator #paginator
+                            [pageSize]="10"
+                            [pageSizeOptions]="[20, 50, 100]"
+                            [showFirstLastButtons]="true">
+            </mat-paginator>
+        </div>
+    </div>
+</section>
+

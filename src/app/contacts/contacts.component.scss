@@ -1,0 +1,183 @@
+.row-header {
+  h1 {
+    font-size: 1.5em;
+    color: #008000;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+#contact-form-wrapper{
+  border: 1px solid #d2d2d2;
+  margin: auto;
+  margin-top: 20px;
+  width: 95%;
+  padding: 10px;
+  position: relative;
+  height: 570px;
+  #left-card {
+    text-align: center;
+    float: right;
+    .header-wrap {
+      width: 100%;
+      h2 {
+        margin-top: 0;
+        font-size: 1.3em;
+      }
+    }
+    mat-card-content {
+      text-align: left;
+      mat-icon {
+        color: #2957a1;
+      }
+
+      li {
+        list-style: none;
+        p {
+          .email-span-wrap {
+            font-weight: bolder;
+            padding-top: 3px;
+            position: absolute;
+          }
+        }
+      }
+    }
+
+  }
+  #right-card{
+    float: left;
+    .header-wrap {
+      width: 100%;
+      h2 {
+        margin-top: 0;
+        font-size: 1.3em;
+      }
+    }
+  }
+  .card-wrapper {
+    display: block;
+    width: 49%;
+    margin: auto;
+    text-align: center;
+    height: 95%;
+    .example-card{
+      margin: auto;
+      height: 100%;
+      .span-form-color {
+        color: #008000;
+      }
+    }
+  }
+}
+
+.create-page {
+  padding: 20px 60px;
+  .page-content {
+    background-color: #FFF;
+    .create-form {
+      padding: 20px;
+      .submit-button-container {
+        justify-content: flex-end;
+        .submit-button{
+          width: 100%;
+        }
+      }
+      .input-style{
+        width: 100%;
+      }
+      .mat-error {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+/*==================
+  ЗА ФОРМАТА
+====================*/
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+
+}
+
+.mat-form-field {
+  display: initial;
+  mat-icon {
+    color: #2957a1;
+  }
+}
+
+
+/*==================
+  RESPONSIVE
+====================*/
+@media (min-width: 1201px) {}
+
+/* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
+@media (min-width: 1025px) and (max-width: 1200px) {}
+
+/* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px*/
+@media (min-width: 768px) and (max-width: 1024px) {}
+
+/* ##Device = Tablets, Ipads (landscape) ##Screen = B/w 768px to 1024px*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px*/
+
+@media (min-width: 769px) {
+  #left-card {
+    ul {
+      padding-left: 0;
+    }
+  }
+}
+@media (max-width: 768px) {
+    #contact-form-wrapper {
+      position: inherit;
+      height: auto;
+      #left-card {
+        float: none;
+        width: 80%;
+        margin-bottom: 20px;
+        ul {
+          padding-left: 2%;
+        }
+      }
+      #right-card{
+        float: none;
+        width: 80%;
+    }
+  }
+}
+@media (max-width: 600px) {
+  #contact-form-wrapper {
+    #left-card {
+      width: 95%;
+      ul{
+        padding-left: 1%;
+      }
+    }
+    #right-card{
+      width: 95%;
+    }
+  }
+}
+/* ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px*/
+@media (max-width: 480px) {
+  #contact-form-wrapper {
+    #left-card {
+      width: 100%;
+      ul{
+        padding: 0;
+      }
+    }
+    #right-card{
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 317px) and  (max-width: 324px){}
+
+@media (max-width: 316px){}

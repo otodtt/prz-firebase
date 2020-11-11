@@ -1,0 +1,232 @@
+.container {
+  width: 95%;
+  margin: 0 auto;
+  min-height: 800px;
+  .row-header{
+    .big-h1-text, .small-h1-text {
+      font-size: 1.5em;
+      color: #008000;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/* Structure */
+.example-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.example-header {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+}
+.mat-form-field {
+  font-size: 14px;
+}
+
+.example-table {
+  overflow: auto;
+  min-height: 300px;
+}
+
+.mat-header-cell > .mat-sort-header-container > .mat-sort-header-arrow {
+color: white !important;
+}
+
+.my-header-row > * {
+justify-content: center;
+background-color:rgb(110, 110, 110);
+color: white !important;
+}
+
+
+.mat-header-cell:first-of-type {
+padding-left: 0;
+}
+
+::ng-deep .mat-sort-header-arrow {
+color: white !important;
+}
+
+.moreDetails {
+  max-width: 5%;
+  justify-content: center;
+  .more-info-button {
+    background-color: white;
+    .material-icons {
+      color: #315807;
+    }
+  }
+}
+
+.mat-row:nth-child(2n+1){
+background: #f1f8e9;
+}
+.mat-row:nth-child(2n){
+  background-color: #dcedc8;
+}
+
+.mat-cell {
+padding-left: 5px;
+padding-right: 5px;
+border-left: 1px solid white;
+}
+
+.mat-cell:first-of-type {
+  border-left: none;
+}
+
+.small-h1-text {
+display: none;
+}
+
+@media (min-width: 1201px) {}
+
+/* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
+@media (min-width: 1025px) and (max-width: 1200px) {}
+
+/* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px*/
+@media (min-width: 768px) and (max-width: 1024px) {
+.mat-column-category {
+  display: none;
+}
+.mat-column-period {
+  display: none;
+}
+
+.mat-column-moreDetails {
+  max-width: 15%;
+}
+
+.small-h1-text {
+  display: none;
+}
+}
+
+/* ##Device = Tablets, Ipads (landscape) ##Screen = B/w 768px to 1024px*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+.mat-column-category {
+  display: none;
+}
+.mat-column-period {
+  display: none;
+}
+
+.mat-column-moreDetails {
+  max-width: 15%;
+}
+
+.small-h1-text {
+  display: none;
+}
+}
+
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px*/
+@media (min-width: 501px) and (max-width: 767px) {
+.mat-column-category {
+  display: none;
+}
+.mat-column-period {
+  display: none;
+}
+.mat-column-disease {
+  display: none;
+}
+
+.mat-column-moreDetails {
+  max-width: 15%;
+}
+
+.small-h1-text {
+  display: none;
+}
+}
+/* ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px*/
+@media  (min-width: 325px) and (max-width: 500px) {
+.mat-column-category {
+  display: none;
+}
+.mat-column-period {
+  display: none;
+}
+.mat-column-disease {
+  display: none;
+}
+.mat-column-dose{
+  display: none;
+}
+.mat-column-moreDetails {
+  max-width: 15%;
+}
+
+.small-h1-text {
+  display: block;
+}
+.big-h1-text {
+  display: none;
+}
+}
+
+@media (min-width: 317px) and  (max-width: 324px){
+.mat-column-category {
+  display: none;
+}
+.mat-column-period {
+  display: none;
+}
+.mat-column-disease {
+  display: none;
+}
+.mat-column-dose{
+  display: none;
+}
+.mat-column-substances{
+  display: none;
+}
+.mat-column-moreDetails {
+  max-width: 30%;
+}
+
+.small-h1-text {
+  display: block;
+}
+.big-h1-text {
+  display: none;
+}
+}
+
+@media (max-width: 316px){
+.mat-column-category {
+  display: none;
+}
+.mat-column-period {
+  display: none;
+}
+.mat-column-disease {
+  display: none;
+}
+.mat-column-dose{
+  display: none;
+}
+.mat-column-substances{
+  display: none;
+}
+.mat-column-moreDetails {
+  max-width: 35%;
+}
+.small-h1-text {
+  display: block;
+}
+.big-h1-text {
+  display: none;
+}
+}

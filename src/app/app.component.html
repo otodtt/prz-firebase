@@ -1,0 +1,15 @@
+<mat-sidenav-container>
+  <mat-sidenav #snav mode="over" fixedInViewport fixedTopGap="0" fixedBottomGap="0" color="primary" position="end">
+    <prz-side-nav (navClose)="snav.toggle()"></prz-side-nav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <prz-scroll-button></prz-scroll-button>
+    <header>
+      <prz-header (navToggle)="snav.toggle()"></prz-header>
+    </header>
+    <router-outlet></router-outlet>
+    <prz-footer></prz-footer>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

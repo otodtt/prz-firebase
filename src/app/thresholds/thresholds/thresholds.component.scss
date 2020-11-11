@@ -1,0 +1,69 @@
+.example-header {
+    padding-top: 3px;
+    padding-bottom: 8px;
+    padding-left: 0;
+    margin-top: 5px;
+}
+.mat-drawer {
+    width: 290px;
+    padding-right: 8px;
+}
+.search-field {
+    position: absolute;
+    right: 0;
+    top: -5px;
+}
+article {
+    overflow: hidden;
+}
+
+h1, h2 {
+    color: #008000;
+    text-align: center
+}
+h3 {
+    color: #008000;
+    margin: 0;
+}
+.my-dialog-title {
+    margin: 0;
+    font-size: 1em;
+    font-weight: bolder;
+}
+.panel-body {
+    padding: 0 20px;
+}
+.button-wrap {
+    padding-bottom: 40px;
+    .mat-button {
+        margin-left: 16px;
+        padding: 0;
+    }
+}
+.btn-text {
+    font-size: 20px;
+    color: #33691E;
+}
+.btn-text-small {
+    display: none;
+    font-size: 20px;
+    color: #33691E;
+}
+.mat-icon {
+    color: #33691E;
+}
+.bold {
+    font-weight: bolder
+}
+@media (max-width: 481px) {
+    .mat-drawer {
+        width: initial;
+        padding-right: 8px;
+    }
+    .btn-text {
+        display: none;
+    }
+    .btn-text-small {
+        display: initial;
+    }
+}

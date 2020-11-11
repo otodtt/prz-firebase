@@ -1,0 +1,21 @@
+.image-content-1 {
+    content:url('../../../../../assets/phases/technical/beet.jpg');
+}
+
+@media (max-width: 320px) {
+    .image-content-1 {
+        content:url('../../../../../assets/phases/technical/beet_320px.jpg');
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    .image-content-1 {
+        content:url('../../../../../assets/phases/technical/beet_481px.jpg');
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+    .image-content-1 {
+        content:url('../../../../../assets/phases/technical/beet_768px.jpg');
+    }
+}

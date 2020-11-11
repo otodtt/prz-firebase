@@ -1,0 +1,47 @@
+<mat-dialog-content>
+    <div class="dialog-header" >
+      <h2>{{ data.data.name }}</h2>
+    </div>
+    <mat-card class="example-card card-top">
+      <mat-card-content>
+        <p>Производител:</p>
+        <p class="bold">{{ data.data.firmName }}</p>
+      </mat-card-content>
+    </mat-card>
+  
+    <mat-card class="example-card card-top">
+      <mat-card-content>
+        <div class="my-header"><p class="bold">ДАННИ ЗА ПРОДУКТА</p></div>
+        <p class="bold">{{ data.data.name }}</p>
+        <hr>
+        <p>Активно вещество:</p>
+        <p class="bold">{{ data.data.substance }}</p>
+        <hr>
+        <!-- <p>№ на удостоверението за паралелна търговия:</p> -->
+        <p class="bold">{{ data.data.permission }}</p>
+        <!-- <p>Доза/дка (концентрация):</p> -->
+        <p *ngIf="data.data.valid !== null" class="bold">{{ data.data.valid }}</p>
+        <hr>
+        <p>Доза/дка (концентрация):</p>
+        <p class="bold">{{ data.data.dose }} {{ data.data.measure }}</p>
+        <hr>
+        <p>Култура, вредител и моменти на приложение на продукта:</p>
+        <p class="bold">{{ data.data.disease }}</p>
+        <hr>
+        <p>Карантинен срок в дни:</p>
+        <p class="bold">{{ data.data.period }}</p>
+        <hr>
+        <p>Категория на употреба:</p>
+        <p *ngIf="data.data.category === 1" class="bold">Първа професионалана</p>
+        <p *ngIf="data.data.category === 2" class="bold">Втора професионалана</p>
+        <p *ngIf="data.data.category === 3" class="bold">Непрофесионална</p>
+        <p *ngIf="data.data.category !== 1 || data.data.category !== 2 || data.data.category !== 3" class="bold"> - </p>
+      </mat-card-content>
+    </mat-card>
+  
+    <p style="font-size: 10px;">* - Срокът на разрешението се продължава до приключване на процедурата по подновяване</p>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-raised-button (click)="onNoClick()">Затвори</button>
+  </mat-dialog-actions>
+  

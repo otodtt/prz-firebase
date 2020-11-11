@@ -1,0 +1,21 @@
+.image-content-1 {
+    content:url('../../../../assets/phases/citrus/citrus.jpg');
+}
+
+@media (max-width: 320px) {
+    .image-content-1 {
+        content:url('../../../../assets/phases/citrus/citrus_320px.jpg');
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    .image-content-1 {
+        content:url('../../../../assets/phases/citrus/citrus_481px.jpg');
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+    .image-content-1 {
+        content:url('../../../../assets/phases/citrus/citrus_768px.jpg');
+    }
+}

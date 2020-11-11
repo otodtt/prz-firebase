@@ -1,0 +1,85 @@
+<section>
+  <div class="container">
+    <div class="row-header">
+      <h1 id="big-h1">Регистър на използваните активни вещества и разрешените за пускане на пазара и употреба ПРЗ в Република България</h1>
+      <h1 id="small-h1">Регистър на използваните активни вещества</h1>
+    </div>
+    <div class="example-container mat-elevation-z8">
+      <div class="example-loading-shade" *ngIf="isLoadingResults || isRateLimitReached">
+        <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+        <div class="example-rate-limit-reached" *ngIf="isRateLimitReached">
+          Моля, презаредете страницата отново!
+        </div>
+      </div>
+
+      <div class="example-header">
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Филтър">
+        </mat-form-field>
+      </div>
+
+      <mat-table #table matSort matSortActive="name" matSortDisableClear matSortDirection="asc"
+        [dataSource]="dataSource" multiTemplateDataRows class="example-table">
+
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef mat-sort-header disableClear="true" class="header-name">
+            <span class="product-span">
+              <mat-icon>sort</mat-icon>
+            </span>
+          </mat-header-cell>
+          <mat-cell *matCellDef="let row">
+            <p class="row-name">
+              {{ row.name }}
+            </p>
+          </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="products">
+          <mat-header-cell *matHeaderCellDef mat-sort-header disableClear="true" class="header-products">
+            <span class="product-span">ПРОДУКТИ</span>
+          </mat-header-cell>
+          <mat-cell *matCellDef="let row; let isOdd=odd; let isEven=even">
+            <table class="my-in-table" [class.odd]="isOdd" [class.even]="isEven">
+              <tr *ngFor="let prod of row.products">
+                <td class="pesticide_type">
+                  <span *ngIf="prod.pesticide_type == 'fungicides'">Фунгицид</span>
+                  <span *ngIf="prod.pesticide_type == 'insecticides'">Инсектицид</span>
+                  <span *ngIf="prod.pesticide_type == 'acaricides'">Акарицид</span>
+                  <span *ngIf="prod.pesticide_type == 'nematocides'">Нематоцид</span>
+                  <span *ngIf="prod.pesticide_type == 'limatsides'">Лимацид</span>
+                  <span *ngIf="prod.pesticide_type == 'herbicides'">Хербицид</span>
+                </td>
+                <td class="pesticides_firms">
+                  <a matLine [routerLink]="[ '/products/' + prod.pesticide_type + '/' + prod.pesticides_id ]"
+                    matTooltip="Подробно за продукта">
+                    {{ prod.pesticide_name }}
+                  </a>
+                  <span> на фирма </span>
+                  <a matLine routerLink="../firms/{{prod.manufacturersId}}" matTooltip="Към фирмата">
+                    {{ prod.firmName | uppercase }}
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="moreDetails">
+          <mat-header-cell *matHeaderCellDef disableClear="true" class="header-moreDetails moreDetails">
+          </mat-header-cell>
+          <mat-cell *matCellDef="let row" class="moreDetails">
+            <a mat-mini-fab (click)="openDialog(row)" class="more-info-button" matTooltip="Още информация">
+                <i class="material-icons">subject</i>
+            </a>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="columnsToDisplay" class="my-header-row"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: columnsToDisplay;"></mat-row>
+      </mat-table>
+
+      <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[20, 50, 100]" [showFirstLastButtons]="true">
+      </mat-paginator>
+    </div>
+  </div>
+</section>

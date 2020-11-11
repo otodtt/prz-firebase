@@ -1,0 +1,53 @@
+<mat-toolbar class="example-header">
+    <button mat-mini-fab color="warn" (click)="onCloseMenu()">
+        <mat-icon id="close-btn" >close</mat-icon>
+    </button>
+    <span class="example-spacer"></span>
+    <span color="primary" class="bold">МЕНЮ</span>
+</mat-toolbar>
+<mat-nav-list>
+    <nav>
+        <div id="menu-wrap" >
+            <div id="menu-shown" [@rotatedState]='state' >
+                <ul class="nav-list" routerLinkActive="active-list">
+                    <li *ngFor="let page of pages; let i = index" >
+                        <a mat-button
+                            *ngIf="page.subPage !== null"
+                            [class.active]="isActiveClass && page.id == pageId"
+                            (click)="rotate(i)" rel="nofollow">
+                            <i class="material-icons">chevron_right</i>
+                            {{ page.name | uppercase}}
+                        </a>
+                        <a mat-button
+                            *ngIf="page.subPage === null"
+                            routerLink="/{{page.link}}"
+                            routerLinkActive="active"
+                            (click)="onCloseMenu()"
+                            (click)="removeClass()" rel="nofollow">
+                            {{ page.name | uppercase}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="menu-hidden" [@rotatedState]='stateSub'  >
+                <button mat-button *ngIf="isClicked" (click)="returnDefaultMenu()" class="returnButton">
+                    <i class="material-icons" id="mat-icon-chevron_left">arrow_drop_down_circle</i>
+                    <span > НАЗАД</span>
+                </button>
+                <ul class="nav-list" >
+                    <li *ngFor="let psp of subPages">
+                        <a mat-button
+                            routerLink="/{{psp.link}}"
+                            routerLinkActive="active"
+                            (click)="onCloseMenu()"
+                            (click)="addClass(psp.pageId)">
+                            {{psp.subName | uppercase}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</mat-nav-list>
+
+<!-- [ngClass]="(isActiveClass && page.id == i) ? 'active' : ''" -->

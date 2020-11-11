@@ -1,0 +1,15 @@
+:host ::ng-deep {
+    thead {
+        th {
+            border-bottom: 1px solid #ddd;
+        }
+    }
+    td {
+        border-bottom: 1px solid #ddd;
+        vertical-align: middle;
+        p, span {
+            margin-bottom: 0.5em !important;
+            margin-top: 0.5em !important;
+        }
+    }
+}

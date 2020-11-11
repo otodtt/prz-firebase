@@ -1,0 +1,3 @@
+# robots.txt генерирани от atozseotools.com
+User-agent: *
+Disallow: 

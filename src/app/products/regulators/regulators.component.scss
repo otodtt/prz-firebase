@@ -1,0 +1,24 @@
+.mat-header-cell{
+    background-color:rgb(110, 110, 110);
+    color: #ffffff !important;
+}
+
+@media (min-width: 317px) and  (max-width: 324px){
+    table {
+        tr {
+            .crops {
+                word-break: break-all;
+            }
+        }
+    }
+}
+
+@media (max-width: 316px){
+    table {
+        tr {
+            .crops {
+                word-break: break-all;
+            }
+        }
+    }
+}

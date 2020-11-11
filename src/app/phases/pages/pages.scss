@@ -1,0 +1,96 @@
+$black: rgb(0, 0, 0);
+$gray: rgb(231, 231, 231);
+
+h1, h2, h3, h4 {
+    color: #008000;
+}
+h4 {
+    margin-bottom: 5px;
+}
+p {
+    margin: 0;
+    margin-bottom: 1em;
+}
+.italic {
+    font-style: italic;
+}
+.row {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.text-center {
+    text-align: center;
+}
+.text-indent {
+    text-indent: 1.5em;
+}
+.text-indent-off {
+    text-indent: initial;
+}
+.span-indent {
+    padding-left: 1.5em;
+}
+
+/*=================
+    TABLES
+=================*/
+.my-table, .my-tables-in {
+    width: 100%;
+    border-bottom: 1px solid $black;
+    margin-bottom: 40px;
+    thead {
+        th {
+            border-bottom: 1px solid $black;
+            border-top: 1px solid $black;
+            padding-bottom: 5px;
+            padding-top: 5px;
+        }
+    }
+    tbody {
+        td {
+            border-bottom: 1px solid $gray;
+            padding-bottom: 3px;
+            padding-top: 3px;
+        }
+        .line-bold {
+            border-bottom: 1px solid $black;
+            border-top: 1px solid $black;
+        }
+        .line-up-bold {
+            border-top: 1px solid $black;
+        }
+        .line-bottom {
+            border-bottom: 1px solid $black;
+        }
+    }
+}
+/*=================
+    END TABLES
+=================*/
+
+.line-top {
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black
+}
+.image-conainer {
+    text-align: center;
+}
+.image_general {
+  max-width: 90%;
+  margin: 0 auto;
+  border: 2px solid rgb(170, 170, 170);
+}
+
+@media (max-width: 320px) {
+    .image_general {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    .image_general {
+        max-width: 100%;
+    }
+}

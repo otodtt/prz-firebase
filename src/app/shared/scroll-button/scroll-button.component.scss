@@ -1,0 +1,13 @@
+.scroll-btn {
+    display: none
+}
+.scrollToTop {
+    display: block;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+}
+mat-icon {
+    transform: rotate(-90deg)
+}

@@ -1,0 +1,20 @@
+<article>
+    <div class="container">
+        <div class="row-header">
+            <h1>ОЗНАЧЕНИЯ  ЗА  ИЗПОЛЗВАНИТЕ  В РЕПУБЛИКА БЪЛГАРИЯ ФОРМУЛАЦИИ</h1>
+        </div>
+        <div class="example-container mat-elevation-z8">
+            <table>
+                <tr *ngFor="let row of table; let isOdd=odd; let isEven=even"
+                    [class.odd]="isOdd" 
+                    [class.even]="isEven"
+                >
+                    <td class="position">{{ row.position }}</td>
+                    <td class="symbol">{{ row.symbol }}</td>
+                    <td class="latin">{{ row.latin }}</td>
+                    <td class="name">{{ row.name }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</article>

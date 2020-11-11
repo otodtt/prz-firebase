@@ -1,0 +1,52 @@
+<div id="{{changeId}}">
+  <div id="header-email" rowHeight="30px">
+    <span class="email">przbg@abv.bg</span>
+  </div>
+
+  <nav>
+    <mat-toolbar color="primary" [ngClass]="{'navbar-fixed-top': isScrollTop > 90 }">
+      <mat-toolbar-row>
+        <img src="../../../assets/img/small-logo.png" class="image-logo small-logo" alt="logo" title="logo png">
+        <img src="../../../assets/img/medium-logo.png" class="image-logo medium-logo" alt="logo" title="logo png">
+        <img src="../../../assets/img/big-logo.png" class="image-logo big-logo" alt="logo" title="logo png">
+        <span class="logo-text prz-text">ПРЗ</span><span class="logo-text bg-text">БГ</span>
+        <span class="example-spacer"></span>
+        <button mat-mini-fab id="navigation-button" color="primary" (click)="navOpen()" (click)="closeDrawerMenu()"
+          aria-label="Отваряне или затваряне на страничното меню.">
+          <mat-icon id="menu-icon">menu</mat-icon>
+        </button>
+
+        <mat-nav-list id="navigation-top">
+          <mat-list-item *ngFor="let page of pages" class="nav-list" routerLinkActive="nav-list-active">
+            <a matLine [innerHTML]="page.nameIcon | safeHtml" *ngIf="page.subPage === null" [routerLink]="page.link"
+              routerLinkActive="active" class="a-top" rel="nofollow">
+            </a>
+            <a matLine [innerHTML]="page.nameIcon | safeHtml" *ngIf="page.subPage !== null"
+              class="a-top active-non-link" rel="nofollow">
+            </a>
+            <button mat-icon-button *ngIf="page.subPage !== null" aria-label="Dropdown">
+              <mat-icon class="btn-active">expand_more</mat-icon>
+            </button>
+            <!-- Решение ако се скрива дропдаун менюто в ляво Виж хтмл -а! -->
+            <div *ngIf="page.subPage !== null" class="nav-dropdown" [ngClass]="page.link">
+              <!-- <div *ngIf="page.subPage !== null" class="nav-dropdown" > -->
+              <mat-list-item class="sub-menu" *ngFor="let sp of page.subPage">
+                <a matLine [routerLink]="sp.link" routerLinkActive="bottom-active" class="a-bottom">
+                  {{ sp.subName | uppercase }}
+                </a>
+              </mat-list-item>
+            </div>
+
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </nav>
+
+  <div class="bredacrumb">
+    <p class="p-in-header p-up">{{newBreadcrumbTitle}}</p><br />
+    <span class="p-in-header p-down">
+      <a class="bredacrumb-link" [routerLink]="['/home']" (click)="removeClass()" title="Линк към Начало">НАЧАЛО</a> / {{newBreadcrumbName}}
+    </span>
+  </div>
+</div>

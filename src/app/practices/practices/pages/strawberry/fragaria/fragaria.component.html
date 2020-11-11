@@ -1,0 +1,334 @@
+<div class="row text-center" id="prz-loader" *ngIf="!practices">
+    <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
+</div>
+
+<div *ngIf="practices" id="wrap_lmenu_txt">
+    <div class="text-center name-header">
+        <h2 class="customfont">ЯГОДОПЛОДНИ КУЛТУРИ</h2>
+    </div>
+    <div class="row-top">
+        <div class="text-center" id="content-logo">
+            <h4 id="forest">МИНИСТЕРСТВО НА ЗЕМЕДЕЛИЕТО И ГОРИТЕ</h4>
+            <h4 id="plant-protect">НАЦИОНАЛНА СЛУЖБА ЗА РАСТИТЕЛНА ЗАЩИТА</h4>
+        </div>
+    </div>
+    <div class="row text-right">
+        <img id="stamp" src="../../../../../assets/img/my_images/stamp_director.png" alt="печат и подпис на директор" />
+    </div>
+    <div class="row text-center">
+        <h1 >ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА ПРИ ЯГОДА</h1>
+    </div>
+    <div class="row text-right">
+        <p class="number-eppo">№ на НСРЗ ДРЗП 2/091(1)</p>
+        <p class="number-eppo">№ на ЕРРО РР 2/9(1)</p>
+    </div>
+    <div class="row">
+        <div id="authors-wrap">
+            <p ><span class="bold authors">Авторски колектив :</span><br/>
+                ст.н.с.II ст. д-р Ньонка Велчева<br/>
+                ст.н.с.I ст. д.с.н. Никола Атанасов<br/>
+                ст.н.с.II ст. д-р Нонка Бакърджиева<br/>
+                ст.н.с.II ст. д-р Ганка Баева<br/>
+                н.с. д-р Елена Цолова<br/>
+                д-р Петър Николов - НСРЗ<br/>
+                Маргарита Ценова - НСРЗ
+            </p>
+        </div>
+    </div>
+    <div class="row text-center">
+        <span class="year bold">СОФИЯ 2006 г.</span>
+    </div>
+    <div class="row text-center">
+        <h2 >ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА ПРИ ЯГОДА*</h2>
+    </div>
+
+    <!--Специфична сфера на действие-->
+    <div class="row">
+        <div class="text-indent">
+            <h3 >Специфична сфера на действие</h3>
+            <p>Този стандарт очертава принципите на Добрата растителнозащитна практика при ягода.</p>
+            <h3 >Специфично одобрение и поправка</h3>
+            <p >Първоначално одобрена през септември 2005 г. от НСРЗ</p>
+            <br/>
+            <p>
+                Добрата растителнозащитна практика при ягодата се основава на следните по-важни принципи:
+            </p>
+            <p>
+                - да се спазва сеитбооборотът и да не се засаждат ягоди след ягоди;
+            </p>
+            <p>
+                - разсадът да бъде здрав и произведен по сертификационна схема;
+            </p>
+            <p>
+                - да се спазват всички изисквания на агротехниката, за да се избегне заразяването на
+                новозасадените растения;
+            </p>
+            <p>
+                - сортовият състав да бъде правилно избран съобразно условията, при които се отглежда културата;
+            </p>
+            <p>
+                - да се засаждат сортове, устойчиви към повече от основните вредители по ягодата;
+            </p>
+            <p>
+                - новите насаждения трябва да бъдат максимално отдалечени от старите и свободни от почвени
+                вредители, нападащи ягодата, включително и многогодишните плевели.
+            </p>
+            <p>
+                Не се счита за ДРЗП използването на стерилизацията на почвата като метод за борба срещу
+                почвени вредители. Стерилизирането на почвата трябва да се провежда само когато е
+                действително необходимо. Трябва да се прилагат всички агротехнически методи, които намаляват
+                степента на нападение от повечето важни вредители.
+            </p>
+        </div>
+    </div>
+    <!--КРАЙ Специфична сфера на действие-->
+
+    <!-- Изтегляне на Приложения -->
+    <div class="row">
+        <div class="my_addendum text-indent">
+            <span class="span_addendum">
+                <a  class="href_addendum"
+                    rel="noopener noreferrer" target="_blank"
+                    href="../../../../../assets/practices/8-jagodoplodni-prilojenie.pdf"
+                >
+                    * Виж приложение 7
+                </a>
+            </span>
+        </div>
+    </div>
+    <!-- КРАЙ Изтегляне на Приложения -->
+
+    <!-- Избор на Вредител -->
+    <div class="aa-title" id="pest_menu"></div>
+    <div class="row">
+        <div id="pest_menu_links">
+            <h3 >Основни вредители по ягодата са:</h3>
+            <ul id="menu_a">
+                <li>
+                    <a class="back_link" przAnchorTo target="#botrytis-cinerea" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Сиво гниене - <span class="latin_name">Botrytis cinerea</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#phytophtora" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Червено кореново гниене - <span class="latin_name">Phytophthora fragariae var. fragariae</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#phytophthora-cactorum" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        <span class="latin_name">Phytophthora cactorum</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#verticillium" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Вертицилийно увяхване - <span class="latin_name">Verticillium spp.</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#sphaerotheca" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Брашнеста мана - <span class="latin_name">Sphaerotheca macularis f. sp. fragarial</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#mycosphaerella" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Бели листни петна - <span class="latin_name">Mycosphaerella fragariae</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#mycosphaerella" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Виолетово-кафяви листни петна - <span class="latin_name">Fabrea maculate (Diplocarpon erliana)</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#colletotrichum" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Антракноза - <span class="latin_name">Colletotrichum acutatum (fragariae)</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#thanatephorus" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Почвени гъби
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#viruses" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Вируси
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#anthonomus-rubi" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Ягодово хоботниче - <span class="latin_name">Anthonomus rubi</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#tarsonemus-pallidus" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Ягодов акар - <span class="latin_name">Tarsonemus pallidus</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#tetranychus" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Паяжинообразуващи акари - <span class="latin_name">Tetranychus urticae</span> и <span class="latin_name">Tetranychus turkestani</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#otiorrhynchus " title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Коренови хоботници
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#rhynchites" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Ягодово стъблохоботниче - <span class="latin_name">Rhynchites germanicus</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#aphididae" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Листни въшки
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#argyroploce" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Листогризещи гъсеници
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#melolontha" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Почвени насекоми
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#aphelenchoides" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Листни нематоди - <span class="latin_name">Aphelenchoides fragarie, A.blasthophthorus u A.ritzemabos</span> и др.
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#longidorus" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Коренови нематоди - <span class="latin_name">Longidorus elongatus, Xiphinema diversicaudatum u Pratylenchus penetrans</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#weed" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Плевели
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#regulators" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Растежни регулатори
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- КРАЙ Избор на Вредител -->
+
+    <div *ngFor="let practice of practices | async">
+        <div class="aa-title" id="{{practice?.linkId}}"></div>
+        <div class="row" >
+            <div class="pest-description-container text-indent" [innerHTML]="practice?.text  | safeHtml"></div>
+            <div class="pest-image-container" *ngIf="practice.images?.length > 0">
+                <ul class="products">
+                    <li *ngFor="let image of practice.images">
+                        <a data-lightbox="image" href="{{image.imgPath}}"
+                            data-title="{{image.imgTitle}}">
+                            <img threshold="200" loading="lazy" src="{{image.thumbPath}}"
+                                alt="{{image.thumbAlt}}" title="{{image.thumbTitle}}"/>
+                                <span class="title_thumb">{{image.bgName}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row-back">
+            <div class="col-md-6" *ngIf="practice?.tablePiv !== undefined">
+                <div class="panel-success text-center" >
+                    <div class="panel-heading">
+                        <button mat-button class="piv-button" (click)="openDialog(practice?.tablePiv)">
+                            <span class="full-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                            <span class="small-piv">ВИЖ ПИВ</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel-warning text-center">
+                    <div class="panel-heading ">
+                        <a mat-button class="back_link_bottom" przAnchorTo target="#pest_menu" title="към всички неприятели"> виж друг неприятел</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Автори на снимки -->
+    <br><br>
+    <div class="row">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-body my_panel-body">
+                    <p>
+                        <span class="bold">Снимка 1:</span><br>
+                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=192867</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 2:</span><br>
+                        <span>By Liberato, JR - http://dev.padil.gov.au/pests-and-diseases/Pest/Image/4738, CC BY 3.0, https://en.wikipedia.org/w/index.php?curid=37701124</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 3:</span><br>
+                        <span>By Michal Maňas (User:snek01) - Own work, CC BY 2.5, https://commons.wikimedia.org/w/index.php?curid=1799494</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 4:</span><br>
+                        <span>By James Lindsey at Ecology of Commanster, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1671891</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 5:</span><br>
+                        <span>By Gilles San Martin - originally posted to Flickr as Tetranychus urticae with silk threads, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=11208762</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 6:</span><br>
+                        <span>By Kristian Peters -- Fabelfroh 15:18, 28 December 2005 (UTC) - Self-photographed, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=482651</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 7:</span><br>
+                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=998959</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 8:</span><br>
+                        <span>By No machine-readable author provided. Bogdan assumed (based on copyright claims). - No machine-readable source provided. Own work assumed (based on copyright claims)., CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=209764</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 9:</span><br>
+                        <span>By John Tann from Sydney, Australia - Johnson Grass, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=38234408</span>
+                    </p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- КРАЙ Автори на снимки -->
+</div>

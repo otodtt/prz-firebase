@@ -1,0 +1,37 @@
+<mat-dialog-content class="my-dialog-content">
+  <div class="dialog-header">
+    <h2>{{ data.data.name }}</h2>
+  </div>
+  <mat-card class="example-card card-top">
+    <mat-card-content>
+      <h4>Регистрирани ПРЗ с {{ data.data.name | uppercase }}</h4>
+      <hr>
+      <ol>
+        <li *ngFor="let item of data.data.products">
+          <span>
+            <a matLine [routerLink]="[ '/products/' + item.pesticide_type + '/' + item.pesticides_id ]"
+              (click)="onClickNavigate()" matTooltip="Подробно за продукта">
+              {{item.pesticide_name}}
+            </a>
+          </span>
+          <span *ngIf="item.pesticide_type == 'fungicides'"> (Фунгицид)</span>
+          <span *ngIf="item.pesticide_type == 'insecticides'"> (Инсектицид)</span>
+          <span *ngIf="item.pesticide_type == 'acaricides'"> (Акарицид)</span>
+          <span *ngIf="item.pesticide_type == 'nematocides'"> (Нематоцид)</span>
+          <span *ngIf="item.pesticide_type == 'limatsides'"> (Лимацид)</span>
+          <span *ngIf="item.pesticide_type == 'herbicides'"> (Хербицид)</span>
+          <br>
+          <span>на фирма {{item.firmName}}</span>
+          <hr>
+        </li>
+      </ol>
+    </mat-card-content>
+  </mat-card>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button (click)="onNoClick()" matTooltip="Затвори">
+    <mat-icon aria-label="Назад">power_settings_new</mat-icon>
+    <span> Затвори</span>
+  </button>
+</mat-dialog-actions>

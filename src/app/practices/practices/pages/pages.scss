@@ -1,0 +1,463 @@
+:host ::ng-deep {
+    display: block;
+
+    /* =======================================================
+        Нулиране на row класа и добавяне на margin и pading
+    ========================================================= */
+    #wrap_lmenu_txt {
+        background-color: #F8F8F8;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* =======================================================
+    КРАЙ Нулиране на row класа и добавня на margin pading
+    ========================================================= */
+    /*=================
+    Общи за всички
+    =================*/
+    #prz-loader {
+        display: flex;
+
+        height: 1000px;
+        mat-spinner {
+            display: block;
+            margin: 0 auto;
+        }
+
+    }
+    h1, h2, h3, h4 {
+        color: #008000;
+    }
+    h4 {
+        margin-bottom: 5px;
+    }
+    h3 {
+        margin-bottom: 10px;
+    }
+    p {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+    .row {
+        margin-top: 80px;
+        padding-left: 2%;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .text-right {
+        text-align: right;
+    }
+    .text-indent {
+        text-indent: 1.5em;
+    }
+    .italic {
+        font-style: italic;
+    }
+    h4.my_class_h4 {
+        text-decoration: underline;
+        margin-bottom: 5px;
+    }
+    .underline{
+        text-decoration: underline;
+    }
+    .latin_name, .active-substance {
+        font-style: italic;
+    }
+    .text-indent{
+        text-indent: 1.5em;
+    }
+    .phases_link {
+        color: #0815b4;
+    }
+    .phase{
+        margin: 0;
+    }
+    .phase_bottom{
+        margin-bottom: 0;
+    }
+
+    /*=======================
+        КРАЙ Общи за всички
+    ========================*/
+    /*======================
+        Горе Лого МЗХ и НСРЗ
+    =======================*/
+    .name-header{
+        margin-bottom: 40px;
+        h2 {
+            color: initial;
+            font-size: 2em
+        }
+    }
+    .plant-protect, .forest {
+        margin: 10px 0;
+        padding: 0;
+        color: initial;
+    }
+    #content-logo{
+        display: block;
+        margin: 0;
+        h4 {
+            margin: 0;
+            margin-bottom: 8px
+        }
+        #plant-protect{
+            color: #343434;
+            font-weight: 700
+        }
+        #forest{
+            color: #343434;
+            font-weight: 500
+        }
+    }
+    .number-eppo {
+        margin: 0;
+    }
+    #authors-wrap{
+        padding-left: 35%;
+        .authors{
+            text-decoration: underline;
+        }
+        .doctor {
+            border: 1px solid #343434;
+        }
+    }
+    /*===========================
+        КРАЙ Горе Лого МЗХ и НСРЗ
+    ============================*/
+    /*================================
+        Изтегляне на Приложения
+    =================================*/
+    .my_addendum {
+        margin-top: 20px;
+        .span_addendum {
+            border-top: 1px solid black;
+            font-weight: bolder;
+            .href_addendum {
+                font-style: italic;
+                text-decoration: none;
+                color: rgba(0, 0, 0, 0.87);
+            }
+        }
+    }
+    /*================================
+        КРАЙ Изтегляне на Приложения
+    =================================*/
+    /*=======================
+    ЗА ИЗБОР НА НЕПРИЯТЕЛ
+    ========================*/
+    #pest_menu_links  {
+        position: relative;
+        padding: 0 15px;
+        text-decoration: none;
+        #menu_a, #menu_b, #menu_c, #menu_d {
+            padding: 0;
+            li {
+                margin: 8px 0;
+                list-style: none;
+                a {
+                    display: block;
+                    mat-icon {
+                        vertical-align: middle;
+                        font-size: 1.2em;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    #pest_menu_links a:hover mat-icon {
+        transform: translateX(2px);
+        color: #d19c3e;
+    }
+    #pest_menu_links li:hover a{
+        color: #028102;
+        text-decoration: underline;
+    }
+    /*============================
+    КРАЙ ЗА ИЗБОР НА НЕПРИЯТЕЛ
+    =============================*/
+    /*=======================
+        За малките снимки
+    ========================*/
+    .row {
+        .pest-description-container {
+            padding-top: 50px;
+            display: table-cell;
+            vertical-align: top;
+            padding-right: 1%;
+            p {
+                .back_link_bottom{
+                    color: #804f00;
+                }
+                .phases_link {
+                    color: #0815b4;
+                    cursor: pointer;
+                }
+            }
+        }
+        .pest-image-container{
+            display: table-cell;
+            vertical-align: top;
+            padding-top: 50px;
+            padding-right: 1%;
+            width: 18%;
+            .products{
+                overflow: hidden;
+                padding: 15px;
+                text-align: center;
+                background: white;
+                box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+                li {
+                    list-style: none;
+                    margin: 0 0 20px 0;
+                    a {
+                        text-decoration: none;
+                        color: #666766;
+                        img {
+                            border: 4px solid #c0c0c0;
+                            max-width: 95%;
+                        }
+                        img:hover {
+                            color: #40c360;
+                            border-color: #40c360;
+                        }
+                        .title_thumb {
+                            font-size: 0.8em;
+                        }
+                    }
+                }
+            }
+            .products *:last-child{
+                margin: 0 0 5px 0;
+            }
+        }
+    }
+    /*=======================
+    КРАЙ За малките снимки
+    ========================*/
+    /* ===================
+        АВТОРИ НА СНИМКИ
+    ====================== */
+    .mat-expansion-panel {
+        margin-right: 2%;
+        margin-bottom: 40px !important;
+        .mat-expansion-panel-header {
+            background-color: rgb(211, 210, 210);
+        }
+        .my_panel-body {
+            font-size: 0.6em;
+        }
+        .my_panel-body p {
+            margin: 0 0 3px;
+        }
+    }
+    /* ======================
+        КРАЙ АВТОРИ НА СНИМКИ
+    ====================== */
+    /*==================================
+    КРАЙ Панелите за БАК ЛИНК и ПИВ
+    ====================================*/
+    .row-back {
+        display: flex;
+        margin-left: 2%;
+        margin-right: 2%;
+        .col-md-6 {
+            display: table-cell;
+            width: 50%;
+            .panel-warning {
+                margin-top: 10px;
+                margin-bottom: 0;
+                border: none;
+                box-shadow: none;
+                border-bottom: 2px solid rgba(209, 156, 62, 0.561);
+                .panel-heading {
+                    color: #F8F8F8;
+                    background-color: #F8F8F8;
+                    border: none;
+                    .back_link_bottom{
+                        color: #804f00;
+                        width: 100%;
+                        font-size: 1em;
+                    }
+                    .back_link_bottom:hover{
+                        color: #33691E;
+                    }
+                }
+            }
+            .panel-success {
+                margin-top: 12px;
+                .panel-heading {
+                    margin-right: 2%;
+                    .piv-button {
+                        width: 100%;
+                        color: #33691E;
+                        background: #DCEDC8;
+                        .small-piv {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /*==================================
+    КРАЙ Панелите за БАК ЛИНК и ПИВ
+    ====================================*/
+    /*================================
+        Таблица BBCH
+    =================================*/
+    .wrap_table {
+        margin-top: 80px;
+        padding-left: 25px;
+        padding-right: 15px;
+    }
+    /*================================
+        КРАЙ Таблица BBCH
+    =================================*/
+    /*==================
+    RESPONSIVE DESIGN
+    ====================*/
+    @media (max-width: 1200px){}
+    @media (max-width: 993px){
+        .title_thumb{
+            display: none;
+        }
+    }
+    @media (max-width: 992px){
+        .pest-description-container {
+            display: block !important;
+        }
+        .pest-image-container{
+            padding-top: initial;
+            padding-top: 0 !important;
+            .products{
+                display: flex;
+                padding-top: 10px !important;
+                padding-left: 5px !important;
+                padding-right: 10px !important;
+                padding-bottom: 5px !important;
+                li {
+                    margin: 0 !important;
+                    margin-right: 3px !important;
+                    padding-right: 10px !important;
+                    flex-direction: column;
+                    justify-content: center;
+                    vertical-align: middle;
+                    flex-grow: 1;
+                    a {
+                        img {
+                            max-width: 100% !important;
+                        }
+                    }
+                }
+            }
+            .products *:last-child{
+                margin: 0 !important;
+                margin-right: 0 !important;
+                padding-right: 0 !important;
+            }
+        }
+        .row-back {
+            display: block;
+            margin-left: 2%;
+            margin-right: 2%;
+            .col-md-6 {
+                display: block;
+                width: 100%;
+                .panel-warning {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px){}
+    @media (max-width: 690px){
+        #stamp{
+            max-width: 90%;
+        }
+    }
+    @media (max-width: 580px){
+        #stamp{
+            max-width: 75%;
+        }
+        #authors-wrap {
+            padding-left: 25%;
+        }
+    }
+    @media (max-width: 460px){
+        .products li a img{
+            border: 2px solid #c0c0c0;
+        }
+        #stamp{
+            max-width: 60%;
+        }
+        #authors-wrap {
+            padding-left: 0;
+        }
+    }
+    @media (max-width: 360px){
+        #stamp{
+            max-width: 60%;
+        }
+        #authors-wrap {
+            padding-left: 0;
+            font-size: 12px;
+        }
+        .number-eppo {
+            font-size: 12px;
+        }
+        .pest-image-container{
+            .products{
+
+                li {
+                    a {
+                        img {
+                            border: 2px solid #c0c0c0 !important;
+                        }
+                    }
+                }
+            }
+            .products *:last-child{
+                margin: 0 !important;
+            }
+        }
+
+        .row-back {
+            .col-md-6 {
+                .panel-success {
+                    .panel-heading {
+                        .piv-button {
+                            .small-piv {
+                                display: initial;
+                            }
+                            .full-piv {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    @media (max-width: 320px){
+        #authors-wrap {
+            padding-left: 0;
+        }
+        h1, h2 {
+            font-size: 1.3em;
+        }
+        .customfont {
+            font-size: 1.7em !important;
+        }
+        #stamp{
+            max-width: 60%;
+        }
+    }
+
+}
