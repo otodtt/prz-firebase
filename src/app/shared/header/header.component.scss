@@ -87,8 +87,10 @@ $gray: rgb(100, 100, 100);
             border-bottom: none;
         }
     }
-    // Решение ако се скрива дропдаун менюто в ляво
-    // В компонента се добавя клас в зависимост от избора Виж компонента!
+    /* ===============================================
+      Решение ако се скрива дропдаун менюто в ляво
+      В компонента се добавя клас в зависимост от избора Виж компонента!
+    =========================================*/
     .practices {
         left: -80px;
     }
@@ -226,7 +228,6 @@ $gray: rgb(100, 100, 100);
         display: none;
     }
     #aa-legislation {
-      // background-image: url('../../../assets/img/header-bg/legislation-bg.jpg');
       background-image: url('../../../assets/img/header-bg/legislation-bg.jpg');
     }
     #aa-practices {

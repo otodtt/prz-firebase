@@ -174,7 +174,6 @@ export class SubstancesComponent implements OnInit, AfterViewInit, OnDestroy {
     this.mediumQuery.removeEventListener('change', this.mobileQueryListener);
     this.smallQuery.removeEventListener('change', this.mobileQueryListener);
 
-    // tslint:disable-next-line: deprecation
     if (this.resizeSubscription) {
       this.resizeSubscription.unsubscribe();
     }

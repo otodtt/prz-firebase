@@ -130,7 +130,6 @@ export class RegulatorsComponent implements OnInit, AfterViewInit, OnDestroy {
           return this.exampleDatabase.getRepoIssues();
         }),
         map(data => {
-          // Flip flag to show that loading has finished.
           this.isLoadingResults = false;
           this.isRateLimitReached = false;
           this.resultsLength = data.length;

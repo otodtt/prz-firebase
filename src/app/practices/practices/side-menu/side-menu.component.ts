@@ -43,8 +43,7 @@ export class SideMenuComponent implements OnInit, AfterViewInit, OnDestroy {
   ) {
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.openedQuery = media.matchMedia('(max-width: 850px)');
-    // tslint:disable-next-line: deprecation
-    this.openedQuery.addListener(this.mobileQueryListener);
+    this.openedQuery.addEventListener('change', this.mobileQueryListener);
 
     const pathUrl = this.activatedRoute.snapshot.firstChild.url[0].path;
 
@@ -107,8 +106,8 @@ export class SideMenuComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    // tslint:disable-next-line: deprecation
-    this.openedQuery.removeListener(this.mobileQueryListener);
+    this.openedQuery.removeEventListener('change', this.mobileQueryListener);
+
     if (this.resizeSubscription) {
       this.resizeSubscription.unsubscribe();
     }

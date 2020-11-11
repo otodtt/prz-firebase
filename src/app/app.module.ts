@@ -12,8 +12,6 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 import { AngularFireDatabase } from '@angular/fire/database';
-// import { AngularFireModule } from '@angular/fire';
-// import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore';
 
 /** Router */
 import { AppRoutingModul } from './app-routing.module';

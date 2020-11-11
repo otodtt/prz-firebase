@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// import { LazyLoadModule } from '@greg-md/ng-lazy-load';
-
 
 /** Routing */
 import { PracticesRoutingModul } from './practices-routing.module';

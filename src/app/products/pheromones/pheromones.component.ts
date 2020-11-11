@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { Subscription, Observable, merge } from 'rxjs';
 import { MediaMatcher } from '@angular/cdk/layout';
-// import { HttpClient } from '@angular/common/http';
 
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';

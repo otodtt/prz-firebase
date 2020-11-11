@@ -14,15 +14,13 @@ import { ResizeService } from '../common/services/ResizeService';
 const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 @Component({
-    selector: 'prz-contacts',
-    templateUrl: './contacts.component.html',
-    styleUrls: ['./contacts.component.scss']
+  selector: 'prz-contacts',
+  templateUrl: './contacts.component.html',
+  styleUrls: ['./contacts.component.scss']
 })
 export class ContactsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   @ViewChild(FormGroupDirective, { static: true }) formGroupDirective: FormGroupDirective;
-
-  // private submissionForm: AngularFirestoreCollection<any>;
 
   headerId = 'aa-contacts';
   breadcrumbTitle = 'КОНТАКТИ';
@@ -149,7 +147,7 @@ export class ContactsComponent implements OnInit, AfterViewInit, OnDestroy {
         if (size.innerWidth < 481) {
           this.mode = '';
         }
-      });
+    });
   }
 
   openDialog(): void {
