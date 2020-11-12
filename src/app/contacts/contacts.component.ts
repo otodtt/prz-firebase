@@ -5,10 +5,17 @@ import { MediaMatcher } from '@angular/cdk/layout';
 
 import { MatDialog } from '@angular/material/dialog';
 import { DialogContactsComponent } from './dialog-contacts/dialog-contacts.component';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 import { ChangeBreadcrumbService } from '../common/services/changeBreadcrumb.service';
 import { SeoService } from '../common/services/SeoService';
 import { ResizeService } from '../common/services/ResizeService';
+/** Проба след ресет на формата да не избива грешка */
+import { RecaptchaComponent } from 'ng-recaptcha';
 
 // tslint:disable-next-line: max-line-length
 const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -58,6 +65,16 @@ export class ContactsComponent implements OnInit, AfterViewInit, OnDestroy {
   private resizeSubscription: Subscription;
   private mobileQueryListener: () => void;
 
+  /**
+   * Временно за показване на съобщение, че формата не е изпратена.
+   * След това да се махне
+   *  horizontalPosition: MatSnackBarHorizontalPosition = 'start';
+   *  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
+   *  и @angular/material/snack-bar
+   */
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
+
   constructor(
     private changeBreadcrumb: ChangeBreadcrumbService,
     private seoService: SeoService,
@@ -66,6 +83,7 @@ export class ContactsComponent implements OnInit, AfterViewInit, OnDestroy {
     private resizeService: ResizeService,
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
+    private snackBar: MatSnackBar
   ) {
     this.seoService.addTitle(this.title);
     this.seoService.setNoKeywordsMeta(this.description);
@@ -132,7 +150,20 @@ export class ContactsComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   onSubmit( value: any): void {
+    // alert('Вашето съобщение не е изпратено. Моля, използвайте имейл адреса посочен по-долу! Благодаря!');
+    this.snackBar.open(`Вашето съобщение не е изпратено. Моля, използвайте имейл адреса посочен по-долу! Благодаря!`, 'Край', {
+      duration: 3500,
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition,
+    });
     this.resetForm();
+
+    /** Проба след ресет на формата да не избива грешка */
+    RecaptchaComponent.prototype.ngOnDestroy = function(): void {
+      if (this.subscription) {
+        this.subscription.unsubscribe();
+      }
+    };
   }
 
   ngAfterViewInit(): void {
