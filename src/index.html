@@ -7,12 +7,28 @@
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('./assets/fonts/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
+      src: local('Roboto'), local('Roboto-Regular'),
+         url('./assets/fonts/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./assets/fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./assets/fonts/roboto-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('./assets/fonts/roboto-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./assets/fonts/roboto-v20-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+    }
+    </style>
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link async href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
-  <style>
-    @import "critical.css";
-  </style>
+
+  <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap"></noscript>
+
 </head>
 <body>
   <prz-root></prz-root>

@@ -30,18 +30,6 @@
     #aa-registers {
         background-image: url('../../../assets/img/header-bg/registers-bg-481px.jpg');
     }
-
-    .big-logo {
-      display: none;
-    }
-
-    .medium-logo {
-      display: initial;
-    }
-
-    .small-logo {
-      display: none;
-    }
 }
 
 /* ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px*/
@@ -88,18 +76,6 @@
     .p-in-header {
         font-size: .9em;
     }
-
-    .big-logo {
-      display: none;
-    }
-
-    .medium-logo {
-      display: none;
-    }
-
-    .small-logo {
-      display: initial;
-    }
 }
 
 @media (max-width: 320px){
@@ -144,18 +120,6 @@
     }
     .p-in-header {
         font-size: .9em;
-    }
-
-    .big-logo {
-      display: none;
-    }
-
-    .medium-logo {
-      display: none;
-    }
-
-    .small-logo {
-      display: initial;
     }
 }
 
