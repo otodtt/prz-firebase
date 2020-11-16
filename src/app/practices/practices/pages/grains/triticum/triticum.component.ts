@@ -12,7 +12,7 @@ import { DialogComponent } from '../../../shared/dialog/dialog.component';
 
 @Component({
   templateUrl: './triticum.component.html',
-  styleUrls: ['../../pages.scss']
+  styleUrls: ['../../pages.scss', '../../media.scss']
 })
 export class TriticumComponent implements OnInit {
   private title = 'ДРЗП - Пшеница';

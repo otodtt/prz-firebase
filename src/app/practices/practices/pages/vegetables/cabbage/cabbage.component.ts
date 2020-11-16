@@ -11,7 +11,7 @@ import { DialogComponent } from '../../../shared/dialog/dialog.component';
 
 @Component({
     templateUrl: './cabbage.component.html',
-    styleUrls: ['../../pages.scss']
+    styleUrls: ['../../pages.scss', '../../media.scss']
 })
 export class CabbageComponent implements OnInit {
 

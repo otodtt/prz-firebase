@@ -6,8 +6,15 @@
 }
 body {
     font-family: Roboto , sans-serif;
+    font-display: swap;
 
     .cdk-overlay-pane {
         max-width: 90vw !important
     }
+}
+
+.lb-image{
+    max-width: inherit !important;
+    width: 1px; 
+    height: 1px; 
 }

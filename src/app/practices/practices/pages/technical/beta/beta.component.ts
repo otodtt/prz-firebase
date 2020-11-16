@@ -11,7 +11,7 @@ import { DialogComponent } from '../../../shared/dialog/dialog.component';
 
 @Component({
     templateUrl: './beta.component.html',
-    styleUrls: ['../../pages.scss']
+    styleUrls: ['../../pages.scss', '../../media.scss']
 })
 export class BetaComponent implements OnInit {
     private title = 'ДРЗП - Цвекло';

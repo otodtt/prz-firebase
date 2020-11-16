@@ -11,7 +11,7 @@ import { DialogComponent } from '../../../shared/dialog/dialog.component';
 
 @Component({
     templateUrl: './decorate.component.html',
-    styleUrls: ['../../pages.scss']
+    styleUrls: ['../../pages.scss', '../../media.scss']
 })
 export class DecorateComponent implements OnInit {
 

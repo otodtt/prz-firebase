@@ -5,7 +5,7 @@ import { ChangeBreadcrumbService } from '../../../../../common/services/changeBr
 
 @Component({
     templateUrl: './rodentia.component.html',
-    styleUrls: ['../../pages.scss']
+    styleUrls: ['../../pages.scss', '../../media.scss']
 })
 export class RodentiaComponent implements OnInit {
     private title = 'ДРЗП - Гризачи';

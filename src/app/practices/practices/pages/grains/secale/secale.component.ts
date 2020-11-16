@@ -11,7 +11,7 @@ import { DialogComponent } from '../../../shared/dialog/dialog.component';
 
 @Component({
   templateUrl: './secale.component.html',
-  styleUrls: ['../../pages.scss']
+  styleUrls: ['../../pages.scss', '../../media.scss']
 })
 export class SecaleComponent implements OnInit {
   private title = 'ДРЗП - Ръж';

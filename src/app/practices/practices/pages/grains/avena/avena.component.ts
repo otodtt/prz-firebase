@@ -12,7 +12,7 @@ import { DialogComponent } from '../../../shared/dialog/dialog.component';
 
 @Component({
   templateUrl: './avena.component.html',
-  styleUrls: ['../../pages.scss']
+  styleUrls: ['../../pages.scss', '../../media.scss']
 })
 export class AvenaComponent implements OnInit {
   private title = 'ДРЗП - Овес';

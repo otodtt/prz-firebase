@@ -12,7 +12,7 @@ import { DialogComponent } from '../../../shared/dialog/dialog.component';
 
 @Component({
     templateUrl: './zea.component.html',
-    styleUrls: ['../../pages.scss']
+    styleUrls: ['../../pages.scss', '../../media.scss']
 })
 export class ZeaComponent implements OnInit {
     private title = 'ДРЗП - Царевица';

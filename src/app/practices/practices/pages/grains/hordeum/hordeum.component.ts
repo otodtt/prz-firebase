@@ -12,7 +12,7 @@ import { DialogComponent } from '../../../shared/dialog/dialog.component';
 
 @Component({
   templateUrl: './hordeum.component.html',
-  styleUrls: ['../../pages.scss']
+  styleUrls: ['../../pages.scss', '../../media.scss']
 })
 export class HordeumComponent implements OnInit {
   private title = 'ДРЗП - Ечемик';

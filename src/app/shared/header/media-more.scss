@@ -1,0 +1,206 @@
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px*/
+@media (min-width: 481px) and (max-width: 767px) {
+    #aa-legislation {
+      background-image: url('../../../assets/img/header-bg/legislation-bg-481px.jpg');
+    }
+    #aa-practices {
+        background-image: url('../../../assets/img/header-bg/practices-bg-481px.jpg');
+    }
+    #aa-documents {
+        background-image: url('../../../assets/img/header-bg/documents-bg-481px.jpg');
+    }
+    #aa-products {
+        background-image: url('../../../assets/img/header-bg/products-bg-481px.jpg');
+    }
+    #aa-crops {
+        background-image: url('../../../assets/img/header-bg/crops-bg-481px.jpg');
+    }
+    #aa-contacts {
+        background-image: url('../../../assets/img/header-bg/contacts-bg-481px.jpg');
+    }
+    #aa-management {
+        background-image: url('../../../assets/img/header-bg/management-bg-481px.jpg');
+    }
+    #aa-phases {
+        background-image: url('../../../assets/img/header-bg/phases-bg-481px.jpg');
+    }
+    #aa-formulations {
+        background-image: url('../../../assets/img/header-bg/formulations-bg-481px.jpg');
+    }
+    #aa-registers {
+        background-image: url('../../../assets/img/header-bg/registers-bg-481px.jpg');
+    }
+
+    .big-logo {
+      display: none;
+    }
+
+    .medium-logo {
+      display: initial;
+    }
+
+    .small-logo {
+      display: none;
+    }
+}
+
+/* ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px*/
+@media (min-width: 320px) and (max-width: 480px) {
+    #aa-legislation {
+      background-image: url('../../../assets/img/header-bg/legislation-bg-396px.jpg');
+    }
+    #aa-practices {
+        background-image: url('../../../assets/img/header-bg/practices-bg-396px.jpg');
+        height: 170px;
+    }
+    #aa-documents {
+        background-image: url('../../../assets/img/header-bg/documents-bg-396px.jpg');
+        height: 170px;
+    }
+    #aa-products {
+        background-image: url('../../../assets/img/header-bg/products-bg-396px.jpg');
+        height: 170px;
+    }
+    #aa-crops {
+        background-image: url('../../../assets/img/header-bg/crops-bg-396px.jpg');
+        height: 170px;
+    }
+    #aa-contacts {
+        background-image: url('../../../assets/img/header-bg/contacts-bg-396px.jpg');
+        height: 170px;
+    }
+    #aa-management {
+        background-image: url('../../../assets/img/header-bg/management-bg-396px.jpg');
+        height: 170px;
+    }
+    #aa-phases {
+        background-image: url('../../../assets/img/header-bg/phases-bg-396px.jpg');
+    }
+    #aa-formulations {
+        background-image: url('../../../assets/img/header-bg/formulations-bg-396px.jpg');
+    }
+    #aa-registers {
+        background-image: url('../../../assets/img/header-bg/registers-bg-396px.jpg');
+    }
+    #header-email {
+        display: none;
+    }
+    .p-in-header {
+        font-size: .9em;
+    }
+
+    .big-logo {
+      display: none;
+    }
+
+    .medium-logo {
+      display: none;
+    }
+
+    .small-logo {
+      display: initial;
+    }
+}
+
+@media (max-width: 320px){
+    #aa-legislation {
+      background-image: url('../../../assets/img/header-bg/legislation-bg-396px.jpg');
+    }
+    #aa-practices {
+        background-image: url('../../../assets/img/header-bg/practices-bg-396px.jpg');
+        height: 170px;
+    }
+    #aa-documents {
+        background-image: url('../../../assets/img/header-bg/documents-bg-396px.jpg');
+        height: 170px;
+    }
+    #aa-products {
+        background-image: url('../../../assets/img/header-bg/products-bg-396px.jpg');
+        height: 170px;
+    }
+    #aa-crops {
+        background-image: url('../../../assets/img/header-bg/crops-bg-396px.jpg');
+        height: 170px;
+    }
+    #aa-contacts {
+        background-image: url('../../../assets/img/header-bg/contacts-bg-396px.jpg');
+        height: 170px;
+    }
+    #aa-management {
+        background-image: url('../../../assets/img/header-bg/management-bg-396px.jpg');
+        height: 170px;
+    }
+    #aa-phases {
+        background-image: url('../../../assets/img/header-bg/phases-bg-396px.jpg');
+    }
+    #aa-formulations {
+        background-image: url('../../../assets/img/header-bg/formulations-bg-396px.jpg');
+    }
+    #aa-registers {
+        background-image: url('../../../assets/img/header-bg/registers-bg-396px.jpg');
+    }
+    #header-email {
+        display: none;
+    }
+    .p-in-header {
+        font-size: .9em;
+    }
+
+    .big-logo {
+      display: none;
+    }
+
+    .medium-logo {
+      display: none;
+    }
+
+    .small-logo {
+      display: initial;
+    }
+}
+
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px*/
+@media (max-width: 740px) and (max-height: 420px) {
+    #aa-legislation {
+      background-image: url('../../../assets/img/header-bg/legislation-bg-481px.jpg');
+    }
+    #aa-practices {
+        background-image: url('../../../assets/img/header-bg/practices-bg-481px.jpg');
+        height: 150px;
+    }
+    #aa-documents {
+        background-image: url('../../../assets/img/header-bg/documents-bg-481px.jpg');
+        height: 150px;
+    }
+    #aa-products {
+        background-image: url('../../../assets/img/header-bg/products-bg-481px.jpg');
+        height: 150px;
+    }
+    #aa-crops {
+        background-image: url('../../../assets/img/header-bg/crops-bg-481px.jpg');
+        height: 150px;
+    }
+    #aa-contacts {
+        background-image: url('../../../assets/img/header-bg/contacts-bg-481px.jpg');
+        height: 150px;
+    }
+    #aa-management {
+        background-image: url('../../../assets/img/header-bg/management-bg-481px.jpg');
+        height: 150px;
+    }
+    #aa-phases {
+        background-image: url('../../../assets/img/header-bg/phases-bg-481px.jpg');
+    }
+    #aa-formulations {
+        background-image: url('../../../assets/img/header-bg/formulations-bg-481px.jpg');
+    }
+    #aa-registers {
+        background-image: url('../../../assets/img/header-bg/registers-bg-481px.jpg');
+    }
+    #header-email {
+        display: none;
+    }
+    .p-in-header {
+        font-size: .9em;
+    }
+}

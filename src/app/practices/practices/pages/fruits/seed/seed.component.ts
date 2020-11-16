@@ -11,7 +11,7 @@ import { DialogComponent } from '../../../shared/dialog/dialog.component';
 
 @Component({
   templateUrl: './seed.component.html',
-  styleUrls: ['../../pages.scss', './seed.component.scss']
+  styleUrls: ['../../pages.scss', '../../media.scss', './seed.component.scss']
 })
 export class SeedComponent implements OnInit {
 

@@ -11,7 +11,7 @@ import { DialogComponent } from '../../../shared/dialog/dialog.component';
 
 @Component({
   templateUrl: './leafy.component.html',
-  styleUrls: ['../../pages.scss']
+  styleUrls: ['../../pages.scss', '../../media.scss']
 })
 export class LeafyComponent implements OnInit {
     private title = 'ДРЗП - Листни зеленчуци';

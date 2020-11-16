@@ -11,7 +11,7 @@ import { DialogComponent } from '../../shared/dialog/dialog.component';
 
 @Component({
     templateUrl: './vitis.component.html',
-    styleUrls: ['../pages.scss']
+    styleUrls: ['../pages.scss', '../media.scss']
 })
 export class VitisComponent implements OnInit {
 
