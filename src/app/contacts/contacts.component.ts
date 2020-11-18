@@ -129,6 +129,7 @@ export class ContactsComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.changeBreadcrumb.emitTitle(this.breadcrumbTitle);
     this.changeBreadcrumb.emitName(this.breadcrumbName);
     this.changeBreadcrumb.emitId(this.headerId);
 
