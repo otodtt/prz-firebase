@@ -3,7 +3,9 @@
         color: rgb(110, 0, 35);
     }
 }
-
+::ng-deep .mat-progress-spinner circle {
+  stroke: #8bc34a;
+}
 .container {
     width: 95%;
     margin: 0 auto;

@@ -1,12 +1,18 @@
 .scroll-btn {
     display: none
 }
+.scroll-btn {
+  background-color: #8bc34a,
+}
 .scrollToTop {
     display: block;
     position: fixed;
     right: 20px;
     bottom: 20px;
     z-index: 999;
+}
+.mat-icon {
+  color: #000000;
 }
 mat-icon {
     transform: rotate(-90deg)
