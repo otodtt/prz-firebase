@@ -12,7 +12,7 @@ export class LegislationComponent implements OnInit {
 
   headerId = 'aa-legislation';
 
-  breadcrumbTitle = 'ЗАКОНОДАТЕЛСТВО';
+  breadcrumbTitle = 'Закони';
   breadcrumbName = 'Закони';
 
   private title = 'ПРЗ | Законодателство';
@@ -28,6 +28,7 @@ export class LegislationComponent implements OnInit {
 }
 
   ngOnInit(): void {
+    this.changeBreadcrumb.emitTitle(this.breadcrumbTitle);
     this.changeBreadcrumb.emitName(this.breadcrumbName);
     this.changeBreadcrumb.emitId(this.headerId);
   }
