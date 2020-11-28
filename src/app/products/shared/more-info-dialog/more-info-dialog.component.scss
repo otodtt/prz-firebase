@@ -28,7 +28,7 @@ hr {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 8px;
-    text-align: center; 
+    text-align: center;
     h2 {
         margin: 0;
         width: 100%;
@@ -51,4 +51,7 @@ hr {
 }
 .mat-raised-button {
     margin-bottom: 10px;
+}
+.btn-color {
+  background: #8bc34a;
 }

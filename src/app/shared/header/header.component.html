@@ -17,10 +17,10 @@
         <mat-nav-list id="navigation-top">
           <mat-list-item *ngFor="let page of pages" class="nav-list" routerLinkActive="nav-list-active">
             <a matLine [innerHTML]="page.nameIcon | safeHtml" *ngIf="page.subPage === null" [routerLink]="page.link"
-              routerLinkActive="active" class="a-top" rel="nofollow">
+              routerLinkActive="active" class="a-top" title="Към страница {{page.name}}">
             </a>
             <a matLine [innerHTML]="page.nameIcon | safeHtml" *ngIf="page.subPage !== null"
-              class="a-top active-non-link" rel="nofollow">
+              class="a-top active-non-link" rel="nofollow" title="Nofollow link expand menu">
             </a>
             <button mat-icon-button *ngIf="page.subPage !== null" aria-label="Dropdown">
               <mat-icon class="btn-active">expand_more</mat-icon>
