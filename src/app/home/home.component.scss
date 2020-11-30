@@ -1,8 +1,8 @@
 // @import "~bootstrap/dist/css/bootstrap.min.css";
+// $fa-font-path: "../../../node_modules/font-awesome/fonts";
 // @import "../../../node_modules/font-awesome/scss/font-awesome.scss";
 
 $heading-font: 'Poppins', sans-serif;
-// transition
 @mixin transition($args) {
   -webkit-transition: $args;
   -moz-transition: $args;
@@ -10,76 +10,6 @@ $heading-font: 'Poppins', sans-serif;
   -o-transition: $args;
   transition: $args;
 }
-
-/*==================
-	CAROUSEL
-====================*/
-* {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-height: 600px;
-  position: relative;
-  margin: auto;
-}
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  width: 100%;
-  text-align: center;
-}
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #97b568;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-.active {
-  background-color: #527532;
-}
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 6.5s;
-  animation-name: fade;
-  animation-duration: 6.5s;
-}
-@-webkit-keyframes fade {
-  from {opacity: .9}
-  to {opacity: 1}
-}
-@keyframes fade {
-  from {opacity: .9}
-  to {opacity: 1}
-}
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-#carosel-wrap {
-  position: relative;
-  top: -160px;
-  z-index: -500;
-}
-
 
 /*==================
 	SLIDER IN CAROUSEL
@@ -145,36 +75,60 @@ img {vertical-align: middle;}
 ====================*/
 #aa-about-us{
   position: relative;
-  top: -50px;
+  top: -150px;
 	display: inline;
 	// float: left;
-	width: 100%;
+  width: 100%;
+  h1 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 1.8em;
+    color: #008000;
+  }
+  .container {
+    width: 95%;
+    margin: 0 auto;
+  }
 	.aa-about-us-area{
 		display: inline;
 		// float: left;
 		width: 100%;
-		padding: 100px 0;
-		.aa-about-us-left{
-			display: inline;
-			float: left;
-			width: 100%;
-			img{
-				width: 100%;
-			}
-		}
-		.aa-about-us-right{
-			display: inline;
-			float: left;
-			width: 100%;
-			ul{
-				margin-left: 30px;
-				li{
-					font-style: italic;
-					list-style: circle;
-					margin-bottom: 5px;
-				}
-			}
-		}
+    padding: 100px 0;
+    .left-col {
+      width: 41.6666667%;
+      .aa-about-us-left{
+        // display: inline;
+        float: left;
+        // width: 100%;
+        img{
+          width: 100%;
+        }
+      }
+    }
+		.right-col {
+      width: 58.33333333%;
+      float: right;
+      padding-left: 2%;
+      .aa-about-us-right{
+        display: inline;
+        float: left;
+        width: 100%;
+        h2 {
+          margin-top: 0;
+          font-size: 1.5em;
+          color: #008000;
+        }
+        ul{
+          margin-left: 30px;
+          li{
+            font-style: italic;
+            list-style: circle;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+
 	}
 }
 .aa-title{
@@ -219,15 +173,28 @@ img {vertical-align: middle;}
  SERVICE SECTION
 ====================*/
 #aa-service{
-	display: inline;
-	// float: left;
-	width: 100%;
-	padding: 100px 0;
+  display: inline;
+  width: 100%;
+  padding: 100px 0;
+  position: relative;
+  top: -80px;
+  .container {
+    width: 97%;
+    margin: 0 auto;
+  }
 	.aa-service-area{
 		display: inline;
-		// float: left;
-		width: 100%;
+    width: 100%;
+    h2 {
+      margin-top: 0;
+      font-size: 1.5em;
+      color: #008000;
+    }
 		.aa-service-content{
+      .col-md-3 {
+        width: 25%;
+        float: left;
+      }
 			display: inline;
 			float: left;
 			width: 100%;
@@ -249,16 +216,29 @@ img {vertical-align: middle;}
 					float: left;
 					width: 100%;
 					margin-bottom: 20px;
-					position: relative;
+          position: relative;
+          .icon-in-circle {
+            border-radius: 50%;
+            color: #fff;
+            font-size: 40px;
+            height: 100px;
+            line-height: 100px;
+            width: 100px;
+            background-color: #527532;
+            display: inline-block;
+            img {
+              vertical-align: initial;
+            }
+          }
 
 					&:before{
 							border: 2px solid transparent;
 							border-radius: 50%;
 							content: "";
-							height: 100px;
+							height: 96px;
 							margin-left: 4px;
 							position: absolute;
-							width: 92px;
+							width: 88px;
 							@include transition(all 0.5s);
 
 						}
@@ -275,7 +255,8 @@ img {vertical-align: middle;}
 				.aa-single-service-content{
 					display: inline;
 					float: left;
-					width: 100%;
+          width: 100%;
+          padding: 0 3%;
 					h4{
 						font-size: 20px;
 						a{
@@ -286,6 +267,7 @@ img {vertical-align: middle;}
             font-size: 13px;
             a{
               @include transition(all 0.5s);
+              // cursor: pointer;
 						}
 					}
 				}
@@ -294,59 +276,111 @@ img {vertical-align: middle;}
 	}
 }
 
-/*==================
- PROMO BANNER SECTION
-====================*/
+@media(max-width:900px ) {
+  #aa-about-us {
+    .aa-about-us-area {
+      .left-col {
+        float: none;
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        .aa-about-us-left {
+          float: none;
+          img {
+            margin: auto;
+          }
+        }
+      }
+      .right-col {
+        float: none;
+        width: 100%;
+      }
+    }
+  }
 
-#aa-promo-banner{
-	background-image: url("../../assets/img/slider/1.jpg");
-	background-attachment: fixed;
-	background-position: center center;
-	background-size: cover;
-	display: inline;
-	float: left;
-	width: 100%;
-	padding: 100px 0;
-  position: relative;
-  margin-bottom: 40px;
-	&:before{
-		background-color: rgba(0,0,0,0.6);
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 0;
-		right: 0;
-		bottom: 0;
+  #aa-service {
 
-	}
-	.aa-promo-banner-area{
-		display: inline;
-		float: left;
-		width: 100%;
-		padding: 0 150px;
-		text-align: center;
-		h3{
-			color: #fff;
-			font-size: 40px;
-			font-weight: 700;
-			margin-bottom: 20px;
-			text-transform: capitalize;
-		}
-		p{
-			color: #fff;
-			display: inline-block;
-			font-size: 16px;
-			margin-top: 10px;
-		}
-		a{
-			font-weight: bold;
-			margin-top: 50px;
-			text-transform: uppercase;
-		}
-	}
+    .aa-service-content{
+      .col-md-3 {
+        float: none !important;
+        width: auto !important;
+      }
+      .aa-service-icon {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    .aa-single-service-content{
+      padding: 0 3% 40px 3% !important;
+      h3, p {
+        font-size: 1.2em !important;
+      }
+    }
+  }
 }
 
-#wrapper-carousel {
-  margin-bottom: 50px;
+@media(max-width:800px ) {
+  #aa-about-us {
+    .aa-about-us-area {
+      .left-col {
+        width: 70% !important;
+      }
+    }
+  }
 }
 
+@media(max-width:700px) {
+  #aa-about-us {
+    .aa-about-us-area {
+      .left-col {
+        width: 90% !important;
+      }
+    }
+  }
+}
+
+@media(max-width:600px) {
+  #aa-about-us {
+    .aa-about-us-area {
+      .left-col {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+// @media(max-width:480px ) {
+//   #aa-about-us {
+//     .aa-about-us-area {
+//       .left-col {
+//         // width: 100% !important;
+//         width: 216px !important;
+//         height: 216px;
+//       }
+//     }
+//   }
+// }
+
+@media(max-width:360px ) {
+  #aa-about-us {
+    .aa-about-us-area {
+      .left-col {
+        img {
+          height: 216px !important;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:320px ) {
+  #aa-about-us {
+    .aa-about-us-area {
+      .left-col {
+        img {
+          height: 200px !important;
+        }
+      }
+    }
+  }
+}

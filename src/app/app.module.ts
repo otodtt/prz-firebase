@@ -33,12 +33,6 @@ import { ScrollButtonComponent } from './shared/scroll-button/scroll-button.comp
 
 /** Pages */
 import { HomeComponent } from './home/home.component';
-import { CropsComponent } from './crops/crops.component';
-import { DocumentsComponent } from './documents/documents.component';
-import { ContactsComponent } from './contacts/contacts.component';
-import { FormulationsComponent } from './formulations/formulations.component';
-import { LegislationComponent } from './legislation/legislation.component';
-import { DialogContactsComponent } from './contacts/dialog-contacts/dialog-contacts.component';
 
 @NgModule({
   declarations: [
@@ -47,13 +41,7 @@ import { DialogContactsComponent } from './contacts/dialog-contacts/dialog-conta
     SideNavComponent,
     ScrollButtonComponent,
     HomeComponent,
-    CropsComponent,
-    DocumentsComponent,
-    ContactsComponent,
-    FormulationsComponent,
     NotFoundComponent,
-    LegislationComponent,
-    DialogContactsComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,7 +63,7 @@ import { DialogContactsComponent } from './contacts/dialog-contacts/dialog-conta
     SeoService,
     AngularFireDatabase,
   ],
-  entryComponents: [ DialogContactsComponent ],
+  // entryComponents: [ DialogContactsComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,6 +4,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 
 import { ChangeBreadcrumbService } from '../../common/services/changeBreadcrumb.service';
 import { ResizeService } from '../../common/services/ResizeService';
+import { ScriptService } from '../script.service';
 
 @Component({
   templateUrl: './practices.component.html',
@@ -25,7 +26,8 @@ export class PracticesComponent implements OnInit, OnDestroy, AfterViewInit {
     private changeBreadcrumb: ChangeBreadcrumbService,
     private resizeService: ResizeService,
     changeDetectorRef: ChangeDetectorRef,
-    media: MediaMatcher
+    media: MediaMatcher,
+    private script: ScriptService
   ) {
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.openedQuery = media.matchMedia('(max-width: 850px)');
@@ -36,9 +38,6 @@ export class PracticesComponent implements OnInit, OnDestroy, AfterViewInit {
 
     this.smallQuery = media.matchMedia('(max-width: 481px)');
     this.smallQuery.addEventListener('change', this.mobileQueryListener);
-
-
-
 
     if (this.mediumQuery.matches === true && this.smallQuery.matches === false) {
       this.mode = 'push';
@@ -51,6 +50,7 @@ export class PracticesComponent implements OnInit, OnDestroy, AfterViewInit {
   ngOnInit(): void {
     this.changeBreadcrumb.emitTitle(this.breadcrumbTitle);
     this.changeBreadcrumb.emitId(this.headerId);
+    this.script.load('jQuery', 'lightbox');
   }
 
   ngAfterViewInit(): void  {

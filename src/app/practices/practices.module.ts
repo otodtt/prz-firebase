@@ -7,6 +7,7 @@ import { PracticesRoutingModul } from './practices-routing.module';
 /** Directives and Pipes */
 import { AnchorToDirective } from '../common/directives/AnchorToDirective';
 import { LazyImgDirective } from '../common/directives/LazyImgDirective';
+import { ScriptService } from './script.service';
 
 /** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
@@ -108,7 +109,7 @@ import { VitisComponent } from './practices/pages/vitis/vitis.component';
     NigrumComponent,
     VitisComponent,
   ],
-  providers: [],
+  providers: [ScriptService],
   entryComponents: [SideMenuComponent, DialogComponent],
 })
 export class PracticesModule { }

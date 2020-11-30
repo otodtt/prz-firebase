@@ -22,8 +22,6 @@
     "@angular/platform-browser": "~10.2.0",
     "@angular/platform-browser-dynamic": "~10.2.0",
     "@angular/router": "~10.2.0",
-    "font-awesome": "^4.7.0",
-    "bootstrap": "^3.4.1",
     "firebase": "^8.0.1",
     "jquery": "^3.5.1",
     "lightbox2": "^2.11.3",

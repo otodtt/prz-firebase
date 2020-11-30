@@ -1,6 +1,9 @@
 table {
   width: 100%;
 }
+::ng-deep .mat-progress-spinner circle {
+  stroke: #8bc34a;
+}
 
 .container {
     width: 95%;

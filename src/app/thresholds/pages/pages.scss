@@ -1,13 +1,17 @@
 .demo-tab-group {
     border: 1px solid #e8e8e8;
 }
-  
+
 .demo-tab-content {
     padding: 16px;
 }
 
 h2, h3, h4 {
     color: #008000;
+}
+
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar {
+  background-color: #de9d62;
 }
 
 .text-center {

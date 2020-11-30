@@ -19,9 +19,9 @@
             <a matLine [innerHTML]="page.nameIcon | safeHtml" *ngIf="page.subPage === null" [routerLink]="page.link"
               routerLinkActive="active" class="a-top" title="Към страница {{page.name}}">
             </a>
-            <a matLine [innerHTML]="page.nameIcon | safeHtml" *ngIf="page.subPage !== null"
-              class="a-top active-non-link" rel="nofollow" title="Nofollow link expand menu">
-            </a>
+            <p matLine [innerHTML]="page.nameIcon | safeHtml" *ngIf="page.subPage !== null"
+              class="a-top active-non-link" >
+            </p>
             <button mat-icon-button *ngIf="page.subPage !== null" aria-label="Dropdown">
               <mat-icon class="btn-active">expand_more</mat-icon>
             </button>
