@@ -26,7 +26,7 @@ function showSlides(): any {
 @Component({
   selector: 'prz-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss', './media.scss']
+  styleUrls: ['./home.component.scss', './carousel.scss']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   private title = 'ПРЗ | Продуки за растителна защита. Добри Растителнозащитни Пракатики. Интегрирано Управление на Вредители и ПИВ.';

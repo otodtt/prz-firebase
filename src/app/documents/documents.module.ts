@@ -1,20 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-/** Routing */
-import { DocumentsRoutingModul } from './documents-routing.module';
+import { RouterModule } from '@angular/router';
 
-/** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
-
-/**  Pages */
 import { DocumentsComponent } from './documents.component';
 
 @NgModule({
   imports: [
     CommonModule,
     ShareComponentsModule,
-    DocumentsRoutingModul
+    RouterModule.forChild([{ path: '', component: DocumentsComponent }]),
   ],
   declarations: [
     DocumentsComponent

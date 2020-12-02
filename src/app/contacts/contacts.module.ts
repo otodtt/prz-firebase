@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
 
 /** Routing */
-import { ContactsRoutingModul } from './contacts-routing.module';
+import { RouterModule } from '@angular/router';
 
 /** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
@@ -30,7 +30,7 @@ import { DialogContactsComponent } from './dialog-contacts/dialog-contacts.compo
     CommonModule,
     MaterialModule,
     ShareComponentsModule,
-    ContactsRoutingModul,
+    RouterModule.forChild([{ path: '', component: ContactsComponent }]),
     RecaptchaModule,
     RecaptchaFormsModule,
     FormsModule,

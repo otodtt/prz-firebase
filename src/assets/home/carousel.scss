@@ -1,4 +1,6 @@
-
+#wrapper-carousel {
+  margin-bottom: 50px;
+}
 /*==================
 	CAROUSEL
 ====================*/
@@ -74,7 +76,11 @@ body {font-family: Verdana, sans-serif;}
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
-
+#carosel-wrap {
+  position: relative;
+  top: -160px;
+  z-index: -500;
+}
 
 /*==================
  PROMO BANNER SECTION
