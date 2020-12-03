@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { ShareComponentsModule } from '../common/share.components.module';
-import { MaterialModule } from '../common/material/material.module';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { LegislationComponent } from './legislation.component';
 
@@ -12,7 +12,7 @@ import { LegislationComponent } from './legislation.component';
   imports: [
     CommonModule,
     ShareComponentsModule,
-    MaterialModule,
+    MatTabsModule,
     RouterModule.forChild([{ path: '', component: LegislationComponent }]),
   ],
   declarations: [

@@ -6,7 +6,13 @@ import { PhasesRoutingModul } from './phases-routing.module';
 
 /** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
-import { MaterialModule } from '../common/material/material.module';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatButtonModule } from '@angular/material/button';
 
 /**  Shared */
 import { SideMenuComponent } from './side-menu/side-menu.component';
@@ -47,8 +53,14 @@ import { CitrusComponent } from './pages/citrus/citrus.component';
     imports: [
         CommonModule,
         ShareComponentsModule,
-        MaterialModule,
-        PhasesRoutingModul
+        PhasesRoutingModul,
+        MatSidenavModule,
+        MatIconModule,
+        MatToolbarModule,
+        MatListModule,
+        MatCardModule,
+        MatExpansionModule,
+        MatButtonModule
     ],
     declarations: [
         PhasesComponent,

@@ -3,8 +3,13 @@ import { CommonModule } from '@angular/common';
 
 /** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
-import { MaterialModule } from '../common/material/material.module';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSortModule } from '@angular/material/sort';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule, MatPaginatorIntl } from '@angular/material/paginator';
 import { getBulgarianPaginatorIntl } from '../products/shared/services/CustomPaginator';
@@ -26,10 +31,17 @@ import { DialogSubstancesComponent } from './substances/dialog-substances/dialog
   imports: [
     CommonModule,
     ShareComponentsModule,
-    MaterialModule,
     MatTableModule,
     MatPaginatorModule,
     RegistersRoutingModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatButtonModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatSortModule,
+    MatInputModule,
   ],
   declarations: [
     RegistersComponent,

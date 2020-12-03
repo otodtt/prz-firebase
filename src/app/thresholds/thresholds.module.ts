@@ -6,7 +6,14 @@ import { ThresholdsRoutingModul } from './thresholds-routing.module';
 
 /** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
-import { MaterialModule } from '../common/material/material.module';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 /** Shared */
 import { SideMenuComponent } from './side-menu/side-menu.component';
@@ -49,7 +56,14 @@ import { VitisComponent } from './pages/vitis/vitis.component';
         CommonModule,
         ThresholdsRoutingModul,
         ShareComponentsModule,
-        MaterialModule
+        MatSidenavModule,
+        MatIconModule,
+        MatToolbarModule,
+        MatListModule,
+        MatTabsModule,
+        MatCardModule,
+        MatDialogModule,
+        MatButtonModule
     ],
     declarations: [
         ThresholdsDialogComponent,

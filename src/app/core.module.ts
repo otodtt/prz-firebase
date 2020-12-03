@@ -4,6 +4,7 @@ import { ChangeBreadcrumbService } from './common/services/changeBreadcrumb.serv
 import { ResizeService } from './common/services/ResizeService';
 import { SeoService } from './common/services/SeoService';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { CustomPreloadingStrategy } from './custom-preloading.service';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
     ResizeService,
     SeoService,
     AngularFireDatabase,
+    CustomPreloadingStrategy
   ]
 })
 export class CoreModule {}

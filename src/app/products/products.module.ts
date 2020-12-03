@@ -6,8 +6,13 @@ import { ProductsRoutingModule } from './products-routing.module';
 
 /** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
-import { MaterialModule } from '../common/material/material.module';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSortModule } from '@angular/material/sort';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule, MatPaginatorIntl } from '@angular/material/paginator';
 import { getBulgarianPaginatorIntl } from './shared/services/CustomPaginator';
@@ -36,9 +41,15 @@ import { RegulatorDetailComponent } from './regulators/regulator-detail/regulato
     CommonModule,
     ProductsRoutingModule,
     ShareComponentsModule,
-    MaterialModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatSortModule
   ],
   declarations: [
     ProductsComponent,
