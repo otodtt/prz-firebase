@@ -15,6 +15,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule, MatPaginatorIntl } from '@angular/material/paginator';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { getBulgarianPaginatorIntl } from './shared/services/CustomPaginator';
 
 import { ProductsComponent } from './products.component';
@@ -49,7 +50,8 @@ import { RegulatorDetailComponent } from './regulators/regulator-detail/regulato
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    MatSortModule
+    MatSortModule,
+    MatProgressSpinnerModule
   ],
   declarations: [
     ProductsComponent,

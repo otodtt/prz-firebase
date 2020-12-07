@@ -12,6 +12,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule, MatPaginatorIntl } from '@angular/material/paginator';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { getBulgarianPaginatorIntl } from '../products/shared/services/CustomPaginator';
 
 import { RegistersRoutingModule } from './registers-routing.module';
@@ -42,6 +43,7 @@ import { DialogSubstancesComponent } from './substances/dialog-substances/dialog
     MatCardModule,
     MatSortModule,
     MatInputModule,
+    MatProgressSpinnerModule
   ],
   declarations: [
     RegistersComponent,

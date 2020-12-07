@@ -19,6 +19,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 /** Shared */
 import { DialogComponent } from './practices/shared/dialog/dialog.component';
@@ -78,6 +79,7 @@ import { VitisComponent } from './practices/pages/vitis/vitis.component';
     MatDialogModule,
     MatButtonModule,
     MatExpansionModule,
+    MatProgressSpinnerModule
   ],
   declarations: [
     AnchorToDirective,
