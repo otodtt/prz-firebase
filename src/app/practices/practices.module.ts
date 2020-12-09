@@ -4,6 +4,9 @@ import { CommonModule } from '@angular/common';
 /** Routing */
 import { PracticesRoutingModul } from './practices-routing.module';
 
+/** Firebase */
+import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
+
 /** Directives and Pipes */
 import { AnchorToDirective } from '../common/directives/AnchorToDirective';
 import { LazyImgDirective } from '../common/directives/LazyImgDirective';
@@ -79,7 +82,8 @@ import { VitisComponent } from './practices/pages/vitis/vitis.component';
     MatDialogModule,
     MatButtonModule,
     MatExpansionModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    AngularFireDatabaseModule
   ],
   declarations: [
     AnchorToDirective,
@@ -125,7 +129,7 @@ import { VitisComponent } from './practices/pages/vitis/vitis.component';
     NigrumComponent,
     VitisComponent,
   ],
-  providers: [ScriptService],
+  providers: [ScriptService, AngularFireDatabase],
   entryComponents: [SideMenuComponent, DialogComponent],
 })
 export class PracticesModule { }

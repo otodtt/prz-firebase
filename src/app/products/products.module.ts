@@ -4,6 +4,9 @@ import { CommonModule } from '@angular/common';
 /** Routing */
 import { ProductsRoutingModule } from './products-routing.module';
 
+/** Firebase */
+import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
+
 /** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -51,7 +54,8 @@ import { RegulatorDetailComponent } from './regulators/regulator-detail/regulato
     MatIconModule,
     MatInputModule,
     MatSortModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    AngularFireDatabaseModule
   ],
   declarations: [
     ProductsComponent,
@@ -74,6 +78,7 @@ import { RegulatorDetailComponent } from './regulators/regulator-detail/regulato
     RegulatorDetailComponent,
   ],
   providers: [
+    AngularFireDatabase,
     { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() }
   ],
   entryComponents: [MoreInfoDialogComponent, RodentsDialogComponent],

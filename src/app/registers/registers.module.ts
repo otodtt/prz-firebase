@@ -17,7 +17,9 @@ import { getBulgarianPaginatorIntl } from '../products/shared/services/CustomPag
 
 import { RegistersRoutingModule } from './registers-routing.module';
 
-/** Services */
+/** Firebase */
+import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
+// import { AngularFireDatabase } from '@angular/fire/database';
 
 import { MoreDialogComponent } from './parallel/more-dialog/more-dialog.component';
 
@@ -43,7 +45,8 @@ import { DialogSubstancesComponent } from './substances/dialog-substances/dialog
     MatCardModule,
     MatSortModule,
     MatInputModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    AngularFireDatabaseModule
   ],
   declarations: [
     RegistersComponent,
@@ -55,6 +58,7 @@ import { DialogSubstancesComponent } from './substances/dialog-substances/dialog
     DialogSubstancesComponent,
   ],
   providers: [
+    AngularFireDatabase,
     { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() }
   ],
   entryComponents: [ MoreDialogComponent, DialogAdjuvantsComponent, DialogSubstancesComponent ],
