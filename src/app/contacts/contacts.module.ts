@@ -6,10 +6,10 @@ import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
 
 /** Routing */
 import { RouterModule } from '@angular/router';
+import { ResizeService } from '../common/services/ResizeService';
 
 /** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
-// import { MaterialModule } from '../common/material/material.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -19,6 +19,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 
 /**  Pages */
@@ -51,6 +52,7 @@ import { DialogContactsComponent } from './dialog-contacts/dialog-contacts.compo
     MatFormFieldModule,
     MatInputModule
   ],
+  providers: [ResizeService],
   entryComponents: [ DialogContactsComponent ],
 })
 export class ContactsModule { }

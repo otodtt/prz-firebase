@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 /** Routing */
 import { PhasesRoutingModul } from './phases-routing.module';
+import { ResizeService } from '../common/services/ResizeService';
 
 /** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
@@ -93,7 +94,8 @@ import { CitrusComponent } from './pages/citrus/citrus.component';
         VitisComponent,
         WeedComponent,
         CitrusComponent
-    ]
+    ],
+    providers: [ResizeService],
 })
 export class PhasesModule { }
 

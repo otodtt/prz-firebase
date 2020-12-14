@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 /** Routing */
 import { PracticesRoutingModul } from './practices-routing.module';
+import { ResizeService } from '../common/services/ResizeService';
 
 /** Firebase */
 import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
@@ -129,7 +130,7 @@ import { VitisComponent } from './practices/pages/vitis/vitis.component';
     NigrumComponent,
     VitisComponent,
   ],
-  providers: [ScriptService, AngularFireDatabase],
+  providers: [ScriptService, AngularFireDatabase, ResizeService],
   entryComponents: [SideMenuComponent, DialogComponent],
 })
 export class PracticesModule { }

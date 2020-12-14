@@ -75,9 +75,9 @@
 .mat-list-base .mat-list-item,.mat-list-base .mat-list-option {
     color: rgba(0,0,0,.87)
 }
-.mat-action-list .mat-list-item:focus,.mat-action-list .mat-list-item:hover,.mat-list-option:focus,.mat-list-option:hover,.mat-nav-list .mat-list-item:focus,.mat-nav-list .mat-list-item:hover {
+/* .mat-action-list .mat-list-item:focus,.mat-action-list .mat-list-item:hover,.mat-list-option:focus,.mat-list-option:hover,.mat-nav-list .mat-list-item:focus,.mat-nav-list .mat-list-item:hover {
     background: rgba(0,0,0,.04)
-}
+} */
 
 .mat-drawer-container {
     background-color: #fafafa;

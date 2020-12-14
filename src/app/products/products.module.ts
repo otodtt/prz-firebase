@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 /** Routing */
 import { ProductsRoutingModule } from './products-routing.module';
+import { ResizeService } from '../common/services/ResizeService';
 
 /** Firebase */
 import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
@@ -78,6 +79,7 @@ import { RegulatorDetailComponent } from './regulators/regulator-detail/regulato
     RegulatorDetailComponent,
   ],
   providers: [
+    ResizeService,
     AngularFireDatabase,
     { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() }
   ],
