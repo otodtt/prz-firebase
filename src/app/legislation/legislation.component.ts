@@ -4,7 +4,6 @@ import { ChangeBreadcrumbService } from '../common/services/changeBreadcrumb.ser
 import { SeoService } from '../common/services/SeoService';
 
 @Component({
-  selector: 'prz-legislation',
   templateUrl: './legislation.component.html',
   styleUrls: ['./legislation.component.scss']
 })
@@ -22,10 +21,10 @@ export class LegislationComponent implements OnInit {
   constructor(
     private changeBreadcrumb: ChangeBreadcrumbService,
     private seoService: SeoService,
-) {
-    this.seoService.addTitle(this.title);
-    this.seoService.setNoKeywordsMeta(this.description);
-}
+  ) {
+      this.seoService.addTitle(this.title);
+      this.seoService.setNoKeywordsMeta(this.description);
+  }
 
   ngOnInit(): void {
     this.changeBreadcrumb.emitTitle(this.breadcrumbTitle);

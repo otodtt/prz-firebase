@@ -1,6 +1,194 @@
-<div style="height: 1000px; text-align: center;">
-    <p>
-        Страницата все още не е готова.
-    </p>
-</div>
+<article>
+    <div class="h1-wrap">
+        <hr class="h1-line-top">
+        <h1>
+            ДОКУМЕНТИ<br/>
+            По-важни документи, заявления, декларации и др., свързани с работата на земеделски стопани и търговци на ПРЗ.
+        </h1>
+        <hr class="h1-underline">
+    </div>
+    
+    <mat-vertical-stepper [linear]="isLinear" #stepper>
+        <mat-step>
+            <ng-template matStepLabel>ДНЕВНИЦИ</ng-template>
+            <hr>
+            <div >
+                <ol>
+                    <li>
+                        Дневник за проведените растителнозащитни мероприятия и торене
+                        <div>
+                            <div class="my-wrapp-link pdf-wrapp">
+                                <a class="href_doc "
+                                    rel="noopener noreferrer" target="_blank"
+                                    href="../../assets/documents/diary/Дневник_мероприятия.pdf"
+                                >
+                                    <span >
+                                        <img class="icon" src="../../assets/documents/icons/icons8-pdf-20.png" alt="icon pdf file" title="Icon pdf file" width="20" height="20"/>
+                                    </span>
+                                    <span >Вариант 1</span>
+                                </a>
+                            </div>
+                            <div class="my-wrapp-link word-wrapp">
+                                <a class="href_doc "
+                                    rel="noopener noreferrer" target="_blank"
+                                    href="../../assets/documents/diary/Dnevnik_ZP_1.doc"
+                                >
+                                    <span >
+                                        <img class="icon" src="../../assets/documents/icons/icons8-microsoft-word-20.png" alt="icon word file" title="Icon word file" width="20" height="20"/>
+                                    </span>
+                                    <span >Вариант 2</span>
+                                </a>
+                            </div>
+                        </div>
+                        <hr class="hr-in-li">
+                    </li>
+                    <li>
+                        Дневник за появата, развитието, плътността или степен на нападение от вредители
+                        <div>
+                            <div class="my-wrapp-link pdf-wrapp">
+                                <a class="href_doc "
+                                    rel="noopener noreferrer" target="_blank"
+                                    href="../../assets/documents/diary/Дневник_вредители.pdf"
+                                >
+                                    <span >
+                                        <img class="icon" src="../../assets/documents/icons/icons8-pdf-20.png" alt="icon pdf file" title="Icon pdf file" width="20" height="20"/>
+                                    </span>
+                                    <span >Вариант 1</span>
+                                </a>
+                            </div>
+                            <div class="my-wrapp-link word-wrapp">
+                                <a class="href_doc "
+                                    rel="noopener noreferrer" target="_blank"
+                                    href="../../assets/documents/diary/orz-dnevnik_2.doc"
+                                >
+                                    <span >
+                                        <img class="icon" src="../../assets/documents/icons/icons8-microsoft-word-20.png" alt="icon word file" title="Icon word file" width="20" height="20"/>
+                                    </span>
+                                    <span >Вариант 2</span>
+                                </a>
+                            </div>
+                        </div>
+                        <hr class="hr-in-li">
+                    </li>
+                    <li>
+                        Дневник на взетите проби и извършени анализи от растения и растителни продукти
+                        <div>
+                            <div class="my-wrapp-link pdf-wrapp">
+                                <a class="href_doc "
+                                    rel="noopener noreferrer" target="_blank"
+                                    href="../../assets/documents/diary/Дневник_проби.pdf"
+                                >
+                                    <span >
+                                        <img class="icon" src="../../assets/documents/icons/icons8-pdf-20.png" alt="icon pdf file" title="Icon pdf file" width="20" height="20"/>
+                                    </span>
+                                    <span >Вариант 1</span>
+                                </a>
+                            </div>
+                            <div class="my-wrapp-link word-wrapp">
+                                <a class="href_doc "
+                                    rel="noopener noreferrer" target="_blank"
+                                    href="../../assets/documents/diary/orz-dnevnik_3.doc"
+                                >
+                                    <span >
+                                        <img class="icon" src="../../assets/documents/icons/icons8-microsoft-word-20.png" alt="icon word file" title="Icon word file" width="20" height="20"/>
+                                    </span>
+                                    <span >Вариант 2</span>
+                                </a>
+                            </div>
+                        </div>
+                        <hr class="hr-in-li">
+                    </li>
+                </ol>
+                <p><span class="danger" >ВНИМАНИЕ!</span> Тук може да прочете как правилно да се попълнят Дневниците.</p>
+                <p>
+                    <a class="href_doc "
+                        rel="noopener noreferrer" target="_blank"
+                        href="../../assets/documents/diary/orz-dnevnik_3.doc"
+                    >
+                        <span>
+                            <img class="icon" src="../../assets/documents/icons/icons8-pdf-20.png" alt="icon pdf file" title="Icon pdf file" width="20" height="20"/>
+                        </span>
+                        <span >ИНСТРУКЦИЯ</span>
+                    </a>
+                </p>
+            </div>
+        </mat-step>
+        
+        <mat-step >
+            <ng-template matStepLabel>ДЕКЛАРАЦИИ</ng-template>
+            <div >
+                <p class="bold">Национална програма от мерки за контрол на доматен миниращ молец <span class="italic">Tuta absoluta</span></p>
+                <ul>
+                    <li>
+                        <a class="href_doc "
+                            rel="noopener noreferrer" target="_blank"
+                            href="../../assets/documents/declarations/Deklaracia_ZP_PRZ_2019.doc"
+                        >
+                            Образец на Декларация за вложените количества ПРЗ, разрешени според 
+                            „Национална програма от мерки за контрол на доматен миниращ молец 
+                            <span class="italic">Tuta absoluta Meyrick</span> (<span class="italic">Lepidoptera</span>)” (25.10.2019г.)
+                        </a>
+                    </li>
+                    <li>
+                        <a class="href_doc "
+                            rel="noopener noreferrer" target="_blank"
+                            href="../../assets/documents/declarations/Deklaracia_ZP_nepriateli_Tuta-2019.doc"
+                        >
+                            Декларация относно размера на нападнатите площи и установената плътност 
+                            на вредителите по "Национална програма от мерки за контрол на доматен 
+                            миниращ молец (<span class="italic">Tuta absoluta Meyrick</span> ) (25.10.2019г.)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="hr-in-li">
+            <div >
+                <p class="bold">Национална програма от мерки за контрол на неприятели по картофи</p>
+                <ul>
+                    <li class="pdf-icon">
+                        <a class="href_doc "
+                            rel="noopener noreferrer" target="_blank"
+                            href="../../assets/documents/declarations/2-Deklaracia_ZP_nepriateli_Elateridae-2018.pdf"
+                        >
+                        Декларация относно размера на нападнатите площи и установената плътност на 
+                        вредителите по „Национална програма от мерки за контрол на почвени 
+                        неприятели по картофите от сем. Телени червеи (<span class="italic">Elateridae</span>) (12.3.2018г.)
+                        </a>
+                    </li>
+                    <li class="pdf-icon">
+                        <a class="href_doc "
+                            rel="noopener noreferrer" target="_blank"
+                            href="../../assets/documents/declarations/3-Deklaracia_ZP_PRZ_Elateridae-2018.pdf"
+                        >
+                        Декларация за вложените количества ПРЗ, разрешени според "Национална програма 
+                        от мерки за контрол на почвени неприятели по картофите от сем. 
+                        Телени червеи (<span class="italic">Elateridae</span>) (15.3.2018г.)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="hr-in-li">
+            <div >
+                <p class="bold">Национална програма за контрол на вредителите по трайните насаждения</p>
+                <ul>
+                    <li>
+                        <a class="href_doc "
+                            rel="noopener noreferrer" target="_blank"
+                            href="../../assets/documents/declarations/Зимни.doc"
+                        >
+                            ДЕКЛАРАЦИЯ за вложените количества ПРЗ разрешени по: "Национална програма за 
+                            контрол на вредителите по трайните насаждения през зимния период" (20.2.2020г.)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="hr-in-li">
+        </mat-step>
 
+        <mat-step>
+          <ng-template matStepLabel>ЗАЯВЛЕНИЯ</ng-template>
+          <p>You are now done.</p>
+          <div style="height: 100px; width: 90%; background-color: blue;"></div>
+        </mat-step>
+      </mat-vertical-stepper>
+</article>

@@ -350,7 +350,7 @@ a:focus{
   position: relative;
   margin-bottom: 40px;
 	&:before{
-		background-color: rgba(0, 0, 0, 0.5);
+		// background-color: rgba(0, 0, 0, 0.5);
 		content: '';
 		position: absolute;
 		left: 0;
@@ -364,7 +364,8 @@ a:focus{
 		float: left;
 		width: 100%;
 		padding: 0 50px;
-		text-align: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
 		// h3{
 		// 	color: #fff;
 		// 	font-size: 40px;
@@ -374,7 +375,8 @@ a:focus{
 		// }
 		p{
 			// color: #008000;
-			color: #fff;
+			// color: #fff;
+			color: rgb(0, 0, 0);
 			display: inline-block;
 			font-size: 16px;
 			margin-top: 10px;

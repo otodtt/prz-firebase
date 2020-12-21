@@ -1,0 +1,98 @@
+.danger {
+    color: #ff0000;
+    font-weight: bolder;
+}
+
+.bold {
+    font-weight: bolder;
+}
+.italic {
+    font-style: italic;
+}
+p {
+    margin: 5px 0;
+}
+a {
+    text-decoration: none;
+}
+
+article {
+    overflow: hidden;
+}
+
+h1, h2 {
+    color: #006500;
+    text-align: center
+}
+
+//   .example-stretched-tabs {
+//     max-width: 1200px;
+//     margin: auto
+//   }
+
+.text {
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.h1-wrap {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .h1-line-top {
+        box-shadow: 0px -2px #e2e1e1;
+    }
+
+    .h1-underline {
+        box-shadow: 0px 2px #e2e1e1;
+    }
+}
+::ng-deep .mat-vertical-stepper-header {
+    padding: 15px 24px;
+    // border-bottom: 1px solid rgb(185, 185, 185);
+}
+::ng-deep .mat-step-icon {
+    background-color: #8bc34a !important;
+}
+
+::ng-deep .mat-step-icon-selected {
+    background-color: #527532 !important;
+}
+
+// .href_doc {
+//     text-decoration: none;
+// }
+.my-wrapp-link {
+    display: inline-block;
+}
+.icon {
+    position: relative;
+    top: 4px;
+    margin-right: 5px;
+}
+.pdf-wrapp {
+    margin-right: 20px;
+}
+.hr-in-li {
+    height: 1px;
+    background-color: #eaeaea;
+    border: none;
+}
+
+
+ul {
+    list-style-image: url('../../assets/documents/icons/icons8-microsoft-word-18.png');
+    li {
+        a {
+            color: black;
+        }
+        a:hover {
+            color: #527532;
+        }
+        
+    }
+    .pdf-icon {
+        list-style-image: url('../../assets/documents/icons/icons8-pdf-18.png');
+    }
+}
