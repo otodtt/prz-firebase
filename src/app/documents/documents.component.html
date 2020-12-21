@@ -9,7 +9,7 @@
     </div>
     
     <mat-vertical-stepper [linear]="isLinear" #stepper>
-        <mat-step>
+        <mat-step cdkFocusInitial>
             <ng-template matStepLabel>ДНЕВНИЦИ</ng-template>
             <hr>
             <div >
@@ -116,6 +116,7 @@
         
         <mat-step >
             <ng-template matStepLabel>ДЕКЛАРАЦИИ</ng-template>
+            <hr>
             <div >
                 <p class="bold">Национална програма от мерки за контрол на доматен миниращ молец <span class="italic">Tuta absoluta</span></p>
                 <ul>
