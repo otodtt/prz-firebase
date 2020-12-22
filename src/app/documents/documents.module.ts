@@ -6,16 +6,20 @@ import { RouterModule } from '@angular/router';
 import { ShareComponentsModule } from '../common/share.components.module';
 import { DocumentsComponent } from './documents.component';
 
-import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   imports: [
     CommonModule,
     ShareComponentsModule,
     RouterModule.forChild([{ path: '', component: DocumentsComponent }]),
-    MatStepperModule,
-    MatIconModule
+    MatButtonModule,
+    MatIconModule,
+    MatTabsModule,
+    MatExpansionModule
   ],
   declarations: [
     DocumentsComponent

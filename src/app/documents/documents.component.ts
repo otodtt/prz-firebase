@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatAccordion } from '@angular/material/expansion';
 
 import { ChangeBreadcrumbService } from '../common/services/changeBreadcrumb.service';
 import { SeoService } from '../common/services/SeoService';
 
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
     templateUrl: './documents.component.html',
@@ -17,7 +17,10 @@ export class DocumentsComponent implements OnInit {
   private title = 'ПРЗ | Документи';
   private description = 'По-важни документи, заявления, формуляри и др., свързани с работата на земеделски стопани и търговци на ПРЗ.';
 
-  isLinear = false;
+  // isLinear = false;
+  step = 0;
+
+  @ViewChild(MatAccordion) accordion: MatAccordion;
 
   constructor(
     private changeBreadcrumb: ChangeBreadcrumbService,
@@ -30,5 +33,17 @@ export class DocumentsComponent implements OnInit {
     this.changeBreadcrumb.emitTitle(this.breadcrumbTitle);
     this.changeBreadcrumb.emitName(this.breadcrumbName);
     this.changeBreadcrumb.emitId(this.headerId);
+  }
+
+  setStep(index: number): any {
+    this.step = index;
+  }
+
+  nextStep(): any  {
+    this.step++;
+  }
+
+  prevStep(): any  {
+    this.step--;
   }
 }
