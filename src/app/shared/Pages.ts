@@ -163,7 +163,7 @@ const pages = [
             },
             {
                 id: 6,
-                pageId: 5,
+                pageId: 4,
                 subName: 'калкулатор',
                 link: 'calculator'
             }
