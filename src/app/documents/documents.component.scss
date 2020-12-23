@@ -21,6 +21,7 @@ a {
 
 article {
     overflow: hidden;
+    min-height: 1000px;
 }
 
 h1, h2 {
@@ -31,9 +32,6 @@ h1, h2 {
 .text {
     font-weight: bolder;
     color: #ffffff;
-}
-article {
-    min-height: 1000px;
 }
 
 .h1-wrap {
@@ -121,5 +119,32 @@ ul {
 
 .example-headers-align .mat-form-field + .mat-form-field {
   margin-left: 8px;
+}
+////////
+.example-card {
+    max-width: 1200px;
+    margin: 0 auto;
+    mat-card-header {
+        text-align: center;
+        h2 {
+            font-size: 1em;
+        }
+    }
+}
+::ng-deep .mat-card-header-text {
+    width: 100% !important;
+}
+
+.small-text {
+    display: none;
+}
+
+@media (max-width: 480px){
+    .small-text {
+        display: initial;
+    }
+    .big-text {
+        display: none;
+    }
 }
   

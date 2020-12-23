@@ -11,7 +11,7 @@ export class LegislationComponent implements OnInit {
 
   headerId = 'aa-legislation';
 
-  breadcrumbTitle = 'Закони';
+  breadcrumbTitle = 'ЗАКОНИ';
   breadcrumbName = 'Закони';
 
   private title = 'ПРЗ | Законодателство';

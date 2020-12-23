@@ -3,7 +3,7 @@
         <hr class="h1-line-top">
         <h1>
             ДОКУМЕНТИ<br/>
-            По-важни документи, заявления, декларации и др., свързани с работата на земеделски стопани и търговци на ПРЗ.
+            По-важни документи, заявления, декларации, полезни връзки и др., свързани с работата на земеделските стопани и търговци на ПРЗ.
         </h1>
         <hr class="h1-underline">
     </div>
@@ -11,7 +11,8 @@
     <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4" >
         <mat-tab>
             <ng-template mat-tab-label class="label-0" >
-                <span class="text">ЗЕМЕДЕЛСКИ СТОПАНИ</span>
+                <span class="text big-text">ЗЕМЕДЕЛСКИ СТОПАНИ</span>
+                <span class="text small-text">ЗЕМЕДЕЛЦИ</span>
             </ng-template>
             <mat-accordion class="example-headers-align" multi>
                 <mat-expansion-panel>
@@ -320,12 +321,11 @@
             </mat-accordion>
         </mat-tab>
 
-
         <mat-tab >
             <ng-template mat-tab-label class="label-0" >
-                <span class="text">ТЪРГОВЦИ НА ПРЗ</span>
+                <span class="text big-text">ТЪРГОВЦИ НА ПРЗ</span>
+                <span class="text small-text">ТЪРГОВЦИ</span>
             </ng-template>
-
             <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
                 <mat-expansion-panel-header>
                     <mat-panel-title>ЗАЯВЛЕНИЯ</mat-panel-title>
@@ -373,7 +373,7 @@
 
             <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
                 <mat-expansion-panel-header>
-                    <mat-panel-title>УДОСТОВЕРЕНИЯ</mat-panel-title>
+                    <mat-panel-title>УВЕДОМЛЕНИЯ</mat-panel-title>
                 </mat-expansion-panel-header>
                 <div class="my-div-border-top">
                     <ul>
@@ -427,310 +427,22 @@
                 <span class="text">ПОЛЕЗНИ ЛИНКОВЕ</span>
             </ng-template>
         </mat-tab> -->
-
     </mat-tab-group>
-</article>
 
-
-<!-- 
-<mat-vertical-stepper [linear]="isLinear" >
-    <mat-step >
-        <ng-template matStepLabel>ДНЕВНИЦИ</ng-template>
-        <hr>
-        <div >
-            <p >
-                <span class="danger" >ВНИМАНИЕ! </span> <span class="bold underline"> Земеделските производители, които не водят 
-                дневници, носят наказателна отговорност по Закона за защита на растенията и Наредба 104 от 22 август 2006г.!</span>
-            </p>
-            <ol>
-                <li>
-                    Дневник за проведените растителнозащитни мероприятия и торене
-                    <div>
-                        <div class="my-wrapp-link pdf-wrapp">
-                            <a class="href_doc "
-                                rel="noopener noreferrer" target="_blank"
-                                href="../../assets/documents/diary/Дневник_мероприятия.pdf"
-                            >
-                                <span >
-                                    <img class="icon" src="../../assets/documents/icons/icons8-pdf-20.png" alt="icon pdf file" title="Icon pdf file" width="20" height="20"/>
-                                </span>
-                                <span >Вариант 1</span>
-                            </a>
-                        </div>
-                        <div class="my-wrapp-link word-wrapp">
-                            <a class="href_doc "
-                                rel="noopener noreferrer" target="_blank"
-                                href="../../assets/documents/diary/Dnevnik_ZP_1.doc"
-                            >
-                                <span >
-                                    <img class="icon" src="../../assets/documents/icons/icons8-microsoft-word-20.png" alt="icon word file" title="Icon word file" width="20" height="20"/>
-                                </span>
-                                <span >Вариант 2</span>
-                            </a>
-                        </div>
-                    </div>
-                    <hr class="hr-in-li">
-                </li>
-                <li>
-                    Дневник за появата, развитието, плътността или степен на нападение от вредители
-                    <div>
-                        <div class="my-wrapp-link pdf-wrapp">
-                            <a class="href_doc "
-                                rel="noopener noreferrer" target="_blank"
-                                href="../../assets/documents/diary/Дневник_вредители.pdf"
-                            >
-                                <span >
-                                    <img class="icon" src="../../assets/documents/icons/icons8-pdf-20.png" alt="icon pdf file" title="Icon pdf file" width="20" height="20"/>
-                                </span>
-                                <span >Вариант 1</span>
-                            </a>
-                        </div>
-                        <div class="my-wrapp-link word-wrapp">
-                            <a class="href_doc "
-                                rel="noopener noreferrer" target="_blank"
-                                href="../../assets/documents/diary/orz-dnevnik_2.doc"
-                            >
-                                <span >
-                                    <img class="icon" src="../../assets/documents/icons/icons8-microsoft-word-20.png" alt="icon word file" title="Icon word file" width="20" height="20"/>
-                                </span>
-                                <span >Вариант 2</span>
-                            </a>
-                        </div>
-                    </div>
-                    <hr class="hr-in-li">
-                </li>
-                <li>
-                    Дневник на взетите проби и извършени анализи от растения и растителни продукти
-                    <div>
-                        <div class="my-wrapp-link pdf-wrapp">
-                            <a class="href_doc "
-                                rel="noopener noreferrer" target="_blank"
-                                href="../../assets/documents/diary/Дневник_проби.pdf"
-                            >
-                                <span >
-                                    <img class="icon" src="../../assets/documents/icons/icons8-pdf-20.png" alt="icon pdf file" title="Icon pdf file" width="20" height="20"/>
-                                </span>
-                                <span >Вариант 1</span>
-                            </a>
-                        </div>
-                        <div class="my-wrapp-link word-wrapp">
-                            <a class="href_doc "
-                                rel="noopener noreferrer" target="_blank"
-                                href="../../assets/documents/diary/orz-dnevnik_3.doc"
-                            >
-                                <span >
-                                    <img class="icon" src="../../assets/documents/icons/icons8-microsoft-word-20.png" alt="icon word file" title="Icon word file" width="20" height="20"/>
-                                </span>
-                                <span >Вариант 2</span>
-                            </a>
-                        </div>
-                    </div>
-                    <hr class="hr-in-li">
-                </li>
-                <li>
-                    Подробна инструкция как правилно да се попълнят Дневниците.
-                    <br>
-                    <a class="href_doc "
-                        rel="noopener noreferrer" target="_blank"
-                        href="../../assets/documents/diary/orz-dnevnik_3.doc"
-                    >
-                        <span>
-                            <img class="icon" src="../../assets/documents/icons/icons8-pdf-20.png" alt="icon pdf file" title="Icon pdf file" width="20" height="20"/>
-                        </span>
-                        <span >ИНСТРУКЦИЯ</span>
-                    </a>
-                </li>
-            </ol>
-        </div>
-    </mat-step>
-
-    <mat-step>
-        <ng-template matStepLabel>ЗАЯВЛЕНИЯ</ng-template>
-        <hr>
-        <div >
-            <ul>
-                <li>
-                    <a class="href_doc "
-                        rel="noopener noreferrer" target="_blank"
-                        href="../../assets/documents/application/Заявление_за издаване на становище.doc"
-                    >
-                    Заявление за издаване на Становище за Предоставяне на безвъзмездна финансова помощ по Програма за развитие на селските райони.
-                    </a>
-                </li>
-                <li>
-                    <a class="href_doc "
-                        rel="noopener noreferrer" target="_blank"
-                        href="../../assets/documents/application/Заявление_за издаване на Сертификат чл.83 от ЗЗР.doc"
-                    >
-                    Заявление за издаване на Сертификат за използване на ПРЗ по чл.83 от ЗЗР.
-                    </a>
-                </li>
-                <li class="pdf-icon">
-                    <a class="href_doc "
-                        rel="noopener noreferrer" target="_blank"
-                        href="../../assets/documents/application/Spisak-31.07.2020.pdf"
-                    >
-                    Списък на висшите училища и институции в системата на професионалното 
-                    образование и обучение, които имат одобрени от изпълнителния директор на 
-                    БАБХ програми на тема "Обучение на професионални потребители на продукти за 
-                    растителна защита от професионална категория на употреба".
-                    </a>
-                    <hr class="hr-in-li">
-                </li>
-                <li >
-                    <a class="href_doc "
-                        rel="noopener noreferrer" target="_blank"
-                        href="../../assets/documents/application/_ККППЗ(1).docx"
-                    >
-                    Заявка за извършване на контрол на качеството на пресни плодове и зеленчуци по желание на търговец/производител.
-                    </a>
-                    <hr class="hr-in-li">
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a class="href_doc "
-                        rel="noopener noreferrer" target="_blank"
-                        href="../../assets/documents/application/за регистрация.doc"
-                    >
-                    Заявление за регистрация в Официалния регистър на професионалните 
-                    оператори – Приложение 2 към Заповед № РД 11-1601/09.07.2020 г.
-                    </a>
-                </li>
-                <li>
-                    <a class="href_doc "
-                        rel="noopener noreferrer" target="_blank"
-                        href="../../assets/documents/application/фитосанитарна проверка.doc"
-                    >
-                    Заявление за извършване на фитосанитарна проверка и издаване на фитосанитарен сертификат.
-                    </a>
-                </li>
-                <li>
-                    <a class="href_doc "
-                        rel="noopener noreferrer" target="_blank"
-                        href="../../assets/documents/application/фитосанитарен контрол.doc"
-                    >
-                    Заявление за извършване на фитосанитарен контрол и издаване на растителен 
-                    паспорт (РП) или заменен растителен паспорт (ЗП) - Приложение 17 към 
-                    Заповед № РД 11-1601/09.07.2020 г.
-                    </a>
-                    <hr class="hr-in-li">
-                </li>
-            </ul>
-        </div>
-    </mat-step>
+    <div class="h1-wrap">
+        
     
-    <mat-step >
-        <ng-template matStepLabel>ДЕКЛАРАЦИИ</ng-template>
-        <hr>
-        <div >
-            <p class="bold">Национална програма от мерки за контрол на доматен миниращ молец <span class="italic">Tuta absoluta</span></p>
-            <ul>
-                <li>
-                    <a class="href_doc "
-                        rel="noopener noreferrer" target="_blank"
-                        href="../../assets/documents/declarations/Deklaracia_ZP_PRZ_2019.doc"
-                    >
-                        Образец на Декларация за вложените количества ПРЗ, разрешени според 
-                        „Национална програма от мерки за контрол на доматен миниращ молец 
-                        <span class="italic">Tuta absoluta Meyrick</span> (<span class="italic">Lepidoptera</span>)” (25.10.2019г.)
-                    </a>
-                </li>
-                <li>
-                    <a class="href_doc "
-                        rel="noopener noreferrer" target="_blank"
-                        href="../../assets/documents/declarations/Deklaracia_ZP_nepriateli_Tuta-2019.doc"
-                    >
-                        Декларация относно размера на нападнатите площи и установената плътност 
-                        на вредителите по "Национална програма от мерки за контрол на доматен 
-                        миниращ молец (<span class="italic">Tuta absoluta Meyrick</span> ) (25.10.2019г.)
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <hr class="hr-in-li">
-        <div >
-            <p class="bold">Национална програма от мерки за контрол на неприятели по картофи</p>
-            <ul>
-                <li class="pdf-icon">
-                    <a class="href_doc "
-                        rel="noopener noreferrer" target="_blank"
-                        href="../../assets/documents/declarations/2-Deklaracia_ZP_nepriateli_Elateridae-2018.pdf"
-                    >
-                    Декларация относно размера на нападнатите площи и установената плътност на 
-                    вредителите по „Национална програма от мерки за контрол на почвени 
-                    неприятели по картофите от сем. Телени червеи (<span class="italic">Elateridae</span>) (12.3.2018г.)
-                    </a>
-                </li>
-                <li class="pdf-icon">
-                    <a class="href_doc "
-                        rel="noopener noreferrer" target="_blank"
-                        href="../../assets/documents/declarations/3-Deklaracia_ZP_PRZ_Elateridae-2018.pdf"
-                    >
-                    Декларация за вложените количества ПРЗ, разрешени според "Национална програма 
-                    от мерки за контрол на почвени неприятели по картофите от сем. 
-                    Телени червеи (<span class="italic">Elateridae</span>) (15.3.2018г.)
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <hr class="hr-in-li">
-        <div >
-            <p class="bold">Национална програма за контрол на вредителите по трайните насаждения</p>
-            <ul>
-                <li>
-                    <a class="href_doc "
-                        rel="noopener noreferrer" target="_blank"
-                        href="../../assets/documents/declarations/Зимни.doc"
-                    >
-                        ДЕКЛАРАЦИЯ за вложените количества ПРЗ разрешени по: "Национална програма за 
-                        контрол на вредителите по трайните насаждения през зимния период" (20.2.2020г.)
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <hr class="hr-in-li">
-    </mat-step>
-
-    <mat-step>
-        <ng-template matStepLabel>ВЪЗДУШНО</ng-template>
-        <hr>
-        <div >
-            <p class="bold">За получаване на разрешение за прилагане на ПРЗ чрез въздушно пръскане.</p>
-            <ul>
-                <li>
-                    <a class="href_doc "
-                        rel="noopener noreferrer" target="_blank"
-                        href="../../assets/documents/air/Заявление въздушно пръскане приложение 1.doc"
-                    >
-                        Заявление за получаване на разрешение за прилагане на ПРЗ чрез въздушно пръскане, съгласно чл. 110 от ЗЗР.
-                    </a>
-                </li>
-                <li>
-                    <a class="href_doc "
-                        rel="noopener noreferrer" target="_blank"
-                        href="../../assets/documents/air/Предписание за прилагане на ПРЗ.doc"
-                    >
-                        Предписание за прилагане на ПРЗ чрез въздушно пръскане поради опасност за растенията и растителните продукти.
-                    </a>
-                </li>
-                <li>
-                    <a class="href_doc "
-                        rel="noopener noreferrer" target="_blank"
-                        href="../../assets/documents/air/Декларация по чл. 110-приложение 2.doc"
-                    >
-                        Декларация по чл. 110, ал. 2, т. 4 от Закона за защита на растенията
-                    </a>
-                </li>
-                <li>
-                    <a class="href_doc "
-                        rel="noopener noreferrer" target="_blank"
-                        href="../../assets/documents/air/Декларация по чл.112-приложение 4.doc"
-                    >
-                        Декларация по чл. 112 и чл. 4 от Закона за защита на растенията.
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </mat-step>
-</mat-vertical-stepper> -->
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title class="card-title"><h2>ПОЛЕЗНИ ВРЪЗКИ</h2></mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    Тук ще намерите линкове към сайтовете на национални и международни партньори на БАБХ, 
+                    международни организации, свързани с безопасността на храните, здравето на животните и 
+                    други.
+                </p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</article>

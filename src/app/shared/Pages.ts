@@ -160,6 +160,12 @@ const pages = [
                 pageId: 4,
                 subName: 'документи',
                 link: 'documents'
+            },
+            {
+                id: 6,
+                pageId: 5,
+                subName: 'калкулатор',
+                link: 'calculator'
             }
         ],
     },

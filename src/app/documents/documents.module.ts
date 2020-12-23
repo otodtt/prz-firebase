@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule,
     MatIconModule,
     MatTabsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatCardModule
   ],
   declarations: [
     DocumentsComponent
