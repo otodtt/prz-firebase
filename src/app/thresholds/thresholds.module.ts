@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 /** Routing */
 import { ThresholdsRoutingModul } from './thresholds-routing.module';
+import { ResizeService } from '../common/services/ResizeService';
 
 /** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
@@ -101,6 +102,7 @@ import { VitisComponent } from './pages/vitis/vitis.component';
         FragariaComponent,
         VitisComponent
     ],
+    providers: [ResizeService],
     entryComponents: [ThresholdsDialogComponent],
 })
 export class ThresholdsModule { }

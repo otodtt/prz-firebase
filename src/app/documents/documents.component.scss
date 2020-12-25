@@ -1,0 +1,176 @@
+.danger {
+    color: #b60000;
+    font-weight: bolder;
+}
+
+.bold {
+    font-weight: bolder;
+}
+.italic {
+    font-style: italic;
+}
+.underline {
+    text-decoration: underline;
+}
+p {
+    margin: 5px 0;
+}
+a {
+    text-decoration: none;
+}
+
+article {
+    overflow: hidden;
+    min-height: 1000px;
+}
+
+h1, h2 {
+    color: #006500;
+    text-align: center
+}
+
+.text {
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.h1-wrap {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .h1-line-top {
+        box-shadow: 0px -2px #e2e1e1;
+    }
+
+    .h1-underline {
+        box-shadow: 0px 2px #e2e1e1;
+    }
+}
+::ng-deep .mat-vertical-stepper-header {
+    padding: 15px 24px;
+}
+::ng-deep .mat-step-icon {
+    background-color: #8bc34a !important;
+}
+
+::ng-deep .mat-step-icon-selected {
+    background-color: #527532 !important;
+}
+
+.my-wrapp-link {
+    display: inline-block;
+}
+.icon {
+    position: relative;
+    top: 4px;
+    margin-right: 5px;
+}
+.pdf-wrapp {
+    margin-right: 20px;
+}
+.hr-in-li {
+    height: 1px;
+    background-color: #eaeaea;
+    border: none;
+}
+a {
+    color: black;
+}
+a:hover {
+    color: #527532;
+}
+
+.link a {
+    color: #006500;
+}
+.link a:hover {
+    color: #527532;
+    .material-icons {
+        color: #de9d62;
+    }
+}
+
+ul {
+    list-style-image: url('../../assets/documents/icons/icons8-microsoft-word-18.png');
+    .pdf-icon {
+        list-style-image: url('../../assets/documents/icons/icons8-pdf-18.png');
+    }
+    .link {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+}
+.material-icons {
+    color: #006500;
+    position: relative;
+    top: 7px;
+    margin-right: 5px;
+}
+
+.example-stretched-tabs {
+    max-width: 1200px;
+    margin: auto
+}
+::ng-deep .mat-ink-bar {
+    background-color: #de9d62 !important;
+}
+    ::ng-deep .mat-tab-group[mat-stretch-tabs]>.mat-tab-header .mat-tab-label {
+    background-color: #527532;
+}
+.text {
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.my-div-border-top {
+    border-top: #969595 1px solid;
+}
+
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-headers-align .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+////////
+.example-card {
+    max-width: 1200px;
+    margin: 0 auto;
+    mat-card-header {
+        text-align: center;
+    }
+}
+mat-card-content {
+    text-align: left;
+    h2 {
+        text-align: initial;
+    }
+}
+::ng-deep .mat-card-header-text {
+    width: 100% !important;
+}
+
+.small-text {
+    display: none;
+}
+.my-card-title {
+    font-weight: bolder;
+}
+
+@media (max-width: 480px){
+    .small-text {
+        display: initial;
+    }
+    .big-text {
+        display: none;
+    }
+}
+  

@@ -16,6 +16,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { getBulgarianPaginatorIntl } from '../products/shared/services/CustomPaginator';
 
 import { RegistersRoutingModule } from './registers-routing.module';
+import { ResizeService } from '../common/services/ResizeService';
 
 /** Firebase */
 import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
@@ -59,6 +60,7 @@ import { DialogSubstancesComponent } from './substances/dialog-substances/dialog
   ],
   providers: [
     AngularFireDatabase,
+    ResizeService,
     { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() }
   ],
   entryComponents: [ MoreDialogComponent, DialogAdjuvantsComponent, DialogSubstancesComponent ],
