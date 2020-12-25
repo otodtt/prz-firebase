@@ -81,11 +81,31 @@ a:hover {
     color: #527532;
 }
 
+.link a {
+    color: #006500;
+}
+.link a:hover {
+    color: #527532;
+    .material-icons {
+        color: #de9d62;
+    }
+}
+
 ul {
     list-style-image: url('../../assets/documents/icons/icons8-microsoft-word-18.png');
     .pdf-icon {
         list-style-image: url('../../assets/documents/icons/icons8-pdf-18.png');
     }
+    .link {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+}
+.material-icons {
+    color: #006500;
+    position: relative;
+    top: 7px;
+    margin-right: 5px;
 }
 
 .example-stretched-tabs {
@@ -126,9 +146,12 @@ ul {
     margin: 0 auto;
     mat-card-header {
         text-align: center;
-        h2 {
-            font-size: 1em;
-        }
+    }
+}
+mat-card-content {
+    text-align: left;
+    h2 {
+        text-align: initial;
     }
 }
 ::ng-deep .mat-card-header-text {
@@ -137,6 +160,9 @@ ul {
 
 .small-text {
     display: none;
+}
+.my-card-title {
+    font-weight: bolder;
 }
 
 @media (max-width: 480px){
