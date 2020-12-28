@@ -45,6 +45,10 @@
     }
 
   }
+  ::ng-deep .mat-card-header-text {
+    display: none;
+  }
+
   #right-card{
     float: left;
     .header-wrap {
@@ -70,6 +74,8 @@
     }
   }
 }
+
+
 
 .create-page {
   padding: 20px 60px;
