@@ -1,0 +1,114 @@
+.danger {
+    color: #b60000;
+    font-weight: bolder;
+}
+
+.bold {
+    font-weight: bolder;
+}
+.italic {
+    font-style: italic;
+}
+.underline {
+    text-decoration: underline;
+}
+p {
+    margin: 5px 0;
+}
+a {
+    text-decoration: none;
+}
+
+article {
+    overflow: hidden;
+    min-height: 1000px;
+}
+
+h1, h2 {
+    color: #006500;
+    text-align: center
+}
+
+.text {
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.h1-wrap {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .h1-line-top {
+        box-shadow: 0px -2px #e2e1e1;
+    }
+
+    .h1-underline {
+        box-shadow: 0px 2px #e2e1e1;
+    }
+}
+
+.div-table {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+    border: solid 2px green;
+    .div-table-row {
+        display: table-row;
+        .div-sell {
+            display: table-cell;
+            border: solid 2px green;
+        }
+    }
+}
+
+.fieldset {
+    margin-top: 10px
+}
+.wrap-dose {
+    display: table-row;
+    .dose-input-div, .dose-radio-div {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+    }
+    .dose-input-div {
+        mat-form-field {
+            width: 100%;
+        }
+    }
+    // .dose-input {
+    //     width: 100%;
+    // }
+}
+
+.inform-div {
+    width: 100%;
+    background-color: rgb(201, 201, 201);
+    height: 40px;
+    ul {
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        .text-success {
+            padding-top: 12px;
+        }
+    }
+    
+}
+
+.example-radio-group {
+    display: flex;
+    // flex-direction: column;
+    margin: 15px 0;
+}
+  
+.example-radio-button {
+    margin: 5px;
+}

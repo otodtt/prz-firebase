@@ -55,6 +55,11 @@ export const routes: Routes = [
     data: { preload: true, delay: 10000 }
   },
   {
+    path: 'calculator',
+    loadChildren: () => import('./calculator/calculator.module').then(m => m.CalculatorModule),
+    data: { preload: true, delay: 10000 }
+  },
+  {
     path: 'contact',
     loadChildren: () => import( './contacts/contacts.module').then(m => m.ContactsModule),
     data: { preload: true, delay: 10000 }

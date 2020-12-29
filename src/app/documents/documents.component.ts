@@ -17,7 +17,6 @@ export class DocumentsComponent implements OnInit {
   private title = 'ПРЗ | Документи';
   private description = 'По-важни документи, заявления, формуляри и др., свързани с работата на земеделски стопани и търговци на ПРЗ.';
 
-  // isLinear = false;
   step = 0;
 
   @ViewChild(MatAccordion) accordion: MatAccordion;
@@ -29,6 +28,7 @@ export class DocumentsComponent implements OnInit {
     this.seoService.addTitle(this.title);
     this.seoService.setNoKeywordsMeta(this.description);
   }
+
   ngOnInit(): void {
     this.changeBreadcrumb.emitTitle(this.breadcrumbTitle);
     this.changeBreadcrumb.emitName(this.breadcrumbName);

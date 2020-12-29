@@ -1,0 +1,76 @@
+<article>
+    <div class="h1-wrap">
+        <hr class="h1-line-top">
+        <h1>
+            КАЛКУЛАТОР<br/>
+            Калкулатор за изчисляване на необходимото количество от Продукт за Растителна Защита за единица площ.
+        </h1>
+        <hr class="h1-underline">
+    </div>
+
+    <div class="h1-wrap">
+        <div class="div-table">
+            <div class="div-table-row">
+                <div class="div-sell">
+                    <!-- <form action="/action_page.php"> -->
+                        <fieldset class="fieldset">
+                            <legend>Данни за дозата:</legend>
+                            <div class="wrap-dose">
+                                <div class="dose-input-div">
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Доза</mat-label>
+                                      <input matInput placeholder="Доза" type="number" [(ngModel)]="number" name="number" class="dose-input">
+                                    </mat-form-field>
+                                </div>
+                                <div class="dose-radio-div">
+                                    <label id="example-radio-group-label">Избери мерната единица!</label>
+                                    <mat-radio-group
+                                        aria-labelledby="example-radio-group-label"
+                                        class="example-radio-group"
+                                        [(ngModel)]="selectedUnit" name="units">
+                                        <mat-radio-button class="example-radio-button" *ngFor="let unit of units; index as i" [value]="i">
+                                            {{unit}}
+                                        </mat-radio-button>
+                                    </mat-radio-group>
+                                </div>
+                            </div>
+                            
+                            <div class="inform-div">
+                                <!-- Your favorite season is: {{selectedUnit}} ///// {{number}} -->
+                                <ul *ngFor="let unit of units; index as i">
+                                    <li *ngIf="i === 0 && i === selectedUnit && number != 1" 
+                                        class="text-success">Избрана е доза - {{ number }} милилитра на декар
+                                    </li>
+                                    <li *ngIf="i === 0 && i === selectedUnit && number === 1" 
+                                        class="text-success">Избрана е доза - {{ number }} милилитър на декар
+                                    </li>
+                                    <li *ngIf="i === 1 && i === selectedUnit"
+                                        class="text-success">Избрана е доза - {{ number }} литра на декар
+                                    </li>
+                                    <li *ngIf="i === 2 && i === selectedUnit"
+                                        class="text-success">Избрана е доза - {{ number }} грама на декар
+                                    </li>
+                                    <li *ngIf="i === 3 && i === selectedUnit"
+                                        class="text-success">Избрана е доза - {{ number }} килограма на декар
+                                    </li>
+                                    <li *ngIf="i === 4 && i === selectedUnit"
+                                        class="text-success">Избрана е доза - {{ number }} процентен разтвор
+                                    </li>
+                                    <li *ngIf="i >= 5"
+                                        class="text-danger"> {{ unit }} {{ i }} въведи коректни данни
+                                    </li>
+                                  </ul>
+                            </div>
+                        </fieldset>
+                    <!-- </form> -->
+                </div>
+                <div class="div-sell">
+                    <p>Tets Tets Tets Tets Tets Tets Tets Tets Tets</p>
+                    <p>Tets</p>
+                    <p>Tets</p>
+                    <p>Tets</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
