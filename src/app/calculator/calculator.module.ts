@@ -24,7 +24,7 @@ import { MatRadioModule, MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material/rad
   ],
   providers: [{
     provide: MAT_RADIO_DEFAULT_OPTIONS,
-    useValue: { color: 'accent' },
+    useValue: { color: 'primary' },
   }],
   exports: [ MatFormFieldModule, MatInputModule ]
 })

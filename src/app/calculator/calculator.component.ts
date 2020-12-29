@@ -16,7 +16,7 @@ export class CalculatorComponent implements OnInit {
   private description = 'Калкулатор за изчисляване на необходимото количество от Продукт за Растителна Защита за единица площ.';
 
   selectedUnit: number;
-  number: number;
+  dose: number;
   units: string[] = ['мл/дка', 'л/дка', 'мг/дка', 'кг/дка', ' % '];
 
   constructor(
