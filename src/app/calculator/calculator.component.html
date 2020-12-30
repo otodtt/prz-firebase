@@ -12,51 +12,81 @@
         <div class="div-table ">
             <div class="div-table-row">
                 <div class="div-sell container">
-                    <!-- <form action="/action_page.php"> -->
+                    <!-- <form class="create-form" [formGroup]="calculatorForm"  (ngSubmit)="onSubmit(calculatorForm.value)"> -->
+                    <form class="create-form" [formGroup]="calculatorForm"  (ngSubmit)="onSubmit(calculatorForm.value)">
                         <fieldset class="fieldset">
                             <legend>Данни за дозата:</legend>
                             <div class="wrap-dose">
-                                <div class="dose-input-div">
+                                <div class="dose-input-div" >
                                   <label for="dose" class="label-for-dose">Доза:</label>
-                                  <input type="number" [(ngModel)]="dose" name="dose" class="dose-input" id="dose">
-                                    <!-- <mat-form-field appearance="outline" class="dose-input">
-                                      <mat-label>Доза</mat-label>
-                                      <input matInput placeholder="Доза" type="dose" [(ngModel)]="dose" name="dose" class="dose-inputDDD">
-                                    </mat-form-field> -->
+                                    <input type="number" 
+                                        [(ngModel)] = "dose"
+                                        formControlName = "dose"
+                                        class="dose-input" id="dose"
+                                        required min="0.01">
                                 </div>
-                                <div class="dose-radio-div">
+                                <div class="dose-radio-div" >
                                     <label id="example-radio-group-label">Избери мерната единица!</label>
                                     <mat-radio-group
                                         aria-labelledby="example-radio-group-label"
                                         class="example-radio-group cal-row"
-                                        [(ngModel)]="selectedUnit" name="units">
-                                        <mat-radio-button class="example-radio-button num" *ngFor="let unit of units; index as i" [value]="i">
+                                        name="units"
+                                        [(ngModel)]="selectedUnit"
+                                        formControlName = "units"
+                                        required>
+                                        <mat-radio-button class="example-radio-button num"  *ngFor="let unit of units; index as i" [value]="i">
                                             {{unit}}
                                         </mat-radio-button>
                                     </mat-radio-group>
                                 </div>
                             </div>
-
-                            <div class="inform-div">
-                                <!-- Your favorite season is: {{selectedUnit}} ///// {{dose}} -->
+                            <div class="inform-div" *ngIf="calculatorForm.get('dose').invalid || calculatorForm.get('units').invalid ">
+                                <p class="text-danger">Въведи желаната доза и избери мерната единица!</p>
+                            </div>
+                            <div class="inform-div" *ngIf="calculatorForm.get('dose').valid && calculatorForm.get('units').valid " >
                                 <ul *ngFor="let unit of units; index as i">
-                                    <li *ngIf="i === 0 && i === selectedUnit && dose != 1"
-                                        class="text-success">Избрана е доза - {{ dose }} милилитра на декар
+                                    <li *ngIf="i === 0 && i === selectedUnit && dose != 1" class="text-success">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon">thumb_up</mat-icon>
+                                        Избрана е доза - {{ dose }} милилитра на декар
                                     </li>
-                                    <li *ngIf="i === 0 && i === selectedUnit && dose === 1"
-                                        class="text-success">Избрана е доза - {{ dose }} милилитър на декар
+                                    <li *ngIf="i === 0 && i === selectedUnit && dose === 1" class="text-success">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon">thumb_up</mat-icon>
+                                        Избрана е доза - {{ dose }} милилитър на декар
                                     </li>
-                                    <li *ngIf="i === 1 && i === selectedUnit"
-                                        class="text-success">Избрана е доза - {{ dose }} литра на декар
+
+                                    <li *ngIf="i === 1 && i === selectedUnit && dose != 1" class="text-success">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon">thumb_up</mat-icon>
+                                        Избрана е доза - {{ dose }} литра на декар
                                     </li>
-                                    <li *ngIf="i === 2 && i === selectedUnit"
-                                        class="text-success">Избрана е доза - {{ dose }} грама на декар
+                                    <li *ngIf="i === 1 && i === selectedUnit && dose === 1" class="text-success">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon">thumb_up</mat-icon>
+                                        Избрана е доза - {{ dose }} литър на декар
                                     </li>
-                                    <li *ngIf="i === 3 && i === selectedUnit"
-                                        class="text-success">Избрана е доза - {{ dose }} килограма на декар
+
+                                    <li *ngIf="i === 2 && i === selectedUnit && dose != 1" class="text-success">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon">thumb_up</mat-icon>
+                                        Избрана е доза - {{ dose }} грама на декар
                                     </li>
-                                    <li *ngIf="i === 4 && i === selectedUnit"
-                                        class="text-success">Избрана е доза - {{ dose }} процентен разтвор
+                                    <li *ngIf="i === 2 && i === selectedUnit && dose === 1" class="text-success">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon">thumb_up</mat-icon>
+                                        Избрана е доза - {{ dose }} грам на декар
+                                    </li>
+
+                                    <li *ngIf="i === 3 && i === selectedUnit && dose != 1" class="text-success">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon">thumb_up</mat-icon>
+                                        Избрана е доза - {{ dose }} килограма на декар
+                                    </li>
+                                    <li *ngIf="i === 3 && i === selectedUnit && dose === 1" class="text-success">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon">thumb_up</mat-icon>
+                                        Избрана е доза - {{ dose }} килограм на декар
+                                    </li>
+
+                                    <li *ngIf="i === 4 && i === selectedUnit && dose >= 10"class="text-danger">
+                                        ВНИМАНИЕ! Няма продукт с такава регистрация! 
+                                    </li>
+                                    <li *ngIf="i === 4 && i === selectedUnit && dose < 10 "class="text-success">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon">thumb_up</mat-icon>
+                                        Избрана е доза - {{ dose }} процентен разтвор
                                     </li>
                                     <li *ngIf="i >= 5"
                                         class="text-danger"> {{ unit }} {{ i }} въведи коректни данни
@@ -64,7 +94,7 @@
                                   </ul>
                             </div>
                         </fieldset>
-                    <!-- </form> -->
+                    </form>
                 </div>
                 <div class="div-sell">
                     <p>Tets Tets Tets Tets Tets Tets Tets Tets Tets</p>

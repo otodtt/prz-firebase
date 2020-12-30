@@ -6,10 +6,11 @@ import { RouterModule } from '@angular/router';
 import { ShareComponentsModule } from '../common/share.components.module';
 import { CalculatorComponent } from './calculator.component';
 
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule, MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material/radio';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [CalculatorComponent],
@@ -17,10 +18,12 @@ import { MatRadioModule, MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material/rad
     CommonModule,
     ShareComponentsModule,
     RouterModule.forChild([{ path: '', component: CalculatorComponent }]),
-    MatFormFieldModule,
     MatInputModule,
     MatRadioModule,
-    FormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
+    MatIconModule
   ],
   providers: [{
     provide: MAT_RADIO_DEFAULT_OPTIONS,

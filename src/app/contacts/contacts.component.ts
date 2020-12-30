@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, FormControl, FormGroupDirective } from '@angular/forms';
-import { Subscription, Observable, merge } from 'rxjs';
+import { FormBuilder, FormGroup, Validators, FormGroupDirective } from '@angular/forms';
+import { Subscription } from 'rxjs';
 import { MediaMatcher } from '@angular/cdk/layout';
 
 import { MatDialog } from '@angular/material/dialog';
@@ -21,7 +21,6 @@ import { RecaptchaComponent } from 'ng-recaptcha';
 const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 @Component({
-  selector: 'prz-contacts',
   templateUrl: './contacts.component.html',
   styleUrls: ['./contacts.component.scss']
 })

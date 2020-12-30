@@ -64,16 +64,20 @@ h1, h2 {
 }
 
 .fieldset {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  // border: 1px solid rgb(83, 118, 50);
-  border: 1px solid #dc7001;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: -1px 8px 8px 1px rgba(123, 144, 169, 1);
-  -moz-box-shadow: -1px 8px 8px 1px rgba(123, 144, 169, 1);
-  box-shadow: -1px 8px 8px 1px rgba(123, 144, 169, 1);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    // border: 1px solid rgb(83, 118, 50);
+    border: 1px solid #dc7001;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+//   -webkit-box-shadow: -1px 8px 8px 1px rgba(123, 144, 169, 1);
+//   -moz-box-shadow: -1px 8px 8px 1px rgba(123, 144, 169, 1);
+//   box-shadow: -1px 8px 8px 1px rgba(123, 144, 169, 1);
+
+    -webkit-box-shadow: -1px 8px 8px 1px rgb(161, 161, 161, 1);
+    -moz-box-shadow: -1px 8px 8px 1px rgba(161, 161, 161, 1);
+    box-shadow: -1px 8px 8px 1px rgba(161, 161, 161, 1);
 }
 .wrap-dose {
     // display: table-row;
@@ -90,7 +94,7 @@ h1, h2 {
     .label-for-dose {
       margin-right: 20px;
     }
-    .dose-input {
+    .dose-input, .valid {
         width: 70%;
         height: 25px;
         background-color: #ffffff;
@@ -107,13 +111,19 @@ h1, h2 {
         // float: right;
         font-size: 1em;
     }
+    .errors-input {
+        border: 1px solid  red;
+    }
 }
 
 .inform-div {
-    width: 100%;
-    background-color: rgb(129, 129, 129);
+    width: 98%;
+    // background-color: rgb(129, 129, 129);
+    background-color: #ecf0f1;
     height: 40px;
     margin-top: 10px;
+    // margin-right: 10px;
+    padding-left: 10px;
     border-radius: 5px;
     border: 1px solid rgb(100, 100, 100);
     ul {
@@ -124,18 +134,42 @@ h1, h2 {
             margin: 0;
             padding: 0;
             list-style-type: none;
+            color: green;
+            font-weight: bolder;
+            mat-icon {
+                position: relative;
+                top: 4px;
+                margin-right: 5px;
+            }
         }
         .text-success {
+            padding-top: 3px;
+        }
+        .text-danger {
             padding-top: 12px;
+            color: #b60000;
         }
     }
-
+    .text-danger {
+        padding-top: 7px;
+        color: #b60000;
+    }
 }
 
 label, legend {
   font-size: 0.9em;
-  color: rgb(60 105 18);
+//   color: rgb(60 105 18);
+  color: #3f51b5;
+  font-weight: bolder;
 }
+
+// fieldset {
+//     legend {
+//         background-color: #dcdcdc;
+//         border-radius: 10px;
+//         border-top: 1px solid #dc7001 ;
+//     }
+// }
 
 // .example-radio-group {
 //   display: flex;
@@ -149,19 +183,24 @@ label, legend {
 
 
 .container{
-  width: 600px;
-  height: auto;
-  // border: 1px solid #0086FF;
-  // border: 1px solid rgb(83, 118, 50);
-  border: 1px solid #dc7001;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: -1px 8px 8px 1px rgba(123, 144, 169, 1);
-  -moz-box-shadow: -1px 8px 8px 1px rgba(123, 144, 169, 1);
-  box-shadow: -1px 8px 8px 1px rgba(123, 144, 169, 1);
-  padding: 0 10px;
-  background-color: #dcdcdc;
+//   width: 600px;
+    width: 55%;
+    height: auto;
+    // border: 1px solid #0086FF;
+    // border: 1px solid rgb(83, 118, 50);
+    border: 1px solid #dc7001;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+//   -webkit-box-shadow: -1px 8px 8px 1px rgba(123, 144, 169, 1);
+//   -moz-box-shadow: -1px 8px 8px 1px rgba(123, 144, 169, 1);
+//   box-shadow: -1px 8px 8px 1px rgba(123, 144, 169, 1);
+
+    -webkit-box-shadow: -1px 8px 8px 1px rgb(161, 161, 161, 1);
+    -moz-box-shadow: -1px 8px 8px 1px rgba(161, 161, 161, 1);
+    box-shadow: -1px 8px 8px 1px rgba(161, 161, 161, 1);
+    padding: 0 10px;
+    background-color: #dcdcdc;
   // background-color: #de9d62;
 }
 
@@ -173,20 +212,20 @@ label, legend {
 }
 
 .cal-row .num{
-  width: 80px;
-  height: 20px;
-  margin: 5px;
-  // font-size: 25px;
-  // font-weight: 400;
-  border: none;
-  border: 1px solid  rgb(83, 118, 50);
-  border-radius: 5px;
-  background: #ecf0f1;
-  cursor: pointer;
-  -webkit-box-shadow: -1px 8px 8px 1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -1px 8px 8px 1px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.75);
-  padding: 2px;
+    width: 80px;
+    height: 20px;
+    margin: 5px;
+    // font-size: 25px;
+    // font-weight: 400;
+    border: none;
+    border: 1px solid  rgb(83, 118, 50);
+    border-radius: 5px;
+    background: #ecf0f1;
+    cursor: pointer;
+    -webkit-box-shadow: -1px 8px 8px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 8px 8px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.75);
+    padding: 2px;
 }
 
 .cal-row .num:focus{

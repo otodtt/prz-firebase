@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, FormControl, FormGroupDirective } from '@angular/forms';
 
 import { ChangeBreadcrumbService } from '../common/services/changeBreadcrumb.service';
 import { SeoService } from '../common/services/SeoService';
@@ -8,6 +9,8 @@ import { SeoService } from '../common/services/SeoService';
   styleUrls: ['./calculator.component.scss']
 })
 export class CalculatorComponent implements OnInit {
+  // @ViewChild(FormGroupDirective, { static: true }) formGroupDirective: FormGroupDirective;
+
   headerId = 'aa-documents';
   breadcrumbTitle = 'КАЛКУЛАТОР';
   breadcrumbName = 'Калкулатор';
@@ -15,6 +18,29 @@ export class CalculatorComponent implements OnInit {
   private title = 'ПРЗ | Калкулатор';
   private description = 'Калкулатор за изчисляване на необходимото количество от Продукт за Растителна Защита за единица площ.';
 
+  calculatorForm: FormGroup;
+  submitted = false;
+
+
+
+  // validationMessages: any = {
+  //   dose: [
+  //     { type: 'required', message: 'Името е задължително!' },
+  //     // { type: 'minlength', message: 'Минимална дължина за име - 2 знака.' }
+  //   ],
+  //   // subject: [
+  //   //   { type: 'required', message: 'Полето е задължително' },
+  //   //   { type: 'minlength', message: 'Минимална дължина за тема - 3 знака.' }
+  //   // ],
+  //   // text: [
+  //   //   { type: 'required', message: 'Моля, напишете Вашето съобщение!' },
+  //   // ],
+  //   // email: [
+  //   //   { type: 'required', message: 'Трябва да въведете валиден адрес!' },
+  //   //   { type: 'email', message: '' },
+  //   //   { type: 'pattern', message: 'Невалиден email' }
+  //   // ]
+  // };
   selectedUnit: number;
   dose: number;
   units: string[] = ['мл/дка', 'л/дка', 'мг/дка', 'кг/дка', ' % '];
@@ -22,6 +48,7 @@ export class CalculatorComponent implements OnInit {
   constructor(
     private changeBreadcrumb: ChangeBreadcrumbService,
     private seoService: SeoService,
+    private fb: FormBuilder,
   ) {
     this.seoService.addTitle(this.title);
     this.seoService.setNoKeywordsMeta(this.description);
@@ -31,5 +58,35 @@ export class CalculatorComponent implements OnInit {
     this.changeBreadcrumb.emitTitle(this.breadcrumbTitle);
     this.changeBreadcrumb.emitName(this.breadcrumbName);
     this.changeBreadcrumb.emitId(this.headerId);
+
+    this.createForm();
   }
+
+  // convenience getter for easy access to form fields
+  get f(): any {
+    console.log(this.calculatorForm.controls);
+    return this.calculatorForm.controls;
+  }
+
+  // this.calculatorForm = new FormGroup({
+  //   dose: new FormControl()
+  // });
+
+  createForm(): void {
+
+    this.calculatorForm = this.fb.group({
+      dose: ['', [Validators.required, Validators.min(0.01)] ],
+      units: ['', Validators.required ],
+      // text: ['', Validators.required ],
+      // captcha: ['', Validators.required]
+    });
+
+    // this.calculatorForm = this.fb.group({
+    //   dose: new FormControl(this.dose, [
+    //      Validators.required,
+    //   ])
+    // });
+  }
+
+  onSubmit( value: any): void {}
 }
