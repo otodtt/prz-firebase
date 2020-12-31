@@ -42,8 +42,11 @@ export class CalculatorComponent implements OnInit {
   //   // ]
   // };
   selectedUnit: number;
+  selectedAreaUnit: number;
   dose: number;
+  area: number;
   units: string[] = ['мл/дка', 'л/дка', 'мг/дка', 'кг/дка', ' % '];
+  areaUnits: string[] = ['кв.м', 'дка'];
 
   constructor(
     private changeBreadcrumb: ChangeBreadcrumbService,
@@ -63,10 +66,10 @@ export class CalculatorComponent implements OnInit {
   }
 
   // convenience getter for easy access to form fields
-  get f(): any {
-    console.log(this.calculatorForm.controls);
-    return this.calculatorForm.controls;
-  }
+  // get f(): any {
+  //   console.log(this.calculatorForm.controls);
+  //   return this.calculatorForm.controls;
+  // }
 
   // this.calculatorForm = new FormGroup({
   //   dose: new FormControl()
@@ -75,18 +78,19 @@ export class CalculatorComponent implements OnInit {
   createForm(): void {
 
     this.calculatorForm = this.fb.group({
-      dose: ['', [Validators.required, Validators.min(0.01)] ],
+      dose: ['', [Validators.required, Validators.min(0.01), Validators.max(999999) ]],
       units: ['', Validators.required ],
-      // text: ['', Validators.required ],
-      // captcha: ['', Validators.required]
+      area: ['', [Validators.required, Validators.min(0.01), Validators.max(9999999) ]],
+      areaUnits: ['', Validators.required]
     });
-
-    // this.calculatorForm = this.fb.group({
-    //   dose: new FormControl(this.dose, [
-    //      Validators.required,
-    //   ])
-    // });
   }
 
-  onSubmit( value: any): void {}
+  onSubmit( value: any): void {
+    console.log(value);
+  }
+
+  onReset(): void {
+    // this.submitted = false;
+    this.calculatorForm.reset();
+  }
 }

@@ -59,6 +59,12 @@ h1, h2 {
         .div-sell {
             display: table-cell;
             // border: solid 2px green;
+            vertical-align: top;
+            h2 {
+                font-size: 1.3em;
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
         }
     }
 }
@@ -79,23 +85,32 @@ h1, h2 {
     -moz-box-shadow: -1px 8px 8px 1px rgba(161, 161, 161, 1);
     box-shadow: -1px 8px 8px 1px rgba(161, 161, 161, 1);
 }
-.wrap-dose {
+.fieldset-btn {
+    text-align: center;
+}
+.wrap-dose, .wrap-area {
     // display: table-row;
-    .dose-input-div, .dose-radio-div {
-        // display: table-cell;
-        // width: 50%;
+    .dose-input-div, .dose-radio-div, .area-input-div, .area-radio-div {
         vertical-align: top;
     }
-    .dose-input-div {
+    .dose-input-div, .area-input-div {
         mat-form-field {
           width: 100%;
         }
     }
-    .label-for-dose {
+    .area-input-div, .area-radio-div {
+        display: table-cell;
+    }
+    .area-input-div {
+        width: 60%;
+        padding-right: 10px;
+    }
+
+    .label-for-dose, .label-for-area {
       margin-right: 20px;
     }
-    .dose-input, .valid {
-        width: 70%;
+    .dose-input, .area-input, .valid {
+        // width: 70%;
         height: 25px;
         background-color: #ffffff;
         border: 1px solid  rgb(83, 118, 50);
@@ -111,9 +126,16 @@ h1, h2 {
         // float: right;
         font-size: 1em;
     }
+    .dose-input {
+        width: 70%;
+    }
+    .area-input {
+        width: 100%;
+    }
     .errors-input {
         border: 1px solid  red;
     }
+
 }
 
 .inform-div {
@@ -232,23 +254,27 @@ label, legend {
   outline: none;
 }
 
-// .cal-row .num:active{
-//  transform: translate(.1rem);
-//  border: none;
-// }
+.btn-wrapp .btn{
+    // width: 80px;
+    // height: 20px;
+    margin: 5px;
+    // font-size: 25px;
+    // font-weight: 400;
+    border: none;
+    border: 1px solid  rgb(83, 118, 50);
+    border-radius: 5px;
+    // background: #ecf0f1;
+    cursor: pointer;
+    -webkit-box-shadow: -1px 8px 8px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 8px 8px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.75);
+    padding: 2px;
+}
 
+.instructions {
+    padding: 0 20px;
+}
 
-//  .cal-row .btn-equal{
-//  width: 77%;
-//  background: #0086FF;
-//  color: #ecf0f1;
-//  margin-bottom: 20px;
-// }
-
-// .cal-keys .cal-row .btn-blue{
-//  background: #9ACDFF;
-//  color: #ecf0f1;
-// }
 
 
 

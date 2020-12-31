@@ -12,23 +12,23 @@
         <div class="div-table ">
             <div class="div-table-row">
                 <div class="div-sell container">
-                    <!-- <form class="create-form" [formGroup]="calculatorForm"  (ngSubmit)="onSubmit(calculatorForm.value)"> -->
+                    <h2>КАЛКУЛАТОР</h2>
                     <form class="create-form" [formGroup]="calculatorForm"  (ngSubmit)="onSubmit(calculatorForm.value)">
                         <fieldset class="fieldset">
                             <legend>Данни за дозата:</legend>
                             <div class="wrap-dose">
                                 <div class="dose-input-div" >
-                                  <label for="dose" class="label-for-dose">Доза:</label>
+                                    <label for="dose" class="label-for-dose">Доза:</label>
                                     <input type="number" 
                                         [(ngModel)] = "dose"
                                         formControlName = "dose"
                                         class="dose-input" id="dose"
-                                        required min="0.01">
+                                        required min="0.01" max="999999" maxlength="6">
                                 </div>
                                 <div class="dose-radio-div" >
-                                    <label id="example-radio-group-label">Избери мерната единица!</label>
+                                    <label id="dose-radio-group-label">Избери мерната единица!</label>
                                     <mat-radio-group
-                                        aria-labelledby="example-radio-group-label"
+                                        aria-labelledby="dose-radio-group-label"
                                         class="example-radio-group cal-row"
                                         name="units"
                                         [(ngModel)]="selectedUnit"
@@ -88,19 +88,97 @@
                                         <mat-icon aria-hidden="false" aria-label="Example home icon">thumb_up</mat-icon>
                                         Избрана е доза - {{ dose }} процентен разтвор
                                     </li>
-                                    <li *ngIf="i >= 5"
-                                        class="text-danger"> {{ unit }} {{ i }} въведи коректни данни
+                                    <li *ngIf="i >= 5" class="text-danger">
+                                        Въведи коректни данни
                                     </li>
                                   </ul>
                             </div>
                         </fieldset>
+
+                        <fieldset class="fieldset">
+                            <legend>Данни за площа:</legend>
+                            <div class="wrap-area">
+                                <div class="area-input-div" >
+                                    <label for="area" class="label-for-area">Площ:</label>
+                                    <br>
+                                    <input type="number" 
+                                        [(ngModel)] = "area"
+                                        formControlName = "area"
+                                        class="area-input" id="area"
+                                        required min="1" max="9999999" maxlength="7">
+                                </div>
+                                <div class="area-radio-div" >
+                                    <label id="area-radio-group-label">Избери мерната единица!</label>
+                                    <mat-radio-group
+                                        aria-labelledby="area-radio-group-label"
+                                        class="example-radio-group cal-row"
+                                        name="areaUnits"
+                                        [(ngModel)]="selectedAreaUnit"
+                                        formControlName = "areaUnits"
+                                        required>
+                                        <mat-radio-button class="example-radio-button num"  *ngFor="let unit of areaUnits; index as i" [value]="i" >
+                                            {{unit}}
+                                        </mat-radio-button>
+                                    </mat-radio-group>
+                                </div>
+                            </div>
+                            <div class="inform-div" *ngIf="calculatorForm.get('area').invalid || calculatorForm.get('areaUnits').invalid ">
+                                <p class="text-danger">Въведи площта която ще се третира и избери мерната единица!</p>
+                            </div>
+                            <div class="inform-div" *ngIf="calculatorForm.get('area').valid && calculatorForm.get('areaUnits').valid " >
+                                <ul *ngFor="let unit of areaUnits; index as i">
+                                    <li *ngIf="i === 0 && i === selectedAreaUnit && area != 1" class="text-success">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon">thumb_up</mat-icon>
+                                        Площ за третиране - {{ area }} квадратни метра
+                                    </li>
+                                    <li *ngIf="i === 0 && i === selectedAreaUnit && area === 1" class="text-success">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon">thumb_up</mat-icon>
+                                        Площ за третиране - {{ area }} квадратен метрър
+                                    </li>
+
+                                    <li *ngIf="i === 1 && i === selectedAreaUnit && area != 1" class="text-success">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon">thumb_up</mat-icon>
+                                        Площ за третиране - {{ area }} декара
+                                    </li>
+                                    <li *ngIf="i === 1 && i === selectedAreaUnit && area === 1" class="text-success">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon">thumb_up</mat-icon>
+                                        Площ за третиране - {{ area }} декар
+                                    </li>
+                                    <li *ngIf="i >= 2" class="text-danger"> 
+                                        Въведи коректни данни
+                                    </li>
+                                  </ul>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="fieldset fieldset-btn">
+                            <div class="btn-wrapp">
+                                <button mat-raised-button class="btn" color="primary" type="submit" [disabled]="!calculatorForm.valid"> = </button>
+                                <!-- <button mat-raised-button color="accent">Accent</button> -->
+                                <button mat-raised-button class="btn" color="warn" (click)="onReset()"> C </button>
+                            </div>
+                        </fieldset>
                     </form>
                 </div>
-                <div class="div-sell">
-                    <p>Tets Tets Tets Tets Tets Tets Tets Tets Tets</p>
+                <div class="div-sell instructions">
+                    <h2>УПЪТВАНЕ</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta totam 
+                        deleniti eligendi corporis. Earum quo magnam architecto nulla eaque sint, 
+                        ex laboriosam atque quidem labore, corrupti ullam omnis amet facilis?
+                    </p>
                     <p>Tets</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta totam 
+                        deleniti eligendi corporis. Earum quo magnam architecto nulla eaque sint, 
+                        ex laboriosam atque quidem labore, corrupti ullam omnis amet facilis?
+                    </p>
                     <p>Tets</p>
-                    <p>Tets</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta totam 
+                        deleniti eligendi corporis. Earum quo magnam architecto nulla eaque sint, 
+                        ex laboriosam atque quidem labore, corrupti ullam omnis amet facilis?
+                    </p>
                 </div>
             </div>
         </div>
