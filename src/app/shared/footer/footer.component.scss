@@ -1,74 +1,324 @@
-.footer_style {
-  display: block;
+// .footer_style {
+//   display: block;
+//   width: 100%;
+//   background-color: #383838;
+//   font-size: 14px;
+// }
+
+// .clear {
+//   clear: both;
+// }
+
+// .wrapper {
+//   max-width: 1200;
+//   display: block;
+//   margin: 0 auto;
+//   position: relative;
+// }
+
+// #footer_nav {
+//   display: block;
+//   height: 45px;
+//   line-height: 45px;
+//   color: #d0d0d0;
+//   .for_all_li {
+//     display: block;
+//     float: left;
+//     line-height: 45px;
+//     width: 48%;
+//     strong {
+//       color: #ffffff;
+//     }
+//   }
+
+//   .right_part {
+
+//     .material-icons{
+//       color: #ffb6b6;
+//       font-size: 20px;
+//     }
+//     .link-to-contacts {
+//       position: relative;
+//       color: #ffffff;
+//     }
+//     a {
+//       text-decoration: none;
+//       transition: .25s all;
+//     }
+//   }
+// }
+
+// .br_display {
+//   display: none;
+// }
+
+// @media (max-width: 600px){
+//   #footer_nav .for_all_li{
+
+//     width: 100%;
+//   }
+
+//   #footer {
+//     height: 90px;
+//   }
+// }
+
+// @media (max-width: 340px){
+//   .br_display {
+//     display: initial;
+//   }
+//   #footer {
+//     height: 135px;
+//   }
+// }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  // min-width: 100vh;
   width: 100%;
-  background-color: #383838;
-  font-size: 14px;
+  flex-direction: column;
+  background: #ede7f6;
 }
-
-.clear {
-  clear: both;
-}
-
-.wrapper {
-  max-width: 1200;
-  display: block;
-  margin: 0 auto;
+footer {
   position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  // background: #111;
+  background: #383838;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+}
+footer .container .sec {
+  margin-right: 30px;
+}
+footer .container .sec.aboutUs {
+  width: 33%;
+}
+footer .container h2 {
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  // margin-bottom: 15px;
+}
+// footer .container h2::before {
+//   content: '';
+//   position: absolute;
+//   bottom: -5px;
+//   left: 0;
+//   width: 50px;
+//   height: 2px;
+//   background: #de9d62;
+// }
+footer .container .line {
+  width: 2px;
+  height: 15px;
+  display: inline-block;
+  position: relative;
+  background-color: #00bc00;
+  left: 50px;
+  margin-bottom: 10px;
+}
+footer .container .line::before {
+  content: "";
+  right: 4px;
+  top: 7px;
+  bottom: -5px;
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: #00bc00;
+}
+footer .container .line::after {
+  content: "";
+    left: 4px;
+    top: 7px;
+    bottom: -5px;
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #00bc00;
 }
 
-#footer_nav {
-  display: block;
-  height: 45px;
-  line-height: 45px;
-  color: #d0d0d0;
-  .for_all_li {
-    display: block;
-    float: left;
-    line-height: 45px;
-    width: 48%;
-    strong {
-      color: #ffffff;
+// 
+.aboutUs ul li, .quickLinks ul li {
+  list-style: none;
+}
+.aboutUs ul li a, .quickLinks ul li a {
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.aboutUs ul li a:hover, .quickLinks ul li a:hover {
+  color: #fff;
+}
+
+.quickLinks {
+  position: relative;
+  width: 33%;
+}
+
+.contact {
+  width: calc(34% - 60px);
+  margin-right: 0 !important;
+}
+
+.contact .info li a  {
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.contact .info li a:hover {
+  color: #fff;
+}
+.contact .info li {
+  list-style: none;
+}
+.contact .info li p {
+  // color: #de9d62;
+  color: #00bc00;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+}
+
+.contact .info li p span {
+  font-weight: bolder;
+  // padding-top: 3px;
+  position: absolute;
+  margin-left: 10px;
+
+}
+
+.copyrightText, .madeText {
+  width: 100%;
+  background: #181818;
+  padding: 8px 100px;
+  text-align: center;
+  color: #999;
+  p {
+    font-size: 0.9em;
+  }
+}
+.copyrightText {
+  .medium-copy {
+    display: none;
+  }
+  .small-copy {
+    display: none;
+  }
+}
+
+
+.madeText {
+  border-top: 2px solid #383838;
+  border-bottom: 2px solid #383838;
+  .small-copy-made {
+    display: none;
+  }
+  // text-decoration: none;
+  // color: #ffffff;
+  .material-icons{
+    // color: #ffb6b6;
+    color: #ff7a7a;
+    font-size: 20px;
+  }
+}
+
+.madeText strong a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #999;
+}
+.madeText strong a:hover {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  footer {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  section {
+    display: inline-block;
+    // width: 100%;
+    // // display: flex;
+    // justify-content: initial;
+    // align-items: initial;
+    // // min-width: 100vh;
+    // flex-direction: initial;
+  }
+  footer .container {
+    flex-direction: column;
+
+    footer .container .sec{
+      margin-right: 0;
     }
   }
 
-  .right_part {
-
-    .material-icons{
-      color: #ffb6b6;
-      font-size: 20px;
-    }
-    .link-to-contacts {
-      position: relative;
-      color: #ffffff;
-    }
-    a {
-      text-decoration: none;
-      transition: .25s all;
-    }
-  }
-}
-
-.br_display {
-  display: none;
-}
-
-@media (max-width: 600px){
-  #footer_nav .for_all_li{
-
+  footer .container .sec.aboutUs,
+  footer .container .sec.quickLinks,
+  footer .container .sec.contact {
     width: 100%;
   }
 
-  #footer {
-    height: 90px;
+  footer .container .sec.aboutUs,
+  footer .container .sec.quickLinks {
+    margin-bottom: 30px;
+  }
+
+  .copyrightText {
+    padding: 8px 10px;
   }
 }
 
-@media (max-width: 340px){
-  .br_display {
-    display: initial;
+@media (max-width: 500px) {
+  .copyrightText {
+    .medium-copy {
+      display: initial;
+    }
+    .big-copy {
+      display: none;
+    }
   }
-  #footer {
-    height: 135px;
+  .madeText {
+    .small-copy-made {
+      display: initial;
+    }
+    .big-copy-made {
+      display: none;
+    }
   }
+}
 
+@media (max-width: 330px) {
+  .copyrightText {
+    .medium-copy {
+      display: none;
+    }
+    .big-copy {
+      display: none;
+    }
+    .small-copy {
+      display: initial;
+    }
+  }
 }

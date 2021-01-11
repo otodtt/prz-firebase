@@ -1,4 +1,4 @@
-<section>
+<!-- <section>
   <footer id="footer" class="footer_style clear">
     <div class="wrapper">
       <ul id="footer_nav">
@@ -14,4 +14,66 @@
       </ul>
     </div>
   </footer>
+</section> -->
+
+<section>
+  <footer>
+    <div class="container">
+      <div class="sec aboutUs">
+        <h2>За Сайта</h2>
+        <span class="line"></span>
+        <ul>
+          <li><a routerLink="terms" title="Към Условия">Условия за ползване</a></li>
+          <li><a routerLink="sitemap" title="Карта на сйта">Карта на сйта</a></li>
+        </ul>
+      </div>
+      <div class="sec quickLinks">
+        <h2>Категории</h2>
+        <span class="line"></span>
+        <ul>
+          <li><a routerLink="legislation"  title="Към страница Законодателство">Законодателство</a></li>
+          <li><a routerLink="formulations" title="Към страница Формулации">Формулации</a></li>
+          <li><a routerLink="documents" title="Към страница Документи">Документи</a></li>
+          <li><a routerLink="calculator" title="Към страница Калкулатор">Калкулатор</a></li>
+        </ul>
+      </div>
+      <div class="sec contact">
+        <h2>Контакти</h2>
+        <span class="line" ></span>
+        <ul class="info">
+          <li><a routerLink="contact" title="Към страница Контакт">Към Контакти</a></li>
+          <li>
+            <p>
+              <mat-icon aria-hidden="false" aria-label="Example home icon">mail_outline</mat-icon>
+              <span > przbg@abv.bg</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="madeText">
+    <p class="big-copy-made">
+      ИЗРАБОТЕН С
+      <mat-icon aria-hidden="false" aria-label="Favorite icon" class="material-icons">favorite</mat-icon>
+        ОТ 
+        <strong>
+          <a class="link-to-contacts" [routerLink]="['/contact']" title="Линк към Контакти">ДТТ</a>
+        </strong>
+    </p>
+    <p class="small-copy-made">
+      ИЗРАБОТЕН С
+      <mat-icon aria-hidden="false" aria-label="Favorite icon" class="material-icons">favorite</mat-icon>
+      <br>ОТ 
+        <strong>
+          <a class="link-to-contacts" [routerLink]="['/contact']" title="Линк към Контакти">ДТТ</a>
+        </strong>
+    </p>
+  </div>
+  <div class="copyrightText">
+    <p class="big-copy">Copyright &#x24B8; 2021. PRZBG All Right Reserved.</p>
+    <p class="medium-copy">Copyright &#x24B8; 2021. PRZBG <br>All Right Reserved.</p>
+    <p class="small-copy">Copyright &#x24B8; <br>2021. PRZBG <br>All Right Reserved.</p>
+  </div>
 </section>
+

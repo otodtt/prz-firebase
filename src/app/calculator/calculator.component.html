@@ -96,7 +96,7 @@
                         </fieldset>
 
                         <fieldset class="fieldset">
-                            <legend>Данни за площа:</legend>
+                            <legend>Данни за площта:</legend>
                             <div class="wrap-area">
                                 <div class="area-input-div" >
                                     <label for="area" class="label-for-area">Площ:</label>
@@ -153,9 +153,8 @@
 
                         <fieldset class="fieldset fieldset-btn">
                             <div class="btn-wrapp">
-                                <button mat-raised-button class="btn" color="primary" type="submit" [disabled]="!calculatorForm.valid"> = </button>
-                                <!-- <button mat-raised-button color="accent">Accent</button> -->
-                                <button mat-raised-button class="btn" color="warn" (click)="onReset()"> C </button>
+                                <button mat-raised-button class="btn" color="primary" type="submit" [disabled]="!calculatorForm.valid" title="Калкулирай"> = </button>
+                                <button mat-raised-button class="btn" color="warn" (click)="onReset()" title="Изчисти"> C </button>
                             </div>
                         </fieldset>
                     </form>
@@ -163,22 +162,44 @@
                 <div class="div-sell instructions">
                     <h2>УПЪТВАНЕ</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta totam 
-                        deleniti eligendi corporis. Earum quo magnam architecto nulla eaque sint, 
-                        ex laboriosam atque quidem labore, corrupti ullam omnis amet facilis?
+                        С този калкулатор може да изчислите необходимото Ви количество Продукт за 
+                        Растителна Защита (ПРЗ) за третиране на избраната от Вас площ. 
+                        <span class="bold">За правилното изчисление и съответно за най-доброто действие 
+                        на продукта, трябва да спазите стриктно регистрираните дози. За тази цел направете 
+                        проверка в списъка с разрешените ПРЗ или с етикета на продукта.</span>
                     </p>
-                    <p>Tets</p>
+                    <hr>
+                    <p>1. Попълва се полето <span class="bold">"Доза"</span> - въвеждат се само цифри.</p>
+                    <p>2. Избира се мерната единица. Както е изписана върху етикета на продукта.</p>
+                    <br>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta totam 
-                        deleniti eligendi corporis. Earum quo magnam architecto nulla eaque sint, 
-                        ex laboriosam atque quidem labore, corrupti ullam omnis amet facilis?
+                        <span class="bold">Пример 1:</span> Продукт регистриран при череша, 
+                        срещу Листозавивачки в доза 33,3 мл/дка. В полето <span class="bold">"Доза"</span> 
+                        се изписва 33,3 и се избира "мл/дка".
+                        <br>
+                        <span class="bold">Пример 2:</span> Продукт регистриран при картофи, срещу Картофен 
+                        молец в доза 0,03 л/дка. В полето <span class="bold">"Доза"</span> се изписва 0.03 и 
+                        се избира "л/дка".
+                        <br>
+                        <span class="bold">Пример 3:</span> Продукт регистриран при зеленчуци, срещу 
+                        Зелена прасковена листна въшка в доза 0,06%. В полето 
+                        <span class="bold">"Доза"</span> се изписва 0,06 и се избира "%".
+
                     </p>
-                    <p>Tets</p>
+                    <p class="if-correct">Ако въведените данни са коректни, калкулаторът ще Ви покаже съобщение с избраната от Вас доза.</p>
+                    <hr>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta totam 
-                        deleniti eligendi corporis. Earum quo magnam architecto nulla eaque sint, 
-                        ex laboriosam atque quidem labore, corrupti ullam omnis amet facilis?
+                        В секция <span class="bold">"Данни за площта"</span> се въвеждат данните 
+                        за площта, която искате да третирате в квадратни метри или в декари.
                     </p>
+                    <p>3. Попълва се полето <span class="bold">"Площ"</span> - въвеждат се само цифри.</p>
+                    <p>4. Избира се мерната единица за площта.</p>
+                    <p class="if-correct">
+                        Ако въведените данни са коректни, калкулаторът ще Ви покаже съобщение с 
+                        избраната от Вас площ, която ще се третира.
+                    </p>
+                    <br>
+                    <p>Бутонът <span class="text-btn">"  =  "</span> ще бъде активен.</p>
                 </div>
             </div>
         </div>

@@ -85,7 +85,7 @@ export class CalculatorComponent implements OnInit {
     });
   }
 
-  onSubmit( value: any): void {
+  onSubmit( value: any ): void {
     console.log(value);
   }
 
