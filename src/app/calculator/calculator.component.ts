@@ -1,8 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, FormControl, FormGroupDirective } from '@angular/forms';
+import { Component, OnInit, Inject} from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 import { ChangeBreadcrumbService } from '../common/services/changeBreadcrumb.service';
 import { SeoService } from '../common/services/SeoService';
+
 
 @Component({
   templateUrl: './calculator.component.html',
@@ -21,26 +23,6 @@ export class CalculatorComponent implements OnInit {
   calculatorForm: FormGroup;
   submitted = false;
 
-
-
-  // validationMessages: any = {
-  //   dose: [
-  //     { type: 'required', message: 'Името е задължително!' },
-  //     // { type: 'minlength', message: 'Минимална дължина за име - 2 знака.' }
-  //   ],
-  //   // subject: [
-  //   //   { type: 'required', message: 'Полето е задължително' },
-  //   //   { type: 'minlength', message: 'Минимална дължина за тема - 3 знака.' }
-  //   // ],
-  //   // text: [
-  //   //   { type: 'required', message: 'Моля, напишете Вашето съобщение!' },
-  //   // ],
-  //   // email: [
-  //   //   { type: 'required', message: 'Трябва да въведете валиден адрес!' },
-  //   //   { type: 'email', message: '' },
-  //   //   { type: 'pattern', message: 'Невалиден email' }
-  //   // ]
-  // };
   selectedUnit: number;
   selectedAreaUnit: number;
   dose: number;
@@ -52,6 +34,7 @@ export class CalculatorComponent implements OnInit {
     private changeBreadcrumb: ChangeBreadcrumbService,
     private seoService: SeoService,
     private fb: FormBuilder,
+    public dialog: MatDialog
   ) {
     this.seoService.addTitle(this.title);
     this.seoService.setNoKeywordsMeta(this.description);
@@ -65,16 +48,6 @@ export class CalculatorComponent implements OnInit {
     this.createForm();
   }
 
-  // convenience getter for easy access to form fields
-  // get f(): any {
-  //   console.log(this.calculatorForm.controls);
-  //   return this.calculatorForm.controls;
-  // }
-
-  // this.calculatorForm = new FormGroup({
-  //   dose: new FormControl()
-  // });
-
   createForm(): void {
 
     this.calculatorForm = this.fb.group({
@@ -86,11 +59,54 @@ export class CalculatorComponent implements OnInit {
   }
 
   onSubmit( value: any ): void {
-    console.log(value);
+    console.log(value.units);
+    // let doseResult: number;
+    let calculationResult: number;
+    // if (value.units === 4) {
+    //   doseResult = value.dose;
+    // } else {
+    //   doseResult = value.dose;
+    // }
+
+    if (value.areaUnits === 0 ) {
+      calculationResult = value.dose * value.area / 1000;
+    } else {
+      calculationResult = value.dose * value.area / 1;
+    }
+    // console.log(doseResult);
+    console.log(calculationResult);
+
+    const dialogRef = this.dialog.open(DialogCalculatorComponent, {
+      width: '300px',
+      data: { dose: value.dose, units: value.units, area: value.area, areaUnits: value.areaUnits }
+    });
+
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log('The dialog was closed');
+    //   // this.calculatorForm.reset();
+    // });
   }
 
   onReset(): void {
     // this.submitted = false;
     this.calculatorForm.reset();
+  }
+}
+
+@Component({
+  templateUrl: './dialog-calculator.component.html',
+  styleUrls: ['./dialog-calculator.component.scss']
+})
+export class DialogCalculatorComponent {
+
+  constructor(
+    public dialogRef: MatDialogRef<DialogCalculatorComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any
+  ) {
+    console.log(data);
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 }

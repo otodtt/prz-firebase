@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { ShareComponentsModule } from '../common/share.components.module';
 import { CalculatorComponent } from './calculator.component';
+import { DialogCalculatorComponent } from './calculator.component';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -12,9 +13,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule, MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material/radio';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
-  declarations: [CalculatorComponent],
+  declarations: [
+    CalculatorComponent,
+    DialogCalculatorComponent
+  ],
   imports: [
     CommonModule,
     ShareComponentsModule,
@@ -25,7 +30,8 @@ import { MatButtonModule } from '@angular/material/button';
     FormsModule,
     ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [{
     provide: MAT_RADIO_DEFAULT_OPTIONS,

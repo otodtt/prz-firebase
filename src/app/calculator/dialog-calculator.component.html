@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>dose {{data.dose}}</h1>
+<h2 mat-dialog-title>units {{data.units}}</h2>
+<h2 mat-dialog-title>area {{data.area}}</h2>
+<h2 mat-dialog-title>areaUnits {{data.areaUnits}}</h2>
+<div mat-dialog-content>
+  <p>What's your favorite animal?</p>
+  <!-- <mat-form-field>
+    <mat-label>Favorite Animal</mat-label>
+    <input matInput [(ngModel)]="data.area">
+  </mat-form-field> -->
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <!-- <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button> -->
+</div>
