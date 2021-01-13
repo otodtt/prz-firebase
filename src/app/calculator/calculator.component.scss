@@ -292,5 +292,30 @@ label, legend {
     // padding-top: 13px;
 }
 
+.result-div {
+    display: block;
+    width: 100%;
+    // background-color: lightgreen;
+    // min-height: 150px;
 
-
+    fieldset.result {
+        // border: 3px solid #383838;
+        border: 5px solid #181818;
+        background: #757575;
+        height: 100px;
+        text-align: center;
+        // vertical-align: middle;
+        legend {
+            margin:0 auto;
+            color: #181818;
+        }
+        p {
+            display: inline-block;
+            font-size: 2.9em;
+            color: white;
+            font-weight: bolder;
+            // vertical-align: middle;
+            line-height: 100px;
+        }
+    }
+}

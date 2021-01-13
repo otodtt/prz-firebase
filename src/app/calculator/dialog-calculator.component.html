@@ -1,9 +1,16 @@
-<h1 mat-dialog-title>dose {{data.dose}}</h1>
-<h2 mat-dialog-title>units {{data.units}}</h2>
-<h2 mat-dialog-title>area {{data.area}}</h2>
-<h2 mat-dialog-title>areaUnits {{data.areaUnits}}</h2>
+
+<h2 >Резултат</h2>
+<!-- <h2 mat-dialog-title>area {{data.area}} {{calcAreaUnits}}</h2> -->
+<!-- <h2 mat-dialog-title>areaUnits {{data.areaUnits}}</h2> -->
+
 <div mat-dialog-content>
-  <p>What's your favorite animal?</p>
+  <p>За третиране на<br> {{data.area}} {{calcAreaUnits}}</p>
+  <!-- <p>{{data.area}} {{calcAreaUnits}}</p> -->
+  <p>С доза {{data.dose}} {{doseUnits}}</p>
+  <!-- <p>{{data.dose}} {{doseUnits}}</p> -->
+  <p>Са необходими </p>
+  <h1 mat-dialog-title>RESULT {{data.calc}}</h1>
+  <!-- <p>What's your favorite animal?</p> -->
   <!-- <mat-form-field>
     <mat-label>Favorite Animal</mat-label>
     <input matInput [(ngModel)]="data.area">

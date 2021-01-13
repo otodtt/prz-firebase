@@ -13,6 +13,18 @@
             <div class="div-table-row">
                 <div class="div-sell container">
                     <h2>КАЛКУЛАТОР</h2>
+                    <div class="result-div">
+                        <fieldset class="fieldset result">
+                            <!-- <legend>РЕЗУЛТАТ</legend> -->
+                            <!-- <p *ngIf="selectedAreaUnit === 1">
+                                За третиране на {{ area }} <span *ngIf="area === 1">декар</span><span *ngIf="area !== 1">декарa</span>
+                            </p>
+                            <p *ngIf="selectedAreaUnit === 0">
+                                За третиране на {{ area }} <span *ngIf="area === 1">кв. метър</span><span *ngIf="area !== 1">кв. метра</span>
+                            </p> -->
+                            <p *ngIf="calculationResult">{{ calculationResult }} {{ resultUnits }}</p>
+                        </fieldset>
+                    </div>
                     <form class="create-form" [formGroup]="calculatorForm"  (ngSubmit)="onSubmit(calculatorForm.value)">
                         <fieldset class="fieldset">
                             <legend>Данни за дозата:</legend>
@@ -158,6 +170,7 @@
                             </div>
                         </fieldset>
                     </form>
+                    
                 </div>
                 <div class="div-sell instructions">
                     <h2>УПЪТВАНЕ</h2>

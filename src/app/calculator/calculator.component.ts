@@ -27,8 +27,10 @@ export class CalculatorComponent implements OnInit {
   selectedAreaUnit: number;
   dose: number;
   area: number;
-  units: string[] = ['мл/дка', 'л/дка', 'мг/дка', 'кг/дка', ' % '];
+  resultUnits: string;
+  units: string[] = ['мл/дка', 'л/дка', 'г/дка', 'кг/дка', ' % '];
   areaUnits: string[] = ['кв.м', 'дка'];
+  calculationResult: number;
 
   constructor(
     private changeBreadcrumb: ChangeBreadcrumbService,
@@ -59,27 +61,61 @@ export class CalculatorComponent implements OnInit {
   }
 
   onSubmit( value: any ): void {
-    console.log(value.units);
-    // let doseResult: number;
     let calculationResult: number;
+    // CALCULATION
+    if (value.areaUnits === 0 ) {
+      calculationResult = value.dose * value.area / 1000;
+      this.calculationResult = calculationResult;
+    } else {
+      calculationResult = value.dose * value.area / 1;
+      this.calculationResult = calculationResult;
+    }
+    // SET FULL UNITS
+    // милилитър
+    if ( calculationResult === 1 && value.units === 0) {
+      this.resultUnits = 'милилитър';
+    }
+    if (calculationResult !== 1 && value.units === 0) {
+      this.resultUnits = 'милилитра';
+    }
+    // Литър
+    if ( calculationResult === 1 && value.units === 1) {
+      this.resultUnits = 'литър';
+    }
+    if (this.calculationResult !== 1 && value.units === 1 ) {
+      this.resultUnits = 'литра';
+    }
+    // Грам
+    if ( calculationResult === 1 && value.units === 2) {
+      this.resultUnits = 'грам';
+    }
+    if (this.calculationResult !== 1 && value.units === 2 ) {
+      this.resultUnits = 'грама';
+    }
+    // Килограм
+    if ( calculationResult === 1 && value.units === 3) {
+      this.resultUnits = 'килограм';
+    }
+    if (this.calculationResult !== 1 && value.units === 3 ) {
+      this.resultUnits = 'килограма';
+    }
+    // console.log(value.units, ' + ', calculationResult, ' + ', this.selectedUnit);
+    // let doseResult: number;
+    // let calculationResult: number;
     // if (value.units === 4) {
     //   doseResult = value.dose;
     // } else {
     //   doseResult = value.dose;
     // }
 
-    if (value.areaUnits === 0 ) {
-      calculationResult = value.dose * value.area / 1000;
-    } else {
-      calculationResult = value.dose * value.area / 1;
-    }
-    // console.log(doseResult);
-    console.log(calculationResult);
 
-    const dialogRef = this.dialog.open(DialogCalculatorComponent, {
-      width: '300px',
-      data: { dose: value.dose, units: value.units, area: value.area, areaUnits: value.areaUnits }
-    });
+    // console.log(doseResult);
+    // console.log(calculationResult);
+
+    // const dialogRef = this.dialog.open(DialogCalculatorComponent, {
+    //   minWidth: '280px', panelClass: 'dialog-pannel',
+    //   data: { dose: value.dose, units: value.units, area: value.area, areaUnits: value.areaUnits, calc: calculationResult }
+    // });
 
     // dialogRef.afterClosed().subscribe(result => {
     //   console.log('The dialog was closed');
@@ -97,13 +133,58 @@ export class CalculatorComponent implements OnInit {
   templateUrl: './dialog-calculator.component.html',
   styleUrls: ['./dialog-calculator.component.scss']
 })
-export class DialogCalculatorComponent {
+export class DialogCalculatorComponent implements OnInit {
+
+  doseUnits: string;
+  calcAreaUnits: string;
 
   constructor(
     public dialogRef: MatDialogRef<DialogCalculatorComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
-    console.log(data);
+    // if ( data.areaUnits === 0 ) {
+    //   if ( data.area === 1) {
+    //     this.calcAreaUnits = 'кв. метър';
+    //   } else {
+    //     this.calcAreaUnits = 'кв. метра';
+    //   }
+    //   // this.calcAreaUnits = 'кв.м';
+    // }
+    // if ( data.areaUnits === 1 ) {
+    //   if ( data.area === 1) {
+    //     this.calcAreaUnits = 'декар';
+    //   } else {
+    //     this.calcAreaUnits = 'декара';
+    //   }
+    // }
+
+    // switch ( data.units ) {
+    //   case 0:
+    //     this.doseUnits = 'мл/дка';
+    //     break;
+    //   case 1:
+    //     this.doseUnits = 'л/дка';
+    //     break;
+    //   case 2:
+    //     this.doseUnits = 'г/дка';
+    //     break;
+    //   case 3:
+    //     this.doseUnits = 'кг/дка';
+    //     break;
+    //   case 4:
+    //     this.doseUnits = '%';
+    //     break;
+    //   default:
+    //     this.doseUnits = '';
+    //     break;
+    // }
+    // console.log(this.doseUnits);
+  }
+
+  ngOnInit(): void {
+    // if(data.units === 0) {
+    //   this.doseUnits = 'мл/дка';
+    // }
   }
 
   onNoClick(): void {

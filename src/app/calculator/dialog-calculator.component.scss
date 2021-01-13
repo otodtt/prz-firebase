@@ -1,0 +1,16 @@
+cdk-global-overlay-wrapper {
+    #dialog-pannel {
+        width: 600px !important;
+        background-color: rgb(170, 236, 109);
+    }
+}
+
+::ng-deep {
+    .dialog-pannel {
+        mat-dialog-container {
+            width: 600px;
+            background-color: rgb(109, 117, 236);
+        } 
+    }
+
+}
