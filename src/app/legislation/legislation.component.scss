@@ -35,68 +35,17 @@ h1, h2 {
   max-width: 40px;
   object-fit: contain;
 }
+.p-plan {
+  font-weight: bolder;
+  a {
+    text-decoration: none;
+    color: #006500;
+  }
+  a:hover {
+    color: #527532;
+  }
+}
 
-
-// ol {
-//   counter-reset: li; /* Initiate a counter */
-//   list-style: none; /* Remove default numbering */
-//   *list-style: decimal; /* Keep using default numbering for IE6/7 */
-//   padding: 0;
-//   margin-bottom: 4em;
-//   text-shadow: 0 1px 0 rgba(255,255,255,.5);
-
-//   li {
-//     padding-left: 25px;
-//     margin-right: 10px;
-//   }
-// }
-
-// .rounded-list a{
-//   position: relative;
-//   display: block;
-//   padding: .4em .4em .4em 2em;
-//   *padding: .4em;
-//   margin: .5em 0;
-//   background: rgb(240, 240, 240);
-//   color: rgba(0, 0, 0, 0.87);
-//   text-decoration: none;
-//   border-radius: .3em;
-//   transition: all .3s ease-out;
-//   border: 1px solid #c5c3c3;
-// }
-
-// .rounded-list a:hover{
-//   background: #eee;
-// }
-
-// .rounded-list a:hover:before{
-//   transform: rotate(360deg);
-// }
-
-// .rounded-list a:before{
-//   content: counter(li);
-//   counter-increment: li;
-//   position: absolute;
-//   left: -1.3em;
-//   top: 50%;
-//   margin-top: -1.3em;
-//   // background: #91acfc;
-//   height: 2em;
-//   width: 2em;
-//   line-height: 2em;
-//   border: .3em solid #fff;
-//   text-align: center;
-//   font-weight: bold;
-//   border-radius: 2em;
-//   transition: all .3s ease-out;
-// }
-
-// .bg-list a:before {
-//   background: #8bc34a;
-// }
-// .lt-list a:before {
-//   background: #91acfc;
-// }
 
 /*==================================
   СМЯНА НА БЪЛГАРСКО С ЕВРОПЕЙСКО
@@ -110,9 +59,9 @@ h1, h2 {
 
 
 ol {
-  counter-reset: li; /* Initiate a counter */
-  list-style: none; /* Remove default numbering */
-  *list-style: decimal; /* Keep using default numbering for IE6/7 */
+  counter-reset: li;
+  list-style: none;
+  *list-style: decimal;
   font: 15px 'trebuchet MS', 'lucida sans';
   padding: 0;
   margin-bottom: 4em;
@@ -120,7 +69,7 @@ ol {
 }
 
 ol ol {
-  margin: 0 0 0 2em; /* Add some left margin for inner lists */
+  margin: 0 0 0 2em;
 }
 ol {
   li {
@@ -152,7 +101,6 @@ ol {
   left: -2.5em;
   top: 50%;
   margin-top: -1em;
-  // background: #fa8072;
   height: 2em;
   width: 2em;
   line-height: 2em;
