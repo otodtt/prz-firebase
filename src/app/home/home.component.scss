@@ -320,3 +320,15 @@ ol ol {
   border-left-color: #97b568;
 }
 
+
+.quick-links {
+  a {
+    text-decoration: none;
+    color: #527532;
+    line-height: 1.5
+  }
+  a:hover {
+    color: #de9d62;
+  }
+}
+

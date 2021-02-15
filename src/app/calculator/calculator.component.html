@@ -124,7 +124,7 @@
                                 </div>
                             </div>
                             <div class="inform-div" *ngIf="calculatorForm.get('area').invalid || calculatorForm.get('areaUnits').invalid ">
-                                <p class="text-danger">Въведи площта която ще се третира и избери мерната единица!</p>
+                                <p class="text-danger">Въведи площта за третиране и избери мерната единица!</p>
                             </div>
                             <div class="inform-div" *ngIf="calculatorForm.get('area').valid && calculatorForm.get('areaUnits').valid " >
                                 <ul *ngFor="let unit of areaUnits; index as i">
