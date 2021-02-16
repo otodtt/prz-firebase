@@ -9,7 +9,7 @@
     </div>
 
     <div class="h1-wrap">
-        <div class="div-table ">
+        <div class="div-table">
             <div class="div-table-row">
                 <div class="div-sell container">
                     <h2>КАЛКУЛАТОР</h2>
@@ -41,10 +41,10 @@
                                     </mat-radio-group>
                                 </div>
                             </div>
-                            <div class="inform-div" *ngIf="calculatorForm.get('dose').invalid || calculatorForm.get('units').invalid ">
+                            <div class="inform-div inform-top" *ngIf="calculatorForm.get('dose').invalid || calculatorForm.get('units').invalid ">
                                 <p class="text-danger">Въведи желаната доза и избери мерната единица!</p>
                             </div>
-                            <div class="inform-div" *ngIf="calculatorForm.get('dose').valid && calculatorForm.get('units').valid " >
+                            <div class="inform-div inform-result" *ngIf="calculatorForm.get('dose').valid && calculatorForm.get('units').valid " >
                                 <ul *ngFor="let unit of units; index as i">
                                     <li *ngIf="i === 0 && i === selectedUnit && dose != 1" class="text-success">
                                         <mat-icon aria-hidden="false" aria-label="Example home icon">thumb_up</mat-icon>
@@ -123,10 +123,10 @@
                                     </mat-radio-group>
                                 </div>
                             </div>
-                            <div class="inform-div" *ngIf="calculatorForm.get('area').invalid || calculatorForm.get('areaUnits').invalid ">
+                            <div class="inform-div invorm-bottom" *ngIf="calculatorForm.get('area').invalid || calculatorForm.get('areaUnits').invalid ">
                                 <p class="text-danger">Въведи площта за третиране и избери мерната единица!</p>
                             </div>
-                            <div class="inform-div" *ngIf="calculatorForm.get('area').valid && calculatorForm.get('areaUnits').valid " >
+                            <div class="inform-div inform-result" *ngIf="calculatorForm.get('area').valid && calculatorForm.get('areaUnits').valid " >
                                 <ul *ngFor="let unit of areaUnits; index as i">
                                     <li *ngIf="i === 0 && i === selectedAreaUnit && area != 1" class="text-success">
                                         <mat-icon aria-hidden="false" aria-label="Example home icon">thumb_up</mat-icon>

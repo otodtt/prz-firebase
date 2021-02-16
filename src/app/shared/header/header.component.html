@@ -41,7 +41,8 @@
     </mat-toolbar>
   </nav>
 
-  <div class="bredacrumb">
+  <div *ngIf="changeId !== 'aa-home'" class="bredacrumb">
+  <!-- <div class="bredacrumb"> -->
     <p class="p-in-header p-up">{{newBreadcrumbTitle}}</p><br />
     <span class="p-in-header p-down">
       <a class="bredacrumb-link" [routerLink]="['/home']" (click)="removeClass()" title="Линк към Начало">НАЧАЛО</a> / {{newBreadcrumbName}}

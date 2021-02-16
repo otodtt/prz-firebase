@@ -52,12 +52,10 @@ h1, h2 {
     width: 100%;
     border-collapse: separate;
     border-spacing: 10px;
-    // border: solid 2px green;
     .div-table-row {
         display: table-row;
         .div-sell {
             display: table-cell;
-            // border: solid 2px green;
             vertical-align: top;
             h2 {
                 font-size: 1.3em;
@@ -71,7 +69,6 @@ h1, h2 {
 .fieldset {
     margin-top: 10px;
     margin-bottom: 10px;
-    // border: 1px solid rgb(83, 118, 50);
     border: 1px solid #dc7001;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -88,7 +85,6 @@ h1, h2 {
     text-align: center;
 }
 .wrap-dose, .wrap-area {
-    // display: table-row;
     .dose-input-div, .dose-radio-div, .area-input-div, .area-radio-div {
         vertical-align: top;
     }
@@ -109,11 +105,9 @@ h1, h2 {
       margin-right: 20px;
     }
     .dose-input, .area-input, .valid {
-        // width: 70%;
         height: 25px;
         background-color: #ffffff;
         border: 1px solid  rgb(83, 118, 50);
-        // border: 1px solid  #dc7001;
         border-radius: 5px;
         background: #ecf0f1;
         cursor: pointer;
@@ -122,7 +116,6 @@ h1, h2 {
         box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.75);
         padding: 5px;
         margin-bottom: 20px;
-        // float: right;
         font-size: 1em;
     }
     .dose-input {
@@ -139,11 +132,9 @@ h1, h2 {
 
 .inform-div {
     width: 98%;
-    // background-color: rgb(129, 129, 129);
     background-color: #ecf0f1;
     height: 40px;
     margin-top: 10px;
-    // margin-right: 10px;
     padding-left: 10px;
     border-radius: 5px;
     border: 1px solid rgb(100, 100, 100);
@@ -179,36 +170,13 @@ h1, h2 {
 
 label, legend {
   font-size: 0.9em;
-//   color: rgb(60 105 18);
   color: #3f51b5;
   font-weight: bolder;
 }
 
-// fieldset {
-//     legend {
-//         background-color: #dcdcdc;
-//         border-radius: 10px;
-//         border-top: 1px solid #dc7001 ;
-//     }
-// }
-
-// .example-radio-group {
-//   display: flex;
-//   // flex-direction: column;
-//   margin: 15px 0;
-// }
-
-// .example-radio-button {
-//   margin: 5px;
-// }
-
-
 .container{
-//   width: 600px;
     width: 55%;
     height: auto;
-    // border: 1px solid #0086FF;
-    // border: 1px solid rgb(83, 118, 50);
     border: 1px solid #dc7001;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -222,7 +190,6 @@ label, legend {
     box-shadow: -1px 8px 8px 1px rgba(161, 161, 161, 1);
     padding: 0 10px;
     background-color: #dcdcdc;
-  // background-color: #de9d62;
 }
 
 
@@ -236,8 +203,6 @@ label, legend {
     width: 80px;
     height: 20px;
     margin: 5px;
-    // font-size: 25px;
-    // font-weight: 400;
     border: none;
     border: 1px solid  rgb(83, 118, 50);
     border-radius: 5px;
@@ -254,15 +219,10 @@ label, legend {
 }
 
 .btn-wrapp .btn{
-    // width: 80px;
-    // height: 20px;
     margin: 5px;
-    // font-size: 25px;
-    // font-weight: 400;
     border: none;
     border: 1px solid  rgb(83, 118, 50);
     border-radius: 5px;
-    // background: #ecf0f1;
     cursor: pointer;
     -webkit-box-shadow: -1px 8px 8px 1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -1px 8px 8px 1px rgba(0, 0, 0, 0.75);
@@ -278,32 +238,17 @@ label, legend {
     font-style: italic;
 }
 .text-btn {
-    // font-size: 2em;
     font-weight: bolder;
-    // background-color: #3f51b5;
-    // border: 1px solid #537632;
-    // border-radius: 5px;
-    // display: inline-block;
-    // text-align: center;
-    // width: 64px;
-    // vertical-align: middle;
-    // height: 30px;
-    // padding-top: 13px;
 }
 
 .result-div {
     display: block;
     width: 100%;
-    // background-color: lightgreen;
-    // min-height: 150px;
-
     fieldset.result {
-        // border: 3px solid #383838;
         border: 5px solid #181818;
         background: #757575;
         height: 100px;
         text-align: center;
-        // vertical-align: middle;
         legend {
             margin:0 auto;
             color: #181818;
@@ -313,8 +258,116 @@ label, legend {
             font-size: 2.9em;
             color: white;
             font-weight: bolder;
-            // vertical-align: middle;
             line-height: 100px;
         }
+    }
+}
+
+@media(max-width:999px ) {
+    .div-table {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        .div-table-row {
+            display: block;
+            .div-sell {
+                display: block;
+                
+            }
+            .container {
+                width: initial;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+@media(max-width:768px ) {
+    .div-table {
+        width: 100%;
+    }
+}
+
+@media(max-width:580px ) {
+    .cal-row {
+        display: block;
+    }
+    label {
+        display: block;
+    }
+    .dose-input-div {
+        .dose-input {
+            width: 95%;
+        }
+    }
+    
+    .wrap-area {
+        .area-input-div, .area-radio-div {
+            display: block;
+            width: 95%;
+        }
+    }
+}
+
+@media(max-width:540px ) {
+    .result-div {
+        fieldset.result {
+            p {
+                line-height: 50px;
+            }
+        }
+    }
+}
+
+@media(max-width:521px ) {
+    .invorm-bottom {
+        height: 60px;
+    }
+}
+
+@media(max-width:500px ) {
+    .invorm-bottom {
+        height: 60px;
+    }
+    
+}
+@media(max-width:480px ) {
+    
+    .inform-result {
+        height: 60px;
+    }
+}
+@media(max-width:350px ) {
+    .result-div {
+        fieldset.result {
+            p {
+                font-size: 2.5em;
+            }
+        }
+    }
+}
+@media(max-width:472px ) {
+    .inform-top {
+        height: 60px;
+    }
+}
+@media(max-width:315px ) {
+    .result-div {
+        fieldset.result {
+            p {
+                font-size: 2em;
+            }
+        }
+    }
+}
+@media(max-width:308px ) {
+    .invorm-bottom {
+        height: 80px;
+    }
+}
+
+@media(max-width:295px ) {
+    .inform-result {
+        height: 80px;
     }
 }

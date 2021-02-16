@@ -39,15 +39,7 @@ footer .container h2 {
   color: #fff;
   font-weight: 500;
 }
-// footer .container h2::before {
-//   content: '';
-//   position: absolute;
-//   bottom: -5px;
-//   left: 0;
-//   width: 50px;
-//   height: 2px;
-//   background: #de9d62;
-// }
+
 footer .container .line {
   width: 2px;
   height: 15px;
@@ -209,12 +201,13 @@ footer .container .line::after {
     }
   }
   .madeText {
-    .small-copy-made {
-      display: initial;
-    }
-    .big-copy-made {
-      display: none;
-    }
+    padding: 8px 10px;
+    // .small-copy-made {
+    //   display: initial;
+    // }
+    // .big-copy-made {
+    //   display: none;
+    // }
   }
 }
 
@@ -228,6 +221,15 @@ footer .container .line::after {
     }
     .small-copy {
       display: initial;
+    }
+  }
+
+  .madeText {
+    .small-copy-made {
+      display: initial;
+    }
+    .big-copy-made {
+      display: none;
     }
   }
 }

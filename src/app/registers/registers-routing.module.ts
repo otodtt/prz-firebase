@@ -5,6 +5,7 @@ import { RegistersComponent } from './registers.component';
 import { ParallelComponent } from './parallel/parallel.component';
 import { AdjuvantsComponent } from './adjuvants/adjuvants.component';
 import { SubstancesComponent } from './substances/substances.component';
+import { FirmsComponent } from './firms/firms.component';
 
 export const routes: Routes = [
     {
@@ -13,6 +14,7 @@ export const routes: Routes = [
         { path: 'parallel-trade', component: ParallelComponent },
         { path: 'adjuvants', component: AdjuvantsComponent },
         { path: 'substances', component: SubstancesComponent },
+        { path: 'firms', component: FirmsComponent },
       ]
     }
 ];

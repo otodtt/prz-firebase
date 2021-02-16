@@ -40,6 +40,8 @@ import { DesiccantsComponent } from './desiccants/desiccants.component';
 import { DesiccantsDetailComponent } from './desiccants/desiccants-detail/desiccants-detail.component';
 import { RegulatorsComponent } from './regulators/regulators.component';
 import { RegulatorDetailComponent } from './regulators/regulator-detail/regulator-detail.component';
+import { FungicidesComponent } from './fungicides/fungicides.component';
+import { HerbicidesComponent } from './herbicides/herbicides.component';
 
 @NgModule({
   imports: [
@@ -77,6 +79,8 @@ import { RegulatorDetailComponent } from './regulators/regulator-detail/regulato
     DesiccantsDetailComponent,
     RegulatorsComponent,
     RegulatorDetailComponent,
+    FungicidesComponent,
+    HerbicidesComponent,
   ],
   providers: [
     ResizeService,

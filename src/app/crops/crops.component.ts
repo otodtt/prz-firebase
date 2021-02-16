@@ -4,7 +4,6 @@ import { ChangeBreadcrumbService } from '../common/services/changeBreadcrumb.ser
 import { SeoService } from '../common/services/SeoService';
 
 @Component({
-    selector: 'prz-crops',
     templateUrl: './crops.component.html',
     styleUrls: ['./crops.component.scss']
 })

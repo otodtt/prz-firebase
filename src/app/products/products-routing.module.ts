@@ -5,6 +5,8 @@ import { ProductsComponent } from './products.component';
 import { AcaricidesComponent } from './acaricides/acaricides.component';
 import { AcaricideDetailComponent } from './acaricides/acaricide-detail/acaricide-detail.component';
 import { InsecticidesComponent } from './insecticides/insecticides.component';
+import { FungicidesComponent } from './fungicides/fungicides.component';
+import { HerbicidesComponent } from './herbicides/herbicides.component';
 import { NematocidesComponent } from './nematocides/nematocides.component';
 import { NematocideDetailComponent } from './nematocides/nematocide-detail/nematocide-detail.component';
 import { RodentsComponent } from './rodents/rodents.component';
@@ -23,6 +25,8 @@ export const routes: Routes = [
     path: '', component: ProductsComponent, children: [
       { path: '', redirectTo: '/acaricides', pathMatch: 'full' },
       { path: 'insecticides', component: InsecticidesComponent },
+      { path: 'fungicides', component: FungicidesComponent },
+      { path: 'herbicides', component: HerbicidesComponent },
       { path: 'acaricides', component: AcaricidesComponent },
       { path: 'acaricides/:id', component: AcaricideDetailComponent },
       { path: 'nematocides', component: NematocidesComponent },

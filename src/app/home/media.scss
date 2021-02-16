@@ -1,8 +1,13 @@
 .mySlides {
   img {
-    object-fit: contain;
-    height: auto;
+    // object-fit: contain;
+    // height: auto;
+    object-fit: cover;
+    height: 450px;
   }
+}
+#wrapper-carosel {
+  padding-top: 60px;
 }
 
 /* On smaller screens, decrease text size */
@@ -12,6 +17,12 @@
 img {vertical-align: middle;}
 
 @media(max-width:991px ) {
+  .mySlides {
+    img {
+      object-fit: contain;
+      height: auto;
+    }
+  }
   .text {
     .aa-top-slider-content {
       padding: 18px;
@@ -159,7 +170,16 @@ img {vertical-align: middle;}
   }
 }
 
+@media(max-width:600px) {
+  #wrapper-carosel {
+    padding-top: 65px;
+  }
+}
+
 @media(max-width:480px ) {
+  #wrapper-carosel {
+    padding-top: 55px;
+  }
   #wrapper {
     top: -111px;
     #carosel-wrap {

@@ -30,6 +30,7 @@ import { AdjuvantsComponent } from './adjuvants/adjuvants.component';
 import { DialogAdjuvantsComponent } from './adjuvants/dialog-adjuvants/dialog-adjuvants.component';
 import { SubstancesComponent } from './substances/substances.component';
 import { DialogSubstancesComponent } from './substances/dialog-substances/dialog-substances.component';
+import { FirmsComponent } from './firms/firms.component';
 
 @NgModule({
   imports: [
@@ -57,6 +58,7 @@ import { DialogSubstancesComponent } from './substances/dialog-substances/dialog
     DialogAdjuvantsComponent,
     SubstancesComponent,
     DialogSubstancesComponent,
+    FirmsComponent,
   ],
   providers: [
     AngularFireDatabase,
