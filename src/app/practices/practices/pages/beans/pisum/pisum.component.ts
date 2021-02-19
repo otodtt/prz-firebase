@@ -17,7 +17,7 @@ export class PisumComponent implements OnInit {
     private title = 'ДРЗП - Грах';
     private description = 'Добра Растителнозащитна Пракатика при грах. Борба с болести, неприятели и плевели при граха.';
     private keywords = 'грах, болести, неприятели, плевели, ПРЗ, ПИВ';
-    breadcrumbName = 'Соя';
+    breadcrumbName = 'Грах';
 
 
     practices: Observable<any[]>;

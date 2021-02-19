@@ -1,0 +1,299 @@
+<div >
+    <ul class="first-ul">
+        <li class="first-nav-names">
+            <a class="link-to category-name" [routerLink]="['/home']" title="Линк към Начало">НАЧАЛО</a>
+        </li>
+        <li class="first-nav-names">
+            <span class="category-name">ПРОДУКТИ</span>
+            <ul class="second-ul">
+                <li>
+                    <a class="link-to" [routerLink]="['/products/fungicides']" title="Линк към Фунгициди">Фунгициди</a>
+                </li>
+                <li>
+                    <a class="link-to" [routerLink]="['/products/insecticides']" title="Линк към Инсектициди">Инсектициди</a>
+                </li>
+                <li>
+                    <a class="link-to" [routerLink]="['/products/acaricides']" title="Линк към Акарициди">Акарициди</a>
+                </li>
+                <li>
+                    <a class="link-to" [routerLink]="['/products/nematocides']" title="Линк към Нематоциди">Нематоциди</a>
+                </li>
+                <li>
+                    <a class="link-to" [routerLink]="['/products/rodenticides']" title="Линк към Родентициди">Родентициди</a>
+                </li>
+                <li>
+                    <a class="link-to" [routerLink]="['/products/limatsides']" title="Линк към Лимациди">Лимациди</a>
+                </li>
+                <li>
+                    <a class="link-to" [routerLink]="['/products/repellents']" title="Линк към Репеленти">Репеленти</a>
+                </li>
+                <li>
+                    <a class="link-to" [routerLink]="['/products/pheromones']" title="Линк към Феромони">Феромони</a>
+                </li>
+                <li>
+                    <a class="link-to" [routerLink]="['/products/herbicides']" title="Линк към Хербициди">Хербициди</a>
+                </li>
+                <li>
+                    <a class="link-to" [routerLink]="['/products/desiccants']" title="Линк към Десиканти">Десиканти и Дефолианти</a>
+                </li>
+                <li>
+                    <a class="link-to" [routerLink]="['/products/regulators']" title="Линк към Растежни регулатори">Растежни регулатори</a>
+                </li>
+            </ul>
+        </li>
+        <li class="first-nav-names">
+            <span class="category-name">РЕГИСТРИ</span>
+            <ul class="second-ul">
+                <li>
+                    <a class="link-to" [routerLink]="['/registers/firms']" title="Линк към Фирми">Фирми</a>
+                </li>
+                <li>
+                    <a class="link-to" [routerLink]="['/registers/substances']" title="Линк към Активни вещества">Активни вещества</a>
+                </li>
+                <li>
+                    <a class="link-to" [routerLink]="['/registers/adjuvants']" title="Линк към Адюванти">Адюванти</a>
+                </li>
+                <li>
+                    <a class="link-to" [routerLink]="['/registers/parallel-trade']" title="Линк към Паралелна търговия">Паралелна търговия</a>
+                </li>
+            </ul>
+        </li>
+        <li class="first-nav-names"><span class="category-name">КУЛТУРИ</span></li>
+        <li class="first-nav-names useful">
+            <span class="category-name">ПОЛЕЗНО</span>
+            <ul class="second-ul">
+                <li class="usefull-categorys first-li">
+                    <a class="link-to usefull-names " [routerLink]="['/legislation']" title="Линк към Законодателство">ЗАКОНОДАТЕЛСТВО</a>
+                </li>
+                <li class="usefull-categorys">
+                    <span class="usefull-names">ДРЗП - ДОБРИ РАСТИТЕЛНО ЗАЩИТНИ ПРАКТИКИ</span>
+                    <ul class="third-ul">
+                        <li>
+                            <a class="link-to" [routerLink]="['/practices/introduction']" title="Линк към ДРЗП Правила">Правила</a>
+                        </li>
+                        <li>
+                            <span class="not-links">ЗЪРНЕНОЖИТНИ</span>
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/practices/triticum-spp']" title="Линк към ДРЗП Пшеница">Пшеница</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/hordeum-vulgare']" title="Линк към ДРЗП Ечемик">Ечемик</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/avena-sativa']" title="Линк към ДРЗП Овес">Овес</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/secale-cereale']" title="Линк към ДРЗП Ръж">Ръж</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/zea-mays']" title="Линк към ДРЗП Царевица">Царевица</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/rodentia']" title="Линк към ДРЗП Борба с гризачи">Борба с гризачи</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="not-links">БОБОВИ</span>
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/practices/phaseolus-vulgaris']" title="Линк към ДРЗП Фасул">Фасул</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/glycine-max']" title="Линк към ДРЗП Соя">Соя</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/pisum-sativum']" title="Линк към ДРЗП Грах">Грах</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/lens-culinaris']" title="Линк към ДРЗП Леща">Леща</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/cicer-arietinum']" title="Линк към ДРЗП Нахут">Нахут</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/medicago-sativa']" title="Линк към ДРЗП Люцерна">Люцерна</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="not-links">ТЕХНИЧЕСКИ КУЛТУРИ</span>
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/practices/nicotiana-tabacum']" title="Линк към ДРЗП Тютюн">Тютюн</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/beta-vulgaris']" title="Линк към ДРЗП Цвекло">Цвекло</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/gossypium']" title="Линк към ДРЗП Памук">Памук</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/helianthus-annuus']" title="Линк към ДРЗП Слънчоглед">Слънчоглед</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/brassica-napus']" title="Линк към ДРЗП Рапица">Рапица</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/arachis-hypogaea']" title="Линк към ДРЗП Фъстъци">Фъстъци</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="not-links">ЗЕЛЕНЧУЦИ</span>
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/practices/vegetables']" title="Линк към ДРЗП Домати, пипер, патладжан">Домати, пипер, патладжан</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/solanum-tuberosum']" title="Линк към ДРЗП Картофи">Картофи</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/bulb-crops']" title="Линк към ДРЗП Лукови">Лукови култури</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/cabbage-crops']" title="Линк към ДРЗП Зелеви">Зелеви култури</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/pumpkin-crops']" title="Линк към ДРЗП Тиквови">Тиквови култури</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/leaf-vegetables']" title="Линк към ДРЗП Листни">Листни зеленчуци</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="not-links">ЗЕЛЕНЧУЦИ В СЪОРАЖЕНИЯ</span>
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/practices/solanum-lycopersicum']" title="Линк към ДРЗП Домати в съоражения">Домати в съоражения</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/cucurbitaceae']" title="Линк към ДРЗП Тиквови в съоражения">Тиквови култури</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/decorate']" title="Линк към ДРЗП Украсни в съоражения">Украсни култури</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/capsicum-annuum']" title="Линк към ДРЗП Пипер в съоражения">Пипер в съоражения</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/leaf-facilities']" title="Линк към ДРЗП Листни в съоражения">Листни зеленчуци</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="not-links">ОВОЩНИ КУЛТУРИ</span>
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/practices/pome-fruit']" title="Линк към ДРЗП Семкови">Семкови овощни видове</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/stone-fruit']" title="Линк към ДРЗП Костилкови">Костилкови овощни видове</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="not-links">ЯГОДОПЛОДНИ</span>
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/practices/fragaria']" title="Линк към ДРЗП Ягода">Ягода</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/rubus-idaeus']" title="Линк към ДРЗП Малина">Малина</a></li>
+                                <li><a class="link-to" [routerLink]="['/practices/ribes-nigrum']" title="Линк към ДРЗП Касис">Касис</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="link-to" [routerLink]="['/practices/vitis-vinifera']" title="Линк към ДРЗП Лоза">Лоза</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="usefull-categorys">
+                    <span class="usefull-names">BBCH - СТАДИИ НА РАСТЕЖ</span>
+                    <ul>
+                        <li><a class="link-to" [routerLink]="['/phases/introduction']" title="Линк към BBCH Въведение">Въведение</a></li>
+                        <li>
+                            ЗЪРНЕНОЖИТНИ
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/phases/cereals']" title="Линк към BBCH Житни">Житни</a></li>
+                                <li><a class="link-to" [routerLink]="['/phases/maize']" title="Линк BBCH Царевица">Царевица</a></li>
+                                <li><a class="link-to" [routerLink]="['/phases/rice']" title="Линк към BBCH Ориз">Ориз</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            БОБОВИ
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/phases/bean']" title="Линк към BBCH Фасул">Фасул</a></li>
+                                <li><a class="link-to" [routerLink]="['/phases/faba-bean']" title="Линк BBCH Бакла">Бакла</a></li>
+                                <li><a class="link-to" [routerLink]="['/phases/pea']" title="Линк към BBCH Грах">Грах</a></li>
+                                <li><a class="link-to" [routerLink]="['/phases/soybean']" title="Линк към BBCH Соя">Соя</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            ТЕХНИЧЕСКИ КУЛТУРИ
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/phases/sunflower']" title="Линк към BBCH Слънчоглед">Слънчоглед</a></li>
+                                <li><a class="link-to" [routerLink]="['/phases/oilseed-rape']" title="Линк към BBCH Рапица">Рапица</a></li>
+                                <li><a class="link-to" [routerLink]="['/phases/beet']" title="Линк към BBCH Цвекло">Цвекло</a></li>
+                                <li><a class="link-to" [routerLink]="['/phases/hop']" title="Линк към BBCH Хмел">Хмел</a></li>
+                                <li><a class="link-to" [routerLink]="['/phases/cotton']" title="Линк към BBCH Памук">Памук</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            ЗЕЛЕНЧУЦИ
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/phases/potato']" title="Линк към BBCH Картофи">Картофи</a></li>
+                                <li><a class="link-to" [routerLink]="['/phases/solanaceous-fruits']" title="Линк към BBCH Домати, патладжан, пипер">Домати, патладжан, пипер</a></li>
+                                <li><a class="link-to" [routerLink]="['/phases/cucurbits']" title="Линк към BBCH Тиквови">Тиквови култури</a></li>
+                                <li><a class="link-to" [routerLink]="['/phases/brassica']" title="Линк към BBCH Зелеви">Зелеви култури</a></li>
+                                <li><a class="link-to" [routerLink]="['/phases/leaf-vegetables']" title="Линк към BBCH Листни">Листни зеленчуци</a></li>
+                                <li><a class="link-to" [routerLink]="['/phases/other-brassica']" title="Линк към BBCH Други зелеви">Други Зелеви</a></li>
+                                <li><a class="link-to" [routerLink]="['/phases/root-and-stem']" title="Линк към BBCH Коренови и стъблени">Коренови и стъблени</a></li>
+                                <li><a class="link-to" [routerLink]="['/phases/bulb-vegetables']" title="Линк към BBCH Лукови">Лукови култури</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            ОВОЩНИ КУЛТУРИ
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/phases/pome-fruit']" title="Линк към BBCH Семкови">Семкови овощни видове</a></li>
+                                <li><a class="link-to" [routerLink]="['/phases/stone-fruit']" title="Линк към BBCH Костилкови">Костилкови овощни видове</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            ЯГОДОПЛОДНИ
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/phases/strawberry']" title="Линк към BBCH Ягода">Ягода</a></li>
+                                <li><a class="link-to" [routerLink]="['/phases/currants']" title="Линк към BBCH Касис">Касис</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="link-to" [routerLink]="['/phases/grapevine']" title="Линк към BBCH Лоза">Лоза</a></li>
+                        <li><a class="link-to" [routerLink]="['/phases/citrus']" title="Линк към BBCH Цитруси">Цитруси</a></li>
+                        <li><a class="link-to" [routerLink]="['/phases/weed-species']" title="Линк към BBCH Плевели">Плевели</a></li>
+                    </ul>
+                </li>
+                <li class="usefull-categorys">
+                    <span class="usefull-names">ПРАГОВЕ НА ИКОНОМИЧЕСКА ВРЕДНОСТ</span>
+                    <ul>
+                        <li>
+                            ЗЪРНЕНОЖИТНИ
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/thresholds/triticum-spp']" title="Линк към ПРЗ Пшеница">Пшеница</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/hordeum-vulgare']" title="Линк към ПРЗ Ечемик">Ечемик</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/zea-mays']" title="Линк към ПРЗ Царевица">Царевица</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            БОБОВИ
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/thresholds/phaseolus-vulgaris']" title="Линк към ПРЗ Фасул">Фасул</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/pisum-sativum']" title="Линк към ПРЗ Грах">Грах</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/vicia-villosa']" title="Линк към ПРЗ Фий">Фий</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/medicago-sativa']" title="Линк към ПРЗ Люцерна">Люцерна</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            ТЕХНИЧЕСКИ КУЛТУРИ
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/thresholds/brassica-napus']" title="Линк към ПРЗ Рапица">Рапица</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/helianthus-annuus']" title="Линк към ПРЗ Слънчоглед">Слънчоглед</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/beta-vulgaris']" title="Линк към ПРЗ Захарно Цвекло">Захарно Цвекло</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/nicotiana-tabacum']" title="Линк към ПРЗ Тютюн">Тютюн</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/gossypium']" title="Линк към ПРЗ Памук">Памук</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/cannabis-and-linum']" title="Линк към ПРЗ Коноп и Лен">Коноп и Лен</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/humulus-lupulus']" title="Линк към ПРЗ Хмел">Хмел</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            ЕТЕРИЧНО-МАСЛЕНИ
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/thresholds/mentha-and-lavandula']" title="Линк към ПРЗ Мента и Лавандула">Мента и Лавандула</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/rosa-damascena']" title="Линк към ПРЗ Казанлъшка роза">Казанлъшка роза</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            ЗЕЛЕНЧУЦИ
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/thresholds/solanum-lycopersicum']" title="Линк към ПРЗ Домати">Домати</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/capsicum-annuum']" title="Линк към ПРЗ Пипер">Пипер</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/solanum-melongena']" title="Линк към ПРЗ Патладжан">Патладжан</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/cucumis-sativus']" title="Линк към ПРЗ Краставици">Краставици</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/cucumis-and-citrullus']" title="Линк към ПРЗ Пъпеши и Дини">Пъпеши и Дини</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/allium']" title="Линк към ПРЗ Лук и Чесън">Лук и Чесън</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/brassica-oleracea']" title="Линк към ПРЗ Зеле">Зеле</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/daucus-carota']" title="Линк към ПРЗ Моркови">Моркови</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/solanum-tuberosum']" title="Линк към ПРЗ Картофи">Картофи</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            ОВОЩНИ КУЛТУРИ
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/thresholds/malus-and-pyrus']" title="Линк към ПРЗ Ябълка и Круша">Ябълка и Круша</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/prunus-and-cerasus']" title="Линк към ПРЗ Череша и Вишна">Череша и Вишна</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/prunus-persica']" title="Линк към ПРЗ Праскова">Праскова</a></li>
+                                <li><a class="link-to" [routerLink]="['/thresholds/prunus-domestica']" title="Линк към ПРЗ Слива">Слива</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            ЯГОДОПЛОДНИ
+                            <ul>
+                                <li><a class="link-to" [routerLink]="['/thresholds/fragaria-and-rubus']" title="Линк към ПРЗ Ягоди и Малини">Ягоди и Малини</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="link-to" [routerLink]="['/thresholds/vitis-vinifera']" title="Линк към ПРЗ Лоза">Лоза</a></li>
+                    </ul>
+                </li>
+                <li class="usefull-categorys">
+                    <a class="link-to usefull-names" [routerLink]="['/formulations']" title="Линк към Формулации">ФОРМУЛАЦИИ</a>
+                </li>
+                <li class="usefull-categorys">
+                    <a class="link-to usefull-names" [routerLink]="['/documents']" title="Линк към Документи">ДОКУМЕНТИ</a>
+                </li>
+                <li class="usefull-categorys">
+                    <a class="link-to usefull-names" [routerLink]="['/calculator']" title="Линк към Калкулатор">КАЛКУЛАТОР</a>
+                </li>
+            </ul>
+        </li>
+        <li class="first-nav-names">
+            <a class="link-to category-name" [routerLink]="['/contact']" title="Линк към КОНТАКТИ">КОНТАКТИ</a>
+        </li>
+    </ul>
+</div>
+
+  

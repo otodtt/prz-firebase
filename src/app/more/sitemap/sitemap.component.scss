@@ -1,0 +1,91 @@
+* {margin: 0; padding: 0; list-style: none;}
+a {
+    text-decoration: none;
+}
+ul li {
+  margin-left: 15px;
+  position: relative;
+  padding-left: 5px;
+
+  padding-bottom: 5px;
+}
+ul li::before {
+  content: " ";
+  position: absolute;
+  width: 1px;
+  background-color: #000;
+  top: 5px;
+//   bottom: -12px;
+  bottom: -24px;
+  left: -10px;
+}
+// body > ul > li:first-child::before {top: 12px;}
+body > ul > li:first-child::before {top: 10px;}
+ul li:not(:first-child):last-child::before {display: none;}
+ul li:only-child::before {
+  display: list-item;
+  content: " ";
+  position: absolute;
+  width: 1px;
+  background-color: #000;
+  top: 5px;
+  bottom: 7px;
+  height: 7px;
+  left: -10px;
+}
+ul li::after {
+  content: " ";
+  position: absolute;
+  left: -10px;
+  width: 10px;
+  height: 1px;
+  background-color: #000;
+  top: 12px;
+}
+
+.first-nav-names {
+    margin-bottom: 15px;
+    .category-name {
+        color: #00bc00;
+        font-weight: bolder;
+        letter-spacing: 2px;
+    }
+    .useful {
+        .category-name {
+            margin-top: 15px;
+            padding-top: 15px;
+        }
+    }
+    .second-ul {
+        .first-li {
+            margin-top: 10px;
+        }
+        .usefull-categorys {
+            margin-bottom: 10px;
+            .usefull-names {
+                color: green;
+            }
+        }
+
+        .third-ul {
+            li {
+                margin-bottom: 4px; 
+                .not-link {
+                    color: brown;
+                }
+            }
+            
+        }
+    }
+    // a {
+    //     color: green;
+    //     font-weight: bolder;
+    // }
+    // .usefull-categorys {
+    //     margin-bottom: 10px;
+    //     padding-left: 15px;
+    //     .usefull-names {
+    //         color: blue;
+    //     }
+    // }
+}

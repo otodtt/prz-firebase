@@ -64,6 +64,16 @@ export const routes: Routes = [
     loadChildren: () => import( './contacts/contacts.module').then(m => m.ContactsModule),
     data: { preload: true, delay: 10000 }
   },
+  {
+    path: 'sitemap',
+    loadChildren: () => import( './more/sitemap/sitemap.module').then(m => m.SitemapModule),
+    data: { preload: true, delay: 10000 }
+  },
+  {
+    path: 'terms',
+    loadChildren: () => import( './more/terms/terms.module').then(m => m.TermsModule),
+    data: { preload: true, delay: 10000 }
+  },
   { path: '**', component: NotFoundComponent }
 ];
 
